@@ -1,0 +1,285 @@
+/* scroll bar custom */
+::-webkit-scrollbar {
+    width: 10px;
+}
+
+/* Track */
+::-webkit-scrollbar-track {
+    background: #303C3A; 
+}
+
+/* Handle */
+::-webkit-scrollbar-thumb {
+  background: #888; 
+  border-radius: 20px;
+}
+
+/* Handle on hover */
+::-webkit-scrollbar-thumb:hover {
+  background: #555; 
+}
+
+/* gradient for text */
+.gradient-text{
+    background:  -webkit-linear-gradient(135deg, #FAE196 0%, #F58994 50.7%, #9694E9 100%);
+    font-weight: 700;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+/* Backgroun */
+.bg-bts{
+    width: 100%;
+    height: auto;
+    background-color: #303C3A;
+    background-size: cover;
+    color: #fff;
+    overflow: hidden;
+}
+
+/* Page 1 */
+
+.bg-bts .page1 .page1-content{
+    padding-top: 0;
+}
+
+.bg-bts .page1 .page1-content h1{
+    max-width: 500px;
+    font-size: 58px;
+    font-weight: 600;
+}
+
+.bg-bts .page1 .page1-content p{
+    padding-top: 10px;
+    max-width: 400px;
+    font-size: 17px;
+    font-weight: 400;
+}
+
+.bg-bts .page1 .page1-content .login{
+    border-radius: 28px;
+    width: 110px;
+}
+
+.bg-bts .page1 .page1-content .video{
+    border-radius: 28px;
+    width: 140px;
+}
+
+.bg-bts .page1 .page1-content .fungsi{
+    padding-top: 100px;
+}
+
+.bg-bts .page1 .page1-content .fungsi h6{
+    font-size: 16px;
+    font-weight: 600;   
+}
+
+.bg-bts .page1 .page1-content .fungsi p{
+    margin-top: -10px;
+    font-size: 14px;
+    font-weight: 200;   
+    letter-spacing: 1px;
+}
+
+.bg-bts .page1 .page1-content .fungsi .icon2-page1{
+    margin-left: -20px;
+}
+
+.bg-bts .page1 .page1-content .fungsi .qoutes{
+    margin-left: -20px;
+}
+
+.bg-bts .page1 .page1-img{
+    width: 1080px;
+    height: 1000px;
+    margin-top: -270px;
+    margin-left: -300px;
+}
+
+
+/* Page 2 */
+.bg-bts .page2 {
+    margin-top: -100px;
+}
+
+.bg-bts .page2 .page2-content .page2-img1{
+    margin-top: -20px;
+    margin-left: -140px;
+}
+
+.bg-bts .page2 .page2-content h4{
+    padding-top: 60px;
+    font-size: 24px;
+    font-weight: 600;
+    letter-spacing: 4px;
+    text-align: end;
+}
+
+.bg-bts .page2 .page2-content .box-sambutan{
+    background: #899593;
+    padding: 30px 20px;
+    padding-left:  230px;
+    border-radius: 10px;
+}
+
+.bg-bts .page2 .page2-content .page2-img2{
+    margin-top: -364px;
+    margin-left: -150px;
+}
+
+.bg-bts .page2 .page2-content .page2-img3{
+    margin-right: -170px;
+    margin-top: -300px;
+    margin-bottom: -280px;
+}
+
+
+/* Page 3 */
+.bg-bts .page3 {
+    padding-top: 40px;
+}
+
+.bg-bts .page3 h1{
+    max-width: 400px;
+    font-size: 58px;
+    font-weight: 600;
+    padding-top: 40px;
+}
+
+.bg-bts .page3 .col{
+    padding-top: 25px;
+}
+
+.bg-bts .page3  .page3-box{
+    background: #899593;
+    border-radius: 10px;
+    padding: 20px 0;
+}
+
+.bg-bts .page3 .page3-box h6{
+    margin-top: 6px;
+    font-size: 16px;
+    letter-spacing: 1px;
+}
+
+.bg-bts .page3 .page3-box p{
+    margin-top: -12px;
+    font-size: 14px;
+    font-weight: 300;
+    letter-spacing: 1px;
+}
+
+.bg-bts .page3 .page3-box .page3-img1{
+    width: 320px;
+    display: block;
+    margin: 0 auto;
+}
+
+
+/* Page4 */
+.bg-bts .page4 {
+    padding-top: 120px;
+}
+
+.bg-bts .page4 .page4-img1{
+    width: 1200px;
+    margin-top: -20px;
+    margin-left: -180px;
+}
+
+.bg-bts .page4 .page4-title{
+    font-size: 58px;
+    font-weight: 600;
+}
+
+
+
+/* Page 5 */
+.bg-bts .page5 {
+    padding-top: 80px;
+}
+
+.bg-bts .page5 .page5-title{
+    font-size: 58px;
+    font-weight: 600;
+}
+
+.bg-bts .page5 .page5-img1{
+    height: 130px;
+    margin-top: 8px;
+}
+
+.bg-bts .page5 .page5-text{
+    margin-top: 14px;
+    margin-left: -60px;
+}
+
+.bg-bts .page5 .page5-img2{
+    margin-top: -50px;
+   margin-left: 100px;
+   margin-bottom: -130px;
+}
+
+.bg-bts .page5 .box-team{
+    background-color: rgba(255, 255, 255, .15);
+    backdrop-filter: blur(5px);
+    width: fit-content;
+    border-radius: 10px;
+}
+
+.bg-bts .page5 .col{
+    padding-top: 25px;
+}
+
+.bg-bts .page5 .fajar{
+    padding-top: 10px;
+}
+.bg-bts .page5 .rafly{
+    padding-top: 6px;
+}
+.bg-bts .page5 .angga{
+    padding-top: 6px;
+}
+
+.bg-bts .page5 .maghvi{
+    margin-top: -10px;
+}
+
+.bg-bts .page5 .fadil{
+    margin-top: 8px;
+}
+
+
+/* footer */
+.bg-bts .footer{
+    background-color: #4e5856;
+    padding-top: 40px;
+}
+
+.bg-bts .footer .footer-logo-img{
+    width: 220px;
+    height: auto;
+}
+
+.bg-bts .footer .footer-menu{
+    justify-content: space-between;
+}
+
+.bg-bts .footer .footer-menu h6{
+    cursor: pointer;
+    color: #899593;
+}
+
+.bg-bts .footer .footer-menu h6:hover{
+    color: #fff;
+}
+
+.bg-bts .creator{
+    background: #767e7c;
+    padding: 2px 0;
+}
+.bg-bts .creator p{
+   margin: 8px 0;
+   font-size: 14px;
+}
