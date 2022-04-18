@@ -1,0 +1,75 @@
+.content{
+    margin-left: 10px;
+}
+
+.row .box{
+    margin-left: 20px;
+    border-style: dashed;
+    border-radius: 5px;
+    border-color: gray;
+    max-height: 220px;
+}
+
+.row .box img{
+    display: block;
+    margin: 0 auto;
+}
+
+.row .box a{
+    text-decoration: none;
+}
+
+.input{
+    margin-left: 30px;
+}
+
+.input .button1{
+    margin-left: 10px;
+    width: 50px;
+    float: right;
+}
+
+.input .button2{
+    width: 150px;
+    float: right;
+}
+
+
+
+
+/* tampilan hp */
+/* @media (max-width: 576px) { 
+    .row .box{
+        max-width: 20px;
+    }
+
+} */
+
+@media (max-width: 768px) { 
+    .content{
+        margin-left: 30px;
+    }
+
+    .row .box{
+        margin-top: -20px;
+        margin-left: 40px;
+        margin-bottom: 30px;
+        max-width: 220px;
+    }
+
+    .input .input-text{
+        max-width: 420px;
+    }
+
+    .input .button1{
+        margin-right: 100px;
+        margin-left: 30px;
+        width: 50px;
+        float: right;
+    }
+    
+    .input .button2{
+        width: 150px;
+        float: right;
+    }
+}
