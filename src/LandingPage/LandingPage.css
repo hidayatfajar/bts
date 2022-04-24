@@ -22,10 +22,16 @@
 /* gradient for text */
 .gradient-text{
     background:  -webkit-linear-gradient(135deg, #FAE196 0%, #F58994 50.7%, #9694E9 100%);
-    font-weight: 700;
+    font-weight: 780;
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
 }
+
+/* Navbar */
+/* .bg-bts .navbar-lp .offcanvas-navbar{
+    display: none;
+} */
+
 
 /* Backgroun */
 .bg-bts{
@@ -40,34 +46,44 @@
 /* Page 1 */
 
 .bg-bts .page1 .page1-content{
-    padding-top: 0;
+    padding-top: 50px;
 }
 
 .bg-bts .page1 .page1-content h1{
-    max-width: 500px;
-    font-size: 58px;
+    max-width: 700px;
+    font-size: 54px;
     font-weight: 600;
+    letter-spacing: 0.8px;
 }
 
 .bg-bts .page1 .page1-content p{
-    padding-top: 10px;
-    max-width: 400px;
+    padding-top: 20px;
+    max-width: 480px;
     font-size: 17px;
     font-weight: 400;
+    letter-spacing: 0.5px;
+}
+.bg-bts .page1 .page1-content .button{
+    display: flex;
+    padding-top: 20px;
+    margin-left: -10px;
 }
 
-.bg-bts .page1 .page1-content .login{
+.bg-bts .page1 .page1-content .button .login{
     border-radius: 28px;
     width: 110px;
+    margin: 0 8px;
 }
 
-.bg-bts .page1 .page1-content .video{
+.bg-bts .page1 .page1-content .button .video{
     border-radius: 28px;
     width: 140px;
+    margin: 0 8px;
 }
 
 .bg-bts .page1 .page1-content .fungsi{
-    padding-top: 100px;
+    padding-top: 80px;
+    display: none;
 }
 
 .bg-bts .page1 .page1-content .fungsi h6{
@@ -79,7 +95,7 @@
     margin-top: -10px;
     font-size: 14px;
     font-weight: 200;   
-    letter-spacing: 1px;
+    letter-spacing: 0.6px;
 }
 
 .bg-bts .page1 .page1-content .fungsi .icon2-page1{
@@ -97,10 +113,68 @@
     margin-left: -300px;
 }
 
+.bg-bts .page1 .page1-img2{
+    display: none;
+}
+
+
+/* Page Angkatan */
+.bg-bts .page-akt{
+    margin-top: -60px;
+}
+.bg-bts .page-akt .page-akt-content h1{
+    max-width: 700px;
+    margin-top: 20px;
+    font-size: 54px;
+    font-weight: 600;
+    letter-spacing: 0.8px;
+}
+
+.bg-bts .page-akt .page-akt-content p{
+    padding-top: 20px;
+    padding-bottom: 10px;
+    max-width: 480px;
+    font-size: 17px;
+    font-weight: 400;
+    letter-spacing: 0.5px;
+}
+.bg-bts .page-akt .page-akt-content .button{
+    margin-left: -10px;
+}
+.bg-bts .page-akt .page-akt-content .video{
+    border-radius: 28px;
+    width: 140px;
+    margin: 0 8px;
+}
+
+
+/* Page Sekolah */
+.bg-bts .page-sekolah{
+    padding-top: 180px;
+}
+
+.bg-bts .page-sekolah h1{
+    max-width: 700px;
+    margin-top: 20px;
+    font-size: 42px;
+    font-weight: 600;
+    letter-spacing: 0.8px;
+}
+
+.bg-bts .page-sekolah p{
+    padding-top: 20px;
+    padding-bottom: 10px;
+    max-width: 660px;
+    font-size: 17px;
+    font-weight: 400;
+    letter-spacing: 0.5px;
+}
+
+
 
 /* Page 2 */
 .bg-bts .page2 {
-    margin-top: -100px;
+    margin-top: 120px;
 }
 
 .bg-bts .page2 .page2-content .page2-img1{
@@ -180,6 +254,7 @@
 /* Page4 */
 .bg-bts .page4 {
     padding-top: 120px;
+    padding-bottom: 100px;
 }
 
 .bg-bts .page4 .page4-img1{
@@ -192,6 +267,11 @@
     font-size: 58px;
     font-weight: 600;
 }
+.bg-bts .page4 .slide-galery .galery{
+    width: 100%;
+    display: block;
+    margin: 0 auto;
+ }
 
 
 
@@ -217,8 +297,8 @@
 
 .bg-bts .page5 .page5-img2{
     margin-top: -50px;
-   margin-left: 100px;
-   margin-bottom: -130px;
+   margin-left: 0px;
+   margin-bottom: -160px;
 }
 
 .bg-bts .page5 .box-team{
@@ -282,4 +362,164 @@
 .bg-bts .creator p{
    margin: 8px 0;
    font-size: 14px;
+}
+
+.player-wrapper {
+    position: relative;
+    padding-top: 56.25% ;/* Player ratio: 100 / (1280 / 720) */   
+}
+
+.react-player {
+    position: absolute;
+    top: 0;
+    left: 0;
+    box-shadow: 14px 10px 20px rgba(0,0,0,1);
+  }
+
+
+/* Phone Display or Responsive */
+@media (max-width:991px) {
+    .bg-bts .navbar-lp .menu{
+        display: none;
+    }
+
+
+    .bg-bts .page1 .page1-content h1{
+        max-width: none;
+        font-size: 40px;
+        font-weight: 500;
+        margin-top: -40px;
+        text-align: center;
+    }
+    .bg-bts .page1 .page1-content p{
+        text-align: center;
+        font-size: 16px;
+        font-weight: 300;
+    }
+    .bg-bts .page1 .page1-content .button{
+        justify-content: center;
+    }
+    .bg-bts .page1 .page1-content .button .video{
+        width: 110px;
+    }
+    .bg-bts .page1 .page1-content .fungsi{
+        padding-top: 0;
+    }
+    .bg-bts .page1 .page1-content .fungsi h6{
+        font-size: 14px;
+    }
+    .bg-bts .page1 .page1-content .fungsi p{
+        text-align: left;
+        font-size: 12px;
+        font-weight: 100;
+        letter-spacing: 0.2px;
+    }
+    .bg-bts .page1 .page1-content .fungsi .garis{
+        margin-left: -10px;
+    }
+    .bg-bts .page1 .page1-img{
+        display: none;
+    }
+    .bg-bts .page1 .page1-img2{
+        width: 110%;
+        height: 110%;
+        display: block;
+        margin: 0 auto;
+    }
+
+    
+    /* Page angkatan */
+    .bg-bts .page-akt{
+        margin-top: 20px;
+    }
+    .bg-bts .page-akt .page-akt-content h1{
+        font-size: 40px;
+        font-weight: 500;
+        letter-spacing: 0.8px;
+    }
+    .bg-bts .page-akt .page-akt-content p{
+        max-width: 340px;
+        font-size: 16px;
+        font-weight: 400;
+        letter-spacing: 0.5px;
+    }
+    .bg-bts .page-akt .page-akt-content .button{
+        margin-left: -10px;
+    }
+    .bg-bts .page-akt .page-akt-content .video{
+        border-radius: 28px;
+        width: 140px;
+        margin: 0 8px;
+    }
+    .col-video{
+        padding-top: 80px;
+    }
+
+
+    /* page2 */
+    .bg-bts .page2{
+        padding-top: 80px;
+    }
+    .bg-bts .page2 .page2-content .page2-img1{
+        display: none;
+    }
+    .bg-bts .page2 .page2-content h4{
+        text-align: start;
+    }
+    .bg-bts .page2 .page2-content .box-sambutan{
+        padding-left: 20px;
+        padding-bottom: 40px;
+    }
+    .bg-bts .page2 .page2-content .page2-img2{
+        margin-top:-220px;
+        margin-left: 0px;
+    }
+    .bg-bts .page2 .page2-content .page2-img3{
+        display: none;
+    }
+
+ 
+    /* page3 */
+    .bg-bts .page3 h1{
+        font-size: 40px;
+        font-weight: 500;
+    }
+
+
+    /* page4 */
+    .bg-bts .page4 .page4-title{
+        font-size: 40px;
+        font-weight: 500;
+    }
+    .bg-bts .page4 .page4-img1{
+        display: none;
+    }
+
+    /* page5 */
+    .bg-bts .page5 .page5-title{
+        font-size: 40px;
+        font-weight: 500;
+    }
+    .bg-bts .page5 .page5-img1{
+        display: none;
+    }
+    .bg-bts .page5 .page5-text{
+        display: none;
+    }
+    .bg-bts .page5 .page5-img2{
+        width: 300px;
+        margin-top: -160px;
+        margin-left: 200px;
+    }
+    .bg-bts .page5 .fadil{
+        align-content: center;
+    }
+
+    /* footer */
+    .bg-bts .footer{
+       padding-bottom: 20px;
+    }
+    .bg-bts .footer .footer-menu h6{
+        display: none;
+    }
 }
