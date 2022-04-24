@@ -2,7 +2,8 @@ import React, { Component } from "react";
 import { BrowserRouter, Route, Switch } from "react-router-dom";
 
 import LandingPage from "./LandingPage/LandingPage";
-
+import Admin from "./Admin/PostGambar/PostGambar";
+import SidebarAdmin from "./Admin/SidebarAdmin/SidebarAdmin.js";
 export default class App extends Component {
   render() {
 
@@ -11,6 +12,8 @@ export default class App extends Component {
         <BrowserRouter>
           <Switch>
             <Route path="/" exact component={LandingPage} />
+            <Route path="/Admin" exact component={Admin} />
+            <Route path="/SidebarAdmin"  component={SidebarAdmin} />
           </Switch>
         </BrowserRouter>
       </div>
