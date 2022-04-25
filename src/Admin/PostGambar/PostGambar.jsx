@@ -6,32 +6,17 @@ import notif from '../Assets/icons-notifikasi.svg';
 import img from '../Assets/icons-img.svg';
 // import './SideBar.js';
 
-class Bts extends Component{
+class PostGambar extends Component{
   render(){
     return(
-      <div>
-        {/* NAVBAR */}
-        {/* <Navbar bg="dark" expand="lg">
-          <Container>
-            <Navbar.Brand href="#home" style={{color:'#FFF'}}>MEMO</Navbar.Brand>
-            <Navbar.Toggle aria-controls="basic-navbar-nav" style={{backgroundColor:'white'}}/>
-            <Navbar.Collapse id="basic-navbar-nav">
-              <Nav className="ms-auto nav">
-                <Nav.Link href="#link" className="nav1"><img src={search} alt="" /></Nav.Link>
-                <Nav.Link href="#link" className="nav2"><img src={notif} alt="" /></Nav.Link>
-                <Nav.Link href="#link" style={{color:'#FFF'}} className="nav3">Nama Admin</Nav.Link>
-              </Nav>
-            </Navbar.Collapse>
-          </Container>
-      </Navbar> */}
-      {/* AKHIR NAVBAR */}
+      <div> 
 
       
         {/* KONTEN */}
         <section className="kontent">
-          <div className="container" style={{boxShadow:'5px 5px 10px #D3D3D3'}}>
+          <div className="container" style={{boxShadow:'5px 5px 10px #D3D3D3', padding:'20px'}}>
             <div className="content">
-              <div className="row mt-5">
+              <div className="row">
                 <h2 className='mt-3'>Buat Post</h2>
               </div>
             </div>
@@ -71,7 +56,7 @@ class Bts extends Component{
         </section>
 
         <section>
-          <div className="container mt-5">
+          <div className="container mt-3">
           <Button variant="light">Kembali</Button>
           </div>
         </section>
@@ -80,4 +65,4 @@ class Bts extends Component{
   }
 }
 
-export default Bts
+export default PostGambar
