@@ -152,6 +152,11 @@
 .bg-bts .page-sekolah{
     padding-top: 180px;
 }
+.bg-bts .page-sekolah .page-sekolah-img1{
+    width: 360px;
+    padding-top: 20px;
+    margin-left: -110px;
+}
 
 .bg-bts .page-sekolah h1{
     max-width: 700px;
@@ -170,11 +175,21 @@
     letter-spacing: 0.5px;
 }
 
+.bg-bts .page-sekolah .button .video{
+    border-radius: 28px;
+    width: 140px;
+    margin: 0 8px;
+}
+
+.bg-bts .page-sekolah .page-sekolah-img2{
+    margin-left: 0px;
+    margin-bottom: -160px;
+}
 
 
 /* Page 2 */
 .bg-bts .page2 {
-    margin-top: 120px;
+    margin-top: 180px;
 }
 
 .bg-bts .page2 .page2-content .page2-img1{
@@ -231,13 +246,13 @@
     padding: 20px 0;
 }
 
-.bg-bts .page3 .page3-box h6{
+.bg-bts .page3 .page3-box .profile-kaprog h6{
     margin-top: 6px;
     font-size: 16px;
     letter-spacing: 1px;
 }
 
-.bg-bts .page3 .page3-box p{
+.bg-bts .page3 .page3-box .profile-kaprog p{
     margin-top: -12px;
     font-size: 14px;
     font-weight: 300;
@@ -251,8 +266,11 @@
 }
 
 
+
+/* Delete */
 /* Page4 */
 .bg-bts .page4 {
+    display: none;
     padding-top: 120px;
     padding-bottom: 100px;
 }
@@ -272,6 +290,9 @@
     display: block;
     margin: 0 auto;
  }
+/* Delete */
+
+
 
 
 
@@ -388,7 +409,7 @@
         max-width: none;
         font-size: 40px;
         font-weight: 500;
-        margin-top: -40px;
+        margin-top: -100px;
         text-align: center;
     }
     .bg-bts .page1 .page1-content p{
@@ -430,7 +451,7 @@
     
     /* Page angkatan */
     .bg-bts .page-akt{
-        margin-top: 20px;
+        padding-top: 180px;
     }
     .bg-bts .page-akt .page-akt-content h1{
         font-size: 40px;
@@ -456,9 +477,45 @@
     }
 
 
+    /* Page Sekolah */
+    .bg-bts .page-sekolah .page-sekolah-img1{
+        width: 70%;
+        display: block;
+        margin: 0 auto;
+    }
+    .bg-bts .page-sekolah h1{
+        margin-top: 60px;
+        font-size: 32px;
+        font-weight: 600;
+        letter-spacing: 0.5px;
+        text-align: center;
+    }    
+    .bg-bts .page-sekolah p{
+        padding-top: 20px;
+        padding-bottom: 10px;
+        max-width: 660px;
+        font-size: 17px;
+        font-weight: 400;
+        letter-spacing: 0.2px;
+        text-align: center;
+    }
+    .bg-bts .page-sekolah .button{
+        padding-top: 30px;
+    }
+    .bg-bts .page-sekolah .button .video{
+        width: 60%;
+        height: 40px;
+        display: block;
+        margin: 0 auto;
+    }
+    .bg-bts .page-sekolah .page-sekolah-img2{
+    display: none;
+    }
+
+
     /* page2 */
     .bg-bts .page2{
-        padding-top: 80px;
+        padding-top: 40px;
     }
     .bg-bts .page2 .page2-content .page2-img1{
         display: none;
@@ -481,11 +538,16 @@
  
     /* page3 */
     .bg-bts .page3 h1{
+        padding-top: 100px;
         font-size: 40px;
         font-weight: 500;
     }
+    .bg-bts .page3 .page3-box .profile-kaprog{
+        display: flex;
+    }
 
 
+    /* Delete */
     /* page4 */
     .bg-bts .page4 .page4-title{
         font-size: 40px;
@@ -494,8 +556,14 @@
     .bg-bts .page4 .page4-img1{
         display: none;
     }
+    /* Delete */
+
+
 
     /* page5 */
+    .bg-bts .page5{
+        padding-top: 200px;
+    }
     .bg-bts .page5 .page5-title{
         font-size: 40px;
         font-weight: 500;

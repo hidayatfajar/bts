@@ -17,8 +17,13 @@ import ReactPlayer from "react-player/lazy";
 
 // import image
 import logo from "./asset/Logo.png";
+import logo2 from "./asset/logo2.svg";
 import img1 from "./asset/bg1.png";
 import img1_2 from "./asset/bg1-2.png";
+
+import awan from "./asset/awan.svg";
+
+import smk from "./asset/smk.svg";
 
 import icon1 from "./asset/icon1.png";
 import icon2 from "./asset/icon2.png";
@@ -66,12 +71,14 @@ export default class LandingPage extends Component {
           >
             <Container>
               <Navbar.Brand href="#home">
-                <Image src={logo} />
+                <Image src={logo} style={{ marginTop: "10px" }} />
               </Navbar.Brand>
               <Navbar.Toggle aria-controls="offcanvasNavbar" />
+
+              {/* Nav dekstop */}
               <Nav className="menu">
                 <Nav.Link
-                  href="#deets"
+                  href="/"
                   style={{ paddingLeft: "30px", marginTop: "-10px" }}
                 >
                   Home
@@ -82,45 +89,70 @@ export default class LandingPage extends Component {
                 >
                   Guru
                 </Nav.Link>
-                <Nav.Link
-                  href="#deets"
+                {/* TEI */}
+                <NavDropdown
+                  title="TEI"
+                  id="basic-nav-dropdown"
                   style={{ paddingLeft: "30px", marginTop: "-10px" }}
                 >
-                  TEI
-                </Nav.Link>
-                <Nav.Link
-                  href="#deets"
+                  <NavDropdown.Item href="#action/3.1">TEI 1</NavDropdown.Item>
+                  <NavDropdown.Item href="#action/3.1">TEI 2</NavDropdown.Item>
+                  <NavDropdown.Item href="#action/3.1">TEI 3</NavDropdown.Item>
+                  <NavDropdown.Item href="#action/3.1">TEI 4</NavDropdown.Item>
+                </NavDropdown>{" "}
+                {/* TBSM */}
+                <NavDropdown
+                  title="TBSM"
+                  id="basic-nav-dropdown"
                   style={{ paddingLeft: "30px", marginTop: "-10px" }}
                 >
-                  TBSM
-                </Nav.Link>
-                <Nav.Link
-                  href="#deets"
+                  <NavDropdown.Item href="#action/3.1">TBSM 1</NavDropdown.Item>
+                  <NavDropdown.Item href="#action/3.1">TBSM 2</NavDropdown.Item>
+                  <NavDropdown.Item href="#action/3.1">TBSM 3</NavDropdown.Item>
+                  <NavDropdown.Item href="#action/3.1">TBSM 4</NavDropdown.Item>
+                </NavDropdown>{" "}
+                {/* TKJ */}
+                <NavDropdown
+                  title="TKJ"
+                  id="basic-nav-dropdown"
                   style={{ paddingLeft: "30px", marginTop: "-10px" }}
                 >
-                  TKJ
-                </Nav.Link>
-                <Nav.Link
-                  href="#deets"
+                  <NavDropdown.Item href="#action/3.1">TKJ 1</NavDropdown.Item>
+                  <NavDropdown.Item href="#action/3.1">TKJ 2</NavDropdown.Item>
+                  <NavDropdown.Item href="#action/3.1">TKJ 3</NavDropdown.Item>
+                </NavDropdown>{" "}
+                {/* AK */}
+                <NavDropdown
+                  title="AK"
+                  id="basic-nav-dropdown"
                   style={{ paddingLeft: "30px", marginTop: "-10px" }}
                 >
-                  AK
-                </Nav.Link>
-                <Nav.Link
-                  href="#deets"
+                  <NavDropdown.Item href="#action/3.1">AK 1</NavDropdown.Item>
+                  <NavDropdown.Item href="#action/3.1">AK 2</NavDropdown.Item>
+                  <NavDropdown.Item href="#action/3.1">AK 3</NavDropdown.Item>
+                </NavDropdown>{" "}
+                {/* RPL */}
+                <NavDropdown
+                  title="RPL"
+                  id="basic-nav-dropdown"
                   style={{ paddingLeft: "30px", marginTop: "-10px" }}
                 >
-                  RPL
-                </Nav.Link>
-                <Nav.Link
-                  href="#deets"
+                  <NavDropdown.Item href="/rpl">RPL 1</NavDropdown.Item>
+                  <NavDropdown.Item href="#action/3.1">RPL 2</NavDropdown.Item>
+                  <NavDropdown.Item href="#action/3.1">RPL 3</NavDropdown.Item>
+                </NavDropdown>{" "}
+                {/* TET  */}
+                <NavDropdown
+                  title="TET"
+                  id="basic-nav-dropdown"
                   style={{ paddingLeft: "30px", marginTop: "-10px" }}
                 >
-                  TET
-                </Nav.Link>
+                  <NavDropdown.Item href="#action/3.1">TET 1</NavDropdown.Item>
+                  <NavDropdown.Item href="#action/3.1">TET 2</NavDropdown.Item>
+                </NavDropdown>{" "}
               </Nav>
 
-              {/* Navbar Canvas */}
+              {/* Nav mobile */}
               <Navbar.Offcanvas
                 className="offcanvas-navbar"
                 id="offcanvasNavbar"
@@ -129,7 +161,7 @@ export default class LandingPage extends Component {
               >
                 <Offcanvas.Header closeButton>
                   <Offcanvas.Title id="offcanvasNavbarLabel">
-                    <Image src={logo} style={{ color: "black" }} />
+                    <Image src={logo2} style={{ paddingTop: "14px" }} />
                   </Offcanvas.Title>
                 </Offcanvas.Header>
                 <Offcanvas.Body>
@@ -138,7 +170,7 @@ export default class LandingPage extends Component {
                       href="#deets"
                       style={{
                         marginTop: "10px",
-                        color: "gray",
+                        color: "#0275d8",
                         fontSize: "18px",
                         fontWeight: "600",
                         letterSpacing: "2px",
@@ -146,11 +178,12 @@ export default class LandingPage extends Component {
                     >
                       Home
                     </Nav.Link>
+
                     <Nav.Link
                       href="#deets"
                       style={{
                         marginTop: "10px",
-                        color: "gray",
+                        color: "#0275d8",
                         fontSize: "18px",
                         fontWeight: "600",
                         letterSpacing: "2px",
@@ -158,78 +191,117 @@ export default class LandingPage extends Component {
                     >
                       Guru
                     </Nav.Link>
-                    <Nav.Link
-                      href="#deets"
+
+                    {/* TEI */}
+                    <NavDropdown
+                      title="TEI"
+                      id="offcanvasNavbarDropdown"
                       style={{
                         marginTop: "10px",
-                        color: "gray",
+                        color: "black",
                         fontSize: "18px",
                         fontWeight: "600",
                         letterSpacing: "2px",
                       }}
                     >
-                      TEI
-                    </Nav.Link>
-                    <Nav.Link
-                      href="#deets"
+                      <NavDropdown.Item href="#action3">TEI 1</NavDropdown.Item>
+                      <NavDropdown.Item href="#action3">TEI 2</NavDropdown.Item>
+                      <NavDropdown.Item href="#action3">TEI 3</NavDropdown.Item>
+                      <NavDropdown.Item href="#action3">TEI 4</NavDropdown.Item>
+                    </NavDropdown>
+
+                    {/* TBSM */}
+                    <NavDropdown
+                      title="TBSM"
+                      id="offcanvasNavbarDropdown"
                       style={{
                         marginTop: "10px",
-                        color: "gray",
+                        color: "black",
                         fontSize: "18px",
                         fontWeight: "600",
                         letterSpacing: "2px",
                       }}
                     >
-                      TBSM
-                    </Nav.Link>
-                    <Nav.Link
-                      href="#deets"
+                      <NavDropdown.Item href="#action3">
+                        TBSM 1
+                      </NavDropdown.Item>
+                      <NavDropdown.Item href="#action3">
+                        TBSM 2
+                      </NavDropdown.Item>
+                      <NavDropdown.Item href="#action3">
+                        TBSM 3
+                      </NavDropdown.Item>
+                      <NavDropdown.Item href="#action3">
+                        TBSM 4
+                      </NavDropdown.Item>
+                    </NavDropdown>
+
+                    {/* TKJ */}
+                    <NavDropdown
+                      title="TKJ"
+                      id="offcanvasNavbarDropdown"
                       style={{
                         marginTop: "10px",
-                        color: "gray",
-                        fontSize: "18px",
-                        fontWeight: "100",
-                        letterSpacing: "2px",
-                      }}
-                    >
-                      TKJ
-                    </Nav.Link>
-                    <Nav.Link
-                      href="#deets"
-                      style={{
-                        marginTop: "10px",
-                        color: "gray",
-                        fontSize: "18px",
-                        fontWeight: "600",
-                        letterSpacing: "2px",
-                      }}
-                    >
-                      AK
-                    </Nav.Link>
-                    <Nav.Link
-                      href="#deets"
-                      style={{
-                        marginTop: "10px",
-                        color: "gray",
+                        color: "black",
                         fontSize: "18px",
                         fontWeight: "600",
                         letterSpacing: "2px",
                       }}
                     >
-                      RPL
-                    </Nav.Link>
-                    <Nav.Link
-                      href="#deets"
+                      <NavDropdown.Item href="#action3">TKJ 1</NavDropdown.Item>
+                      <NavDropdown.Item href="#action3">TKJ 2</NavDropdown.Item>
+                      <NavDropdown.Item href="#action3">TKJ 3</NavDropdown.Item>
+                    </NavDropdown>
+
+                    {/* AK */}
+                    <NavDropdown
+                      title="AK"
+                      id="offcanvasNavbarDropdown"
                       style={{
                         marginTop: "10px",
-                        color: "gray",
+                        color: "black",
                         fontSize: "18px",
                         fontWeight: "600",
                         letterSpacing: "2px",
                       }}
                     >
-                      TET
-                    </Nav.Link>
+                      <NavDropdown.Item href="#action3">Ak 1</NavDropdown.Item>
+                      <NavDropdown.Item href="#action3">Ak 2</NavDropdown.Item>
+                      <NavDropdown.Item href="#action3">Ak 3</NavDropdown.Item>
+                    </NavDropdown>
+
+                    {/* RPL */}
+                    <NavDropdown
+                      title="RPL"
+                      id="offcanvasNavbarDropdown"
+                      style={{
+                        marginTop: "10px",
+                        color: "black",
+                        fontSize: "18px",
+                        fontWeight: "600",
+                        letterSpacing: "2px",
+                      }}
+                    >
+                      <NavDropdown.Item href="/rpl">RPL 1</NavDropdown.Item>
+                      <NavDropdown.Item href="#action3">RPL 2</NavDropdown.Item>
+                      <NavDropdown.Item href="#action3">RPL 3</NavDropdown.Item>
+                    </NavDropdown>
+
+                    {/* TET */}
+                    <NavDropdown
+                      title="TET"
+                      id="offcanvasNavbarDropdown"
+                      style={{
+                        marginTop: "10px",
+                        color: "black",
+                        fontSize: "18px",
+                        fontWeight: "600",
+                        letterSpacing: "2px",
+                      }}
+                    >
+                      <NavDropdown.Item href="/rpl">TET 1</NavDropdown.Item>
+                      <NavDropdown.Item href="#action3">TET 2</NavDropdown.Item>
+                    </NavDropdown>
                   </Nav>
                 </Offcanvas.Body>
               </Navbar.Offcanvas>
@@ -340,7 +412,9 @@ export default class LandingPage extends Component {
           <div className="page-sekolah">
             <Container>
               <Row>
-                <Col md={3}>Logo Sekolah</Col>
+                <Col md={3}>
+                  <Image className="page-sekolah-img1" src={smk} />
+                </Col>
                 <Col md={7}>
                   <h1>
                     THIS IS OUR SCHOOL
@@ -354,13 +428,15 @@ export default class LandingPage extends Component {
                     unggulan yang siap untuk memajukan perkembangan industri di
                     indonesia. berikut ini adalah pengenalan sekolah kami.
                   </p>
-                  <Button variant="outline-success" className="video">
-                    See Video
-                  </Button>
+                  <div className="button">
+                    <Button variant="outline-success d-block" className="video">
+                      See Video
+                    </Button>
+                  </div>
                 </Col>
                 <Col md={2}>
                   {" "}
-                  <Image className="page5-img2" src={img6} />
+                  <Image className="page-sekolah-img2" src={img6} />
                 </Col>
               </Row>
             </Container>
@@ -416,15 +492,17 @@ export default class LandingPage extends Component {
                 <Col md={4} className="col">
                   <div className="page3-box">
                     <Container>
-                      <Row>
-                        <Col md={2}>
-                          <Image className="imgKaprog" src={kaprog1} />
-                        </Col>
-                        <Col md={10}>
-                          <h6>Nama Kaprog</h6>
-                          <p>Jabatan</p>
-                        </Col>
-                      </Row>
+                      <div className="profile-kaprog d-flex">
+                        <Row>
+                          <Col md={3} xs={3}>
+                            <Image className="imgKaprog" src={kaprog1} />
+                          </Col>
+                          <Col md={9} xs={9}>
+                            <h6>Nama Kaprog</h6>
+                            <p>Jabatan</p>
+                          </Col>
+                        </Row>
+                      </div>
                     </Container>
                     <Image className="page3-img1" src={kodok} />
                   </div>
@@ -433,15 +511,17 @@ export default class LandingPage extends Component {
                 <Col md={4} className="col">
                   <div className="page3-box">
                     <Container>
-                      <Row>
-                        <Col md={2}>
-                          <Image className="imgKaprog" src={kaprog1} />
-                        </Col>
-                        <Col md={10}>
-                          <h6>Nama Kaprog</h6>
-                          <p>Jabatan</p>
-                        </Col>
-                      </Row>
+                      <div className="profile-kaprog d-flex">
+                        <Row>
+                          <Col md={3} xs={3}>
+                            <Image className="imgKaprog" src={kaprog1} />
+                          </Col>
+                          <Col md={9} xs={9}>
+                            <h6>Nama Kaprog</h6>
+                            <p>Jabatan</p>
+                          </Col>
+                        </Row>
+                      </div>
                     </Container>
                     <Image className="page3-img1" src={kodok} />
                   </div>
@@ -450,15 +530,17 @@ export default class LandingPage extends Component {
                 <Col md={4} className="col">
                   <div className="page3-box">
                     <Container>
-                      <Row>
-                        <Col md={2}>
-                          <Image className="imgKaprog" src={kaprog1} />
-                        </Col>
-                        <Col md={10}>
-                          <h6>Nama Kaprog</h6>
-                          <p>Jabatan</p>
-                        </Col>
-                      </Row>
+                      <div className="profile-kaprog d-flex">
+                        <Row>
+                          <Col md={3} xs={3}>
+                            <Image className="imgKaprog" src={kaprog1} />
+                          </Col>
+                          <Col md={9} xs={9}>
+                            <h6>Nama Kaprog</h6>
+                            <p>Jabatan</p>
+                          </Col>
+                        </Row>
+                      </div>
                     </Container>
                     <Image className="page3-img1" src={kodok} />
                   </div>
@@ -467,15 +549,17 @@ export default class LandingPage extends Component {
                 <Col md={4} className="col">
                   <div className="page3-box">
                     <Container>
-                      <Row>
-                        <Col md={2}>
-                          <Image className="imgKaprog" src={kaprog1} />
-                        </Col>
-                        <Col md={10}>
-                          <h6>Nama Kaprog</h6>
-                          <p>Jabatan</p>
-                        </Col>
-                      </Row>
+                      <div className="profile-kaprog d-flex">
+                        <Row>
+                          <Col md={3} xs={3}>
+                            <Image className="imgKaprog" src={kaprog1} />
+                          </Col>
+                          <Col md={9} xs={9}>
+                            <h6>Nama Kaprog</h6>
+                            <p>Jabatan</p>
+                          </Col>
+                        </Row>
+                      </div>
                     </Container>
                     <Image className="page3-img1" src={kodok} />
                   </div>
@@ -484,15 +568,17 @@ export default class LandingPage extends Component {
                 <Col md={4} className="col">
                   <div className="page3-box">
                     <Container>
-                      <Row>
-                        <Col md={2}>
-                          <Image className="imgKaprog" src={kaprog1} />
-                        </Col>
-                        <Col md={10}>
-                          <h6>Nama Kaprog</h6>
-                          <p>Jabatan</p>
-                        </Col>
-                      </Row>
+                      <div className="profile-kaprog d-flex">
+                        <Row>
+                          <Col md={3} xs={3}>
+                            <Image className="imgKaprog" src={kaprog1} />
+                          </Col>
+                          <Col md={9} xs={9}>
+                            <h6>Nama Kaprog</h6>
+                            <p>Jabatan</p>
+                          </Col>
+                        </Row>
+                      </div>
                     </Container>
                     <Image className="page3-img1" src={kodok} />
                   </div>
@@ -501,15 +587,17 @@ export default class LandingPage extends Component {
                 <Col md={4} className="col">
                   <div className="page3-box">
                     <Container>
-                      <Row>
-                        <Col md={2}>
-                          <Image className="imgKaprog" src={kaprog1} />
-                        </Col>
-                        <Col md={10}>
-                          <h6>Nama Kaprog</h6>
-                          <p>Jabatan</p>
-                        </Col>
-                      </Row>
+                      <div className="profile-kaprog d-flex">
+                        <Row>
+                          <Col md={3} xs={3}>
+                            <Image className="imgKaprog" src={kaprog1} />
+                          </Col>
+                          <Col md={9} xs={9}>
+                            <h6>Nama Kaprog</h6>
+                            <p>Jabatan</p>
+                          </Col>
+                        </Row>
+                      </div>
                     </Container>
                     <Image className="page3-img1" src={kodok} />
                   </div>
@@ -518,6 +606,7 @@ export default class LandingPage extends Component {
             </Container>
           </div>
 
+          {/* Delete  */}
           {/* Page 4 */}
           <div className="page4">
             <Container>
@@ -538,6 +627,7 @@ export default class LandingPage extends Component {
               </div>
             </Container>
           </div>
+          {/* Delete */}
 
           {/* Page 5 */}
           <div className="page5">
