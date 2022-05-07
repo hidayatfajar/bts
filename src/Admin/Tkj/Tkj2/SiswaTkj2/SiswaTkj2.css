@@ -1,0 +1,38 @@
+#row {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 25px;
+}
+
+#end{
+display: flex;
+justify-content: flex-end;
+}
+
+#end  Button{
+  margin: 0 20px;
+  width: 120px;
+  font-size: 13px;
+}
+
+td Button{
+  margin-right: 5px;
+  width: 100px;
+  height: 40px;
+}
+
+.pilihan{
+  display: flex;
+  justify-content: flex-end;
+  align-items: flex-end;
+}
+
+#row .page{
+  font-size: 14px;
+  color: gray;
+  width: 100px;
+  margin-top: 15px;
+}
+
+
+
