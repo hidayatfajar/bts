@@ -1,0 +1,22 @@
+
+/* Background */
+.bg-rpl{
+    width: 100%;
+    height: auto;
+    background-color: #303C3A;
+    background-size: cover;
+    color: #fff;
+    overflow: hidden;
+}
+
+.bg-rpl .col{
+    padding-top: 25px;
+}
+
+/* Phone Display or Responsive */
+@media (max-width:991px) {
+    .bg-rpl .navbar-lp .menu{
+        display: none;
+    }
+
+}
