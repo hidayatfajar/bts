@@ -4,7 +4,8 @@ import "./SiswaAk3.css";
 import React, { Component } from 'react'
 import 'react-bootstrap-table-next/dist/react-bootstrap-table2.min.css';
 import BootstrapTable from 'react-bootstrap-table-next';
-import {FaTrash, FaEdit} from "react-icons/fa";
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
+import { faTrash, faEdit } from '@fortawesome/free-solid-svg-icons'
 
 
 class SiswaAk3 extends Component {
@@ -87,7 +88,7 @@ class SiswaAk3 extends Component {
                   <Link to={`/admin/ak/edit-siswa-ak3`}>
                 <Button variant="primary" className="mr-2" block>
                 {" "}
-                <FaEdit/>
+                <FontAwesomeIcon icon={faEdit} />
                 </Button>
                 </Link>
                   </Col>
@@ -95,7 +96,7 @@ class SiswaAk3 extends Component {
                   <Link to={`/admin/siswa/ubah/${row.siswa_id}`}>
                   <Button variant="danger" className="mr-2" block>
                     {" "}
-                    <FaTrash />
+                    <FontAwesomeIcon icon={faTrash} />
                   </Button>
                 </Link>
                   </Col>

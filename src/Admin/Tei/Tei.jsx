@@ -8,7 +8,8 @@ import "./Tei.css";
 import 'react-bootstrap-table-next/dist/react-bootstrap-table2.min.css';
 import BootstrapTable from 'react-bootstrap-table-next';
 import { Link} from "react-router-dom";
-import { FaEdit } from "react-icons/fa";
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
+import {faEdit } from '@fortawesome/free-solid-svg-icons'
 
 
 
@@ -100,7 +101,7 @@ class Tei extends Component {
                   <Link to={`/admin/tei/foto-kelas-${row.list}`}>
                     <Button variant="primary" className="mr-2" block>
                       {" "}
-                      <FaEdit />
+                      <FontAwesomeIcon icon={faEdit} />
                     </Button>
                   </Link>
                 </Col>
@@ -127,7 +128,7 @@ class Tei extends Component {
                   <Link to={`/admin/tei/foto-siswa-${row.list}`}>
                     <Button variant="primary" className="mr-2" block>
                       {" "}
-                      <FaEdit />
+                      <FontAwesomeIcon icon={faEdit} />
                     </Button>
                   </Link>
                 </Col>
