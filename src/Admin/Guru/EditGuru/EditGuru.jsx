@@ -51,14 +51,11 @@ class EditGuru extends Component{
             <Button className="button2 mt-4" variant="primary">Post</Button>{' '}
             </div>
           </div>
-          </div>
-        </section>
-
-        <section>
-          <div className="container mt-3">
-            <Link to="/admin/guru">
-              <Button variant="light">Kembali</Button>
-            </Link>
+            <div className="container mt-3">
+              <Link to="/admin/guru">
+                <Button variant="light">Kembali</Button>
+              </Link>
+            </div>
           </div>
         </section>
       </div>
