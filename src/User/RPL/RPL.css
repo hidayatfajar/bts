@@ -13,10 +13,69 @@
     padding-top: 25px;
 }
 
+.bg-rpl .col .nama-siswa{
+    font-size: 16px;
+    font-weight: 500;
+    margin-top: -4px;
+    color: #050505;
+}
+
+.bg-rpl .col .quotes{
+    color: gray ;
+    font-size: 15px;
+    margin-top: -8px;
+}
+
+/* The Modal (background) */
+.bg-rpl .modal {
+    display: block; /* Hidden by default */
+    position: fixed; /* Stay in place */
+    z-index: 1; /* Sit on top */
+    padding: 25px 0 ; /* Location of the box */
+    left: 0;
+    top: 0;
+    width: 100%; /* Full width */
+    height: 100%; /* Full height */
+    overflow: auto; /* Enable scroll if needed */
+    background-color: rgba(19, 8, 8, 0.404);
+    backdrop-filter: blur(5px);
+  }
+  
+  /* Modal Content */
+  .bg-rpl .modal-content {
+    background-color: #fefefe;
+    margin: auto;
+    padding: auto;
+    border: 1px solid #888;
+    border-radius: 10px;
+    width: 30%;
+    z-index: 2;
+  }
+
+
+
 /* Phone Display or Responsive */
 @media (max-width:991px) {
+
+    .bg-rpl .modal{
+        padding-top: 100px;
+    }
+
+    .bg-rpl .modal-content {
+        width: 90%;
+      }
+
     .bg-rpl .navbar-lp .menu{
         display: none;
+    }
+    
+    .bg-rpl .col .nama-siswa{
+        text-align: center;
+        font-size: 18px;
+    }
+    
+    .bg-rpl .col .quotes{
+        text-align: center;
     }
 
 }

@@ -23,10 +23,35 @@ import FotoKelas from "../assets/FotoKelas.jpg";
 import "./RPL.css";
 
 export default class RPL1 extends Component {
+  constructor(props) {
+    super(props);
+    this.state = {
+      modal: false,
+    };
+  }
+
+  onModal = (e) => {
+    this.setState({
+      modal: !this.state.modal,
+    });
+  };
+
   render() {
     return (
       <div>
         <div className="bg-rpl">
+          {/* Modal */}
+          {this.state.modal === true ? (
+            <div className="">
+              <div id="myModal" class="modal">
+                {/* <!-- Modal content --> */}
+                <div class="modal-content" onClick={this.onModal}>
+                  <img src="https://placeimg.com/240/340/tech" alt="" />
+                </div>
+              </div>
+            </div>
+          ) : null}
+
           {/* Navbar */}
           <Navbar
             collapseOnSelect
@@ -274,7 +299,7 @@ export default class RPL1 extends Component {
           </Navbar>
 
           {/* Foto Kelas Slide */}
-          <Carousel>
+          <Carousel style={{ zIndex: "0" }}>
             <Carousel.Item>
               <img
                 className="d-block w-100"
@@ -313,120 +338,14 @@ export default class RPL1 extends Component {
                 >
                   <Card.Img
                     variant="top"
-                    src="https://placeimg.com/240/280/tech"
+                    src="https://placeimg.com/240/240/tech"
                     style={{ width: "auto" }}
+                    onClick={this.onModal}
                   />
                   <Card.Body>
-                    <p
-                      style={{
-                        fontSize: "19px",
-                        fontWeight: "500",
-                        marginBottom: "7%",
-                      }}
-                    >
-                      Fajar Nur Hidayat
-                    </p>
+                    <p className="nama-siswa">Fajar Nur Hidayat</p>
                     <Card.Text>
-                      <footer style={{ color: "grey", fontSize: "15px" }}>
-                        <cite>
-                          " Some quick example text to build on the card title
-                          and make up the bulk of the card's contentccccccc. "
-                        </cite>
-                      </footer>
-                    </Card.Text>
-                  </Card.Body>
-                </Card>
-              </Col>
-              <Col md={3} className="col">
-                <Card
-                  style={{
-                    width: "255px",
-                    height: "366px",
-                    margin: "0 auto",
-                  }}
-                >
-                  <Card.Img
-                    variant="top"
-                    src="https://placeimg.com/250/200/tech"
-                  />
-                  <Card.Body>
-                    <p
-                      style={{
-                        fontSize: "19px",
-                        fontWeight: "500",
-                        marginBottom: "7%",
-                      }}
-                    >
-                      Fajar Nur Hidayat
-                    </p>
-                    <Card.Text>
-                      <footer style={{ color: "grey", fontSize: "15px" }}>
-                        <cite>
-                          " Some quick example text to build on the card title
-                          and make up the bulk of the card's contentccccccc. "
-                        </cite>
-                      </footer>
-                    </Card.Text>
-                  </Card.Body>
-                </Card>
-              </Col>
-              <Col md={3} className="col">
-                <Card
-                  style={{
-                    width: "255px",
-                    height: "366px",
-                    margin: "0 auto",
-                  }}
-                >
-                  <Card.Img
-                    variant="top"
-                    src="https://placeimg.com/250/200/tech"
-                  />
-                  <Card.Body>
-                    <p
-                      style={{
-                        fontSize: "19px",
-                        fontWeight: "500",
-                        marginBottom: "7%",
-                      }}
-                    >
-                      Fajar Nur Hidayat
-                    </p>
-                    <Card.Text>
-                      <footer style={{ color: "grey", fontSize: "15px" }}>
-                        <cite>
-                          " Some quick example text to build on the card title
-                          and make up the bulk of the card's contentccccccc. "
-                        </cite>
-                      </footer>
-                    </Card.Text>
-                  </Card.Body>
-                </Card>
-              </Col>
-              <Col md={3} className="col">
-                <Card
-                  style={{
-                    width: "255px",
-                    height: "366px",
-                    margin: "0 auto",
-                  }}
-                >
-                  <Card.Img
-                    variant="top"
-                    src="https://placeimg.com/250/200/tech"
-                  />
-                  <Card.Body>
-                    <p
-                      style={{
-                        fontSize: "19px",
-                        fontWeight: "500",
-                        marginBottom: "7%",
-                      }}
-                    >
-                      Fajar Nur Hidayat
-                    </p>
-                    <Card.Text>
-                      <footer style={{ color: "grey", fontSize: "15px" }}>
+                      <footer className="quotes">
                         <cite>
                           " Some quick example text to build on the card title
                           and make up the bulk of the card's contentccccccc. "
@@ -440,27 +359,21 @@ export default class RPL1 extends Component {
               <Col md={3} className="col">
                 <Card
                   style={{
-                    width: "255px",
-                    height: "366px",
+                    width: "95%",
+                    height: "auto",
                     margin: "0 auto",
                   }}
                 >
                   <Card.Img
                     variant="top"
-                    src="https://placeimg.com/250/200/tech"
+                    src="https://placeimg.com/240/240/tech"
+                    style={{ width: "auto" }}
+                    onClick={this.onModal}
                   />
                   <Card.Body>
-                    <p
-                      style={{
-                        fontSize: "19px",
-                        fontWeight: "500",
-                        marginBottom: "7%",
-                      }}
-                    >
-                      Fajar Nur Hidayat
-                    </p>
+                    <p className="nama-siswa">Fajar Nur Hidayat</p>
                     <Card.Text>
-                      <footer style={{ color: "grey", fontSize: "15px" }}>
+                      <footer className="quotes">
                         <cite>
                           " Some quick example text to build on the card title
                           and make up the bulk of the card's contentccccccc. "
@@ -470,30 +383,25 @@ export default class RPL1 extends Component {
                   </Card.Body>
                 </Card>
               </Col>
+
               <Col md={3} className="col">
                 <Card
                   style={{
-                    width: "255px",
-                    height: "366px",
+                    width: "95%",
+                    height: "auto",
                     margin: "0 auto",
                   }}
                 >
                   <Card.Img
                     variant="top"
-                    src="https://placeimg.com/250/200/tech"
+                    src="https://placeimg.com/240/240/tech"
+                    style={{ width: "auto" }}
+                    onClick={this.onModal}
                   />
                   <Card.Body>
-                    <p
-                      style={{
-                        fontSize: "19px",
-                        fontWeight: "500",
-                        marginBottom: "7%",
-                      }}
-                    >
-                      Fajar Nur Hidayat
-                    </p>
+                    <p className="nama-siswa">Fajar Nur Hidayat</p>
                     <Card.Text>
-                      <footer style={{ color: "grey", fontSize: "15px" }}>
+                      <footer className="quotes">
                         <cite>
                           " Some quick example text to build on the card title
                           and make up the bulk of the card's contentccccccc. "
@@ -503,63 +411,25 @@ export default class RPL1 extends Component {
                   </Card.Body>
                 </Card>
               </Col>
+
               <Col md={3} className="col">
                 <Card
                   style={{
-                    width: "255px",
-                    height: "366px",
+                    width: "95%",
+                    height: "auto",
                     margin: "0 auto",
                   }}
                 >
                   <Card.Img
                     variant="top"
-                    src="https://placeimg.com/250/200/tech"
+                    src="https://placeimg.com/240/240/tech"
+                    style={{ width: "auto" }}
+                    onClick={this.onModal}
                   />
                   <Card.Body>
-                    <p
-                      style={{
-                        fontSize: "19px",
-                        fontWeight: "500",
-                        marginBottom: "7%",
-                      }}
-                    >
-                      Fajar Nur Hidayat
-                    </p>
+                    <p className="nama-siswa">Fajar Nur Hidayat</p>
                     <Card.Text>
-                      <footer style={{ color: "grey", fontSize: "15px" }}>
-                        <cite>
-                          " Some quick example text to build on the card title
-                          and make up the bulk of the card's contentccccccc. "
-                        </cite>
-                      </footer>
-                    </Card.Text>
-                  </Card.Body>
-                </Card>
-              </Col>
-              <Col md={3} className="col">
-                <Card
-                  style={{
-                    width: "255px",
-                    height: "366px",
-                    margin: "0 auto",
-                  }}
-                >
-                  <Card.Img
-                    variant="top"
-                    src="https://placeimg.com/250/200/tech"
-                  />
-                  <Card.Body>
-                    <p
-                      style={{
-                        fontSize: "19px",
-                        fontWeight: "500",
-                        marginBottom: "7%",
-                      }}
-                    >
-                      Fajar Nur Hidayat
-                    </p>
-                    <Card.Text>
-                      <footer style={{ color: "grey", fontSize: "15px" }}>
+                      <footer className="quotes">
                         <cite>
                           " Some quick example text to build on the card title
                           and make up the bulk of the card's contentccccccc. "
