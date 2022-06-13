@@ -14,9 +14,11 @@ import {
   Offcanvas,
   Carousel,
 } from "react-bootstrap";
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import { faTimes } from "@fortawesome/free-solid-svg-icons";
 
-import logo from "../assets/Logo.png";
-import logo2 from "../assets/Logo2.svg";
+import NavBar from "../../LandingPage/NavBar/NavBar";
+import NavBarMagic from "../../LandingPage/NavBarMagic/NavBarMagic";
 
 import FotoKelas from "../assets/FotoKelas.jpg";
 
@@ -39,13 +41,18 @@ export default class RPL1 extends Component {
   render() {
     return (
       <div>
-        <div className="bg-rpl">
+        <div className="bg-jurusan">
           {/* Modal */}
           {this.state.modal === true ? (
             <div className="">
               <div id="myModal" class="modal">
                 {/* <!-- Modal content --> */}
-                <div class="modal-content" onClick={this.onModal}>
+                <div class="modal-content">
+                  <FontAwesomeIcon
+                    icon={faTimes}
+                    className="close"
+                    onClick={this.onModal}
+                  />
                   <img src="https://placeimg.com/240/340/tech" alt="" />
                 </div>
               </div>
@@ -53,253 +60,11 @@ export default class RPL1 extends Component {
           ) : null}
 
           {/* Navbar */}
-          <Navbar
-            collapseOnSelect
-            className="navbar-lp"
-            expand="lg"
-            variant="dark"
-          >
-            <Container>
-              <Navbar.Brand href="#home">
-                <Image src={logo} style={{ marginTop: "10px" }} />
-              </Navbar.Brand>
-              <Navbar.Toggle aria-controls="offcanvasNavbar" />
-
-              {/* Nav dekstop */}
-              <Nav className="menu">
-                <Nav.Link
-                  href="/"
-                  style={{ paddingLeft: "30px", marginTop: "-10px" }}
-                >
-                  Home
-                </Nav.Link>
-                <Nav.Link
-                  href="#deets"
-                  style={{ paddingLeft: "30px", marginTop: "-10px" }}
-                >
-                  Guru
-                </Nav.Link>
-                {/* TEI */}
-                <NavDropdown
-                  title="TEI"
-                  id="basic-nav-dropdown"
-                  style={{ paddingLeft: "30px", marginTop: "-10px" }}
-                >
-                  <NavDropdown.Item href="#action/3.1">TEI 1</NavDropdown.Item>
-                  <NavDropdown.Item href="#action/3.1">TEI 2</NavDropdown.Item>
-                  <NavDropdown.Item href="#action/3.1">TEI 3</NavDropdown.Item>
-                  <NavDropdown.Item href="#action/3.1">TEI 4</NavDropdown.Item>
-                </NavDropdown>{" "}
-                {/* TBSM */}
-                <NavDropdown
-                  title="TBSM"
-                  id="basic-nav-dropdown"
-                  style={{ paddingLeft: "30px", marginTop: "-10px" }}
-                >
-                  <NavDropdown.Item href="#action/3.1">TBSM 1</NavDropdown.Item>
-                  <NavDropdown.Item href="#action/3.1">TBSM 2</NavDropdown.Item>
-                  <NavDropdown.Item href="#action/3.1">TBSM 3</NavDropdown.Item>
-                  <NavDropdown.Item href="#action/3.1">TBSM 4</NavDropdown.Item>
-                </NavDropdown>{" "}
-                {/* TKJ */}
-                <NavDropdown
-                  title="TKJ"
-                  id="basic-nav-dropdown"
-                  style={{ paddingLeft: "30px", marginTop: "-10px" }}
-                >
-                  <NavDropdown.Item href="#action/3.1">TKJ 1</NavDropdown.Item>
-                  <NavDropdown.Item href="#action/3.1">TKJ 2</NavDropdown.Item>
-                  <NavDropdown.Item href="#action/3.1">TKJ 3</NavDropdown.Item>
-                </NavDropdown>{" "}
-                {/* AK */}
-                <NavDropdown
-                  title="AK"
-                  id="basic-nav-dropdown"
-                  style={{ paddingLeft: "30px", marginTop: "-10px" }}
-                >
-                  <NavDropdown.Item href="#action/3.1">AK 1</NavDropdown.Item>
-                  <NavDropdown.Item href="#action/3.1">AK 2</NavDropdown.Item>
-                  <NavDropdown.Item href="#action/3.1">AK 3</NavDropdown.Item>
-                </NavDropdown>{" "}
-                {/* RPL */}
-                <NavDropdown
-                  title="RPL"
-                  id="basic-nav-dropdown"
-                  style={{ paddingLeft: "30px", marginTop: "-10px" }}
-                >
-                  <NavDropdown.Item href="/rpl">RPL 1</NavDropdown.Item>
-                  <NavDropdown.Item href="#action/3.1">RPL 2</NavDropdown.Item>
-                  <NavDropdown.Item href="#action/3.1">RPL 3</NavDropdown.Item>
-                </NavDropdown>{" "}
-                {/* TET  */}
-                <NavDropdown
-                  title="TET"
-                  id="basic-nav-dropdown"
-                  style={{ paddingLeft: "30px", marginTop: "-10px" }}
-                >
-                  <NavDropdown.Item href="#action/3.1">TET 1</NavDropdown.Item>
-                  <NavDropdown.Item href="#action/3.1">TET 2</NavDropdown.Item>
-                </NavDropdown>{" "}
-              </Nav>
-
-              {/* Nav mobile */}
-              <Navbar.Offcanvas
-                className="offcanvas-navbar"
-                id="offcanvasNavbar"
-                aria-labelledby="offcanvasNavbarLabel"
-                placement="end"
-              >
-                <Offcanvas.Header closeButton>
-                  <Offcanvas.Title id="offcanvasNavbarLabel">
-                    <Image src={logo2} style={{ paddingTop: "14px" }} />
-                  </Offcanvas.Title>
-                </Offcanvas.Header>
-                <Offcanvas.Body>
-                  <Nav className="justify-content-end flex-grow-1 pe-3">
-                    <Nav.Link
-                      href="/"
-                      style={{
-                        marginTop: "10px",
-                        color: "#0275d8",
-                        fontSize: "18px",
-                        fontWeight: "600",
-                        letterSpacing: "2px",
-                      }}
-                    >
-                      Home
-                    </Nav.Link>
-
-                    <Nav.Link
-                      href="#deets"
-                      style={{
-                        marginTop: "10px",
-                        color: "#0275d8",
-                        fontSize: "18px",
-                        fontWeight: "600",
-                        letterSpacing: "2px",
-                      }}
-                    >
-                      Guru
-                    </Nav.Link>
-
-                    {/* TEI */}
-                    <NavDropdown
-                      title="TEI"
-                      id="offcanvasNavbarDropdown"
-                      style={{
-                        marginTop: "10px",
-                        color: "black",
-                        fontSize: "18px",
-                        fontWeight: "600",
-                        letterSpacing: "2px",
-                      }}
-                    >
-                      <NavDropdown.Item href="#action3">TEI 1</NavDropdown.Item>
-                      <NavDropdown.Item href="#action3">TEI 2</NavDropdown.Item>
-                      <NavDropdown.Item href="#action3">TEI 3</NavDropdown.Item>
-                      <NavDropdown.Item href="#action3">TEI 4</NavDropdown.Item>
-                    </NavDropdown>
-
-                    {/* TBSM */}
-                    <NavDropdown
-                      title="TBSM"
-                      id="offcanvasNavbarDropdown"
-                      style={{
-                        marginTop: "10px",
-                        color: "black",
-                        fontSize: "18px",
-                        fontWeight: "600",
-                        letterSpacing: "2px",
-                      }}
-                    >
-                      <NavDropdown.Item href="#action3">
-                        TBSM 1
-                      </NavDropdown.Item>
-                      <NavDropdown.Item href="#action3">
-                        TBSM 2
-                      </NavDropdown.Item>
-                      <NavDropdown.Item href="#action3">
-                        TBSM 3
-                      </NavDropdown.Item>
-                      <NavDropdown.Item href="#action3">
-                        TBSM 4
-                      </NavDropdown.Item>
-                    </NavDropdown>
-
-                    {/* TKJ */}
-                    <NavDropdown
-                      title="TKJ"
-                      id="offcanvasNavbarDropdown"
-                      style={{
-                        marginTop: "10px",
-                        color: "black",
-                        fontSize: "18px",
-                        fontWeight: "600",
-                        letterSpacing: "2px",
-                      }}
-                    >
-                      <NavDropdown.Item href="#action3">TKJ 1</NavDropdown.Item>
-                      <NavDropdown.Item href="#action3">TKJ 2</NavDropdown.Item>
-                      <NavDropdown.Item href="#action3">TKJ 3</NavDropdown.Item>
-                    </NavDropdown>
-
-                    {/* AK */}
-                    <NavDropdown
-                      title="AK"
-                      id="offcanvasNavbarDropdown"
-                      style={{
-                        marginTop: "10px",
-                        color: "black",
-                        fontSize: "18px",
-                        fontWeight: "600",
-                        letterSpacing: "2px",
-                      }}
-                    >
-                      <NavDropdown.Item href="#action3">Ak 1</NavDropdown.Item>
-                      <NavDropdown.Item href="#action3">Ak 2</NavDropdown.Item>
-                      <NavDropdown.Item href="#action3">Ak 3</NavDropdown.Item>
-                    </NavDropdown>
-
-                    {/* RPL */}
-                    <NavDropdown
-                      title="RPL"
-                      id="offcanvasNavbarDropdown"
-                      style={{
-                        marginTop: "10px",
-                        color: "black",
-                        fontSize: "18px",
-                        fontWeight: "600",
-                        letterSpacing: "2px",
-                      }}
-                    >
-                      <NavDropdown.Item href="/rpl">RPL 1</NavDropdown.Item>
-                      <NavDropdown.Item href="#action3">RPL 2</NavDropdown.Item>
-                      <NavDropdown.Item href="#action3">RPL 3</NavDropdown.Item>
-                    </NavDropdown>
-
-                    {/* TET */}
-                    <NavDropdown
-                      title="TET"
-                      id="offcanvasNavbarDropdown"
-                      style={{
-                        marginTop: "10px",
-                        color: "black",
-                        fontSize: "18px",
-                        fontWeight: "600",
-                        letterSpacing: "2px",
-                      }}
-                    >
-                      <NavDropdown.Item href="/rpl">TET 1</NavDropdown.Item>
-                      <NavDropdown.Item href="#action3">TET 2</NavDropdown.Item>
-                    </NavDropdown>
-                  </Nav>
-                </Offcanvas.Body>
-              </Navbar.Offcanvas>
-            </Container>
-          </Navbar>
+          <NavBar />
+          <NavBarMagic />
 
           {/* Foto Kelas Slide */}
-          <Carousel style={{ zIndex: "0" }}>
+          <Carousel className="z-0">
             <Carousel.Item>
               <img
                 className="d-block w-100"
@@ -327,15 +92,9 @@ export default class RPL1 extends Component {
 
           {/* Foto Siswa */}
           <Container>
-            <Row>
-              <Col md={3} className="col">
-                <Card
-                  style={{
-                    width: "95%",
-                    height: "auto",
-                    margin: "0 auto",
-                  }}
-                >
+            <div className="md:flex justify-between">
+              <div className="w-full md:w-3/12 pt-7">
+                <Card className="h-auto mx-auto my-0 p-1 rounded-xl">
                   <Card.Img
                     variant="top"
                     src="https://placeimg.com/240/240/tech"
@@ -343,27 +102,24 @@ export default class RPL1 extends Component {
                     onClick={this.onModal}
                   />
                   <Card.Body>
-                    <p className="nama-siswa">Fajar Nur Hidayat</p>
+                    <p className="text-black text-base font-medium tracking-wide -mt-1">
+                      Fajar Nur Hidayat
+                    </p>
                     <Card.Text>
-                      <footer className="quotes">
+                      <footer className="text-gray-600 text-sm font-normal tracking-wide -mt-2">
                         <cite>
-                          " Some quick example text to build on the card title
-                          and make up the bulk of the card's contentccccccc. "
+                          " Lorem ipsum dolor sit amet consectetur adipisicing
+                          elit. Perspiciatis molestias vero eos labore ea
+                          maiores voluptates eaque iusto, dicta inventore a
+                          rerum. "
                         </cite>
                       </footer>
                     </Card.Text>
                   </Card.Body>
                 </Card>
-              </Col>
-
-              <Col md={3} className="col">
-                <Card
-                  style={{
-                    width: "95%",
-                    height: "auto",
-                    margin: "0 auto",
-                  }}
-                >
+              </div>
+              <div className="w-full md:w-3/12 pt-7">
+                <Card className="h-auto mx-auto my-0 p-1 rounded-xl">
                   <Card.Img
                     variant="top"
                     src="https://placeimg.com/240/240/tech"
@@ -371,75 +127,23 @@ export default class RPL1 extends Component {
                     onClick={this.onModal}
                   />
                   <Card.Body>
-                    <p className="nama-siswa">Fajar Nur Hidayat</p>
+                    <p className="text-black text-base font-medium tracking-wide -mt-1">
+                      Fajar Nur Hidayat
+                    </p>
                     <Card.Text>
-                      <footer className="quotes">
+                      <footer className="text-gray-600 text-sm font-normal tracking-wide -mt-2">
                         <cite>
-                          " Some quick example text to build on the card title
-                          and make up the bulk of the card's contentccccccc. "
+                          " Lorem ipsum dolor sit amet consectetur adipisicing
+                          elit. Perspiciatis molestias vero eos labore ea
+                          maiores voluptates eaque iusto, dicta inventore a
+                          rerum. "
                         </cite>
                       </footer>
                     </Card.Text>
                   </Card.Body>
                 </Card>
-              </Col>
-
-              <Col md={3} className="col">
-                <Card
-                  style={{
-                    width: "95%",
-                    height: "auto",
-                    margin: "0 auto",
-                  }}
-                >
-                  <Card.Img
-                    variant="top"
-                    src="https://placeimg.com/240/240/tech"
-                    style={{ width: "auto" }}
-                    onClick={this.onModal}
-                  />
-                  <Card.Body>
-                    <p className="nama-siswa">Fajar Nur Hidayat</p>
-                    <Card.Text>
-                      <footer className="quotes">
-                        <cite>
-                          " Some quick example text to build on the card title
-                          and make up the bulk of the card's contentccccccc. "
-                        </cite>
-                      </footer>
-                    </Card.Text>
-                  </Card.Body>
-                </Card>
-              </Col>
-
-              <Col md={3} className="col">
-                <Card
-                  style={{
-                    width: "95%",
-                    height: "auto",
-                    margin: "0 auto",
-                  }}
-                >
-                  <Card.Img
-                    variant="top"
-                    src="https://placeimg.com/240/240/tech"
-                    style={{ width: "auto" }}
-                    onClick={this.onModal}
-                  />
-                  <Card.Body>
-                    <p className="nama-siswa">Fajar Nur Hidayat</p>
-                    <Card.Text>
-                      <footer className="quotes">
-                        <cite>
-                          " Some quick example text to build on the card title
-                          and make up the bulk of the card's contentccccccc. "
-                        </cite>
-                      </footer>
-                    </Card.Text>
-                  </Card.Body>
-                </Card>
-              </Col>
-            </Row>
+              </div>
+            </div>
           </Container>
 
           <br />
