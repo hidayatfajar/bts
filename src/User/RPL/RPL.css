@@ -1,6 +1,6 @@
 
 /* Background */
-.bg-rpl{
+.bg-jurusan{
     width: 100%;
     height: auto;
     background-color: #303C3A;
@@ -9,29 +9,13 @@
     overflow: hidden;
 }
 
-.bg-rpl .col{
-    padding-top: 25px;
-}
-
-.bg-rpl .col .nama-siswa{
-    font-size: 16px;
-    font-weight: 500;
-    margin-top: -4px;
-    color: #050505;
-}
-
-.bg-rpl .col .quotes{
-    color: gray ;
-    font-size: 15px;
-    margin-top: -8px;
-}
 
 /* The Modal (background) */
-.bg-rpl .modal {
+.bg-jurusan .modal {
     display: block; /* Hidden by default */
     position: fixed; /* Stay in place */
     z-index: 1; /* Sit on top */
-    padding: 25px 0 ; /* Location of the box */
+    padding-top: 80px; /* Location of the box */
     left: 0;
     top: 0;
     width: 100%; /* Full width */
@@ -42,40 +26,42 @@
   }
   
   /* Modal Content */
-  .bg-rpl .modal-content {
-    background-color: #fefefe;
+  .bg-jurusan .modal-content {
+    background: none;
     margin: auto;
     padding: auto;
-    border: 1px solid #888;
-    border-radius: 10px;
-    width: 30%;
+    border: none;
+    width: 28%;
     z-index: 2;
   }
 
-
+  .bg-jurusan .modal-content .close{
+      width: fit-content;
+      float: right;
+      position: absolute;
+      right: 10px;
+      top: 6px;
+      color: #fff;
+      font-size: 24px;
+      padding-bottom: 10px;
+      cursor: pointer;
+  }
 
 /* Phone Display or Responsive */
 @media (max-width:991px) {
 
-    .bg-rpl .modal{
-        padding-top: 100px;
+    .bg-jurusan .modal{
+        padding-top: 120px;
     }
 
-    .bg-rpl .modal-content {
+    .bg-jurusan .modal-content {
         width: 90%;
       }
 
-    .bg-rpl .navbar-lp .menu{
-        display: none;
-    }
-    
-    .bg-rpl .col .nama-siswa{
-        text-align: center;
-        font-size: 18px;
-    }
-    
-    .bg-rpl .col .quotes{
-        text-align: center;
-    }
+      .bg-jurusan .modal-content .close{
+          top: -35px;
+          margin-right: -10px;
+          font-size: 30px;
+      }
 
 }
