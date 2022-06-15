@@ -43,7 +43,7 @@ export default class RPL1 extends Component {
           {/* Modal */}
           {this.state.modal === true ? (
             <div className="">
-              <div id="myModal" class="modal">
+              <div id="myModal" class="modal" onClick={this.onModal}>
                 {/* <!-- Modal content --> */}
                 <div class="modal-content" onClick={this.onModal}>
                   <img src="https://placeimg.com/240/340/tech" alt="" />
