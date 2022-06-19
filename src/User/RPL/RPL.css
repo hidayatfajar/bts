@@ -28,7 +28,6 @@
   /* Modal Content */
   .bg-jurusan .modal-content {
     background: none;
-    margin: auto;
     padding: auto;
     border: none;
     width: 28%;
@@ -47,6 +46,11 @@
       cursor: pointer;
   }
 
+  .img-siswa{
+    width: 280px;
+    height: 280px;
+    object-fit: cover;
+  }
 /* Phone Display or Responsive */
 @media (max-width:991px) {
 
@@ -64,4 +68,8 @@
           font-size: 30px;
       }
 
+      .img-siswa {
+        width: 356px;
+        height: 356px;
+      }
 }
