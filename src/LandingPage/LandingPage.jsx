@@ -37,6 +37,8 @@ import img6 from "./asset/bg5.png";
 
 import kaprog1 from "./asset/kaprog1.png";
 import kodok from "./asset/kodok.png";
+import kaprogRPL from "./asset/jurusan/kaprog-rpl.svg";
+import jurusanRPL from "./asset/jurusan/jurusan-rpl.JPG";
 
 import galery from "./asset/Galery.png";
 
@@ -51,6 +53,7 @@ import team8 from "./asset/maghvi.svg";
 import team9 from "./asset/fadil.svg";
 
 // import folder
+import NavBarMagic from "./NavBarMagic/NavBarMagic";
 import NavBar from "./NavBar/NavBar";
 
 // import css
@@ -62,448 +65,449 @@ export default class LandingPage extends Component {
     return (
       <div>
         <div className="bg-bts">
+          <NavBarMagic />
+
           <NavBar />
-          <Navig/>
+          <br />
           <br />
           <br />
           <br />
 
           {/* Page1 */}
-          <div className="page1">
-            <Container>
-              <Row>
-                <Col md={6}>
-                  <div className="page1-content">
-                    <h1>
+          <div className="-mt-10 md:flex md:pt-16 pb-36">
+            <div>
+              <Container>
+                <div>
+                  <div className="w-full text-center md:w-6/12 ">
+                    <h1 className="text-title">
                       LET'S WRITE OUR STORY{" "}
                       <span className="gradient-text">EXIST 16.</span>{" "}
                     </h1>
-                    <p>
+
+                    <p className="max-w-480 pt-4 text-lg font-light tracking-wider md:font-normal  md:text-left">
                       Kumpulan foto untuk mengenang masa kita Bersama selama 3
                       tahun di SMKN 2 Kota Bekasi.
                     </p>
-                    <div className="button">
-                      <Button className="login">Sign Up</Button>
+                    <div className="justify-center flex pt-4 md:justify-start">
+                      <button className="w-28 bg-blue-600 rounded-full p-1">
+                        Sign Up
+                      </button>
                       <br />
-                      <Button variant="outline-success" className="video">
+                      <button
+                        variant="outline-success"
+                        className="ml-5 w-28 rounded-full transition delay-150 outline 
+                        text-green-700 outline-green-700 hover:bg-green-700 hover:text-white
+                        "
+                      >
                         See Video
-                      </Button>
+                      </button>
                     </div>
                     <br />
                     <br />
-                    <div className="fungsi">
-                      <Row>
-                        <Col md={1} xs={1}>
-                          <Image className="icon1-page1" src={icon1} />
-                        </Col>
-                        <Col md={4} xs={5}>
-                          <h6>Upload Foto</h6>
-                          <p>
-                            Dapat mengupload foto untuk menjadi kenangan atau
-                            candaan.
-                          </p>
-                        </Col>
-                        <Col md={1} xs={1}>
-                          <Image className="garis" src={garis} />
-                        </Col>
-                        <Col md={1} xs={1}>
-                          <Image className="icon2-page1" src={icon2} />
-                        </Col>
-                        <Col md={4} xs={4}>
-                          <h6 className="qoutes">Upload Quotes</h6>
-                          <p className="qoutes">
-                            Dapat mengupload quotes yang bersifat membangun
-                            untuk menjadi Tujuan.
-                          </p>
-                        </Col>
-                      </Row>
-                    </div>
                   </div>
-                </Col>
+                </div>
+              </Container>
 
-                <Col md={6}>
-                  <Image src={img1} className="page1-img" alt="" />
-                  <Image src={img1_2} className="page1-img2" alt="" />
-                </Col>
-              </Row>
-            </Container>
+              <div>
+                <img
+                  src={img1}
+                  className="gambar-1 
+                  hidden md:block ml-96"
+                  alt=""
+                />
+
+                <img
+                  src={img1_2}
+                  className="mt-2 w-full mx-auto md:hidden md:mt-0 "
+                  alt=""
+                />
+              </div>
+            </div>
           </div>
 
           {/* Page akt */}
-          <div className="page-akt">
+          <div className="-mt-16 md:-mt-52">
             <Container>
-              <Row>
-                <Col md={6}>
-                  <div className="page-akt-content">
-                    <h1>
-                      REWIND VIDEO{" "}
-                      <span className="gradient-text">EXIST 16.</span>{" "}
-                    </h1>
-                    <p>
-                      Beberapa video rewind untuk mengenang kebersamaan kita
-                      angkatan 16, sebagai bagian dari siswa SMKN 2.
-                    </p>
-                    <div className="button">
-                      <Button variant="outline-success" className="video">
-                        See Video
-                      </Button>
-                    </div>
+              <div className="md:flex ">
+                <div className="w-full md:w-5/12">
+                  <h1 className="text-title">
+                    REWIND VIDEO <br />
+                    <span className="gradient-text">EXIST 16.</span>{" "}
+                  </h1>
+                  <p className="max-w- md:max-w-480 pt-4 text-lg font-normal tracking-wider md:font-light  ">
+                    Beberapa video rewind untuk mengenang kebersamaan kita
+                    angkatan 16, sebagai bagian dari siswa SMKN 2.
+                  </p>
+                  <div className="pt-4">
+                    <button
+                      variant="outline-success"
+                      className="w-32 h-9 rounded-full transition delay-150 outline 
+                    text-green-700 outline-green-700 hover:bg-green-700 hover:text-white
+                    "
+                    >
+                      See Video
+                    </button>
                   </div>
-                </Col>
-                <Col md={6} className="col-video">
+                </div>
+                <div className="hidden md:w-1/12 md:block"></div>
+                <div className="w-full pt-20 mx-auto md:w-6/12 md:pt-0">
                   <div className="player-wrapper">
                     <ReactPlayer
-                      className="react-player"
-                      url="https://youtu.be/JzPknKdkGO8"
+                      className="react-player "
                       width="100%"
                       height="100%"
+                      url="https://youtu.be/JzPknKdkGO8"
                       loop={true}
                     />
                   </div>
-                </Col>
-              </Row>
+                </div>
+              </div>
             </Container>
           </div>
 
           {/* Page Sekolah */}
-          <div className="page-sekolah">
+          <div className="pt-40 md:pt-56">
             <Container>
-              <Row>
-                <Col md={3}>
-                  <Image className="page-sekolah-img1" src={smk} />
-                </Col>
-                <Col md={7}>
-                  <h1>
-                    THIS IS OUR SCHOOL
-                    <br />
-                    <span className="gradient-text">
-                      SMKN 2 KOTA BEKASI.
-                    </span>{" "}
-                  </h1>
-                  <p>
-                    Sekolah yang memiliki 6 jurusan didalam nya, serta kelas
-                    unggulan yang siap untuk memajukan perkembangan industri di
-                    indonesia. berikut ini adalah pengenalan sekolah kami.
-                  </p>
-                  <div className="button">
-                    <Button variant="outline-success d-block" className="video">
-                      See Video
-                    </Button>
+              <div className="md:flex">
+                <div className="md:-ml-16">
+                  <img
+                    className="w-64 mx-auto md:w-96 pt-16  md:mx-0"
+                    src={smk}
+                  />
+                </div>
+                <div className="w-full ml-0 pt-3 md:w-8/12 md:ml-14 md:pt-0">
+                  <div className="text-center">
+                    <h1 className="max-w-none mt-5 text-3xl  md:max-w-2xl  md:text-5xl md:font-semibold md:text-left tracking-wide">
+                      THIS IS OUR SCHOOL
+                      <br />
+                      <span className="gradient-text">
+                        SMKN 2 KOTA BEKASI.
+                      </span>{" "}
+                    </h1>
+                    <p
+                      className="pt-4 pb-3  text-base 
+                    tracking-wider
+                    md:text-lg md:text-left md:tracking-wide"
+                    >
+                      Sekolah yang memiliki 6 jurusan didalam nya, serta kelas
+                      unggulan yang siap untuk memajukan perkembangan industri
+                      di indonesia. berikut ini adalah pengenalan sekolah kami.
+                    </p>
                   </div>
-                </Col>
-                <Col md={2}>
+                  <div className="flex justify-center  md:justify-start">
+                    <button
+                      className="w-40 md:w-32 h-9 rounded-full transition delay-150 outline
+                    text-green-700 outline-green-700 hover:bg-green-700 hover:text-white
+                    "
+                    >
+                      See Video
+                    </button>
+                  </div>
+                </div>
+                <div className="hidden md:block mt-10 -mr-40 ">
                   {" "}
-                  <Image className="page-sekolah-img2" src={img6} />
-                </Col>
-              </Row>
-            </Container>
-          </div>
-
-          {/* Page 2 */}
-          <div className="page2">
-            <Container>
-              <div className="page2-content">
-                <Row>
-                  <Col md={3} xs={0}>
-                    <Image className="page2-img1" src={img2} />
-                  </Col>
-                  <Col md={9} xs={12}>
-                    <h4>
-                      KATA SAMBUTAN{" "}
-                      <span className="gradient-text">KEPALA SEKOLAH</span>
-                    </h4>
-                    <br />
-                    <div className="box-sambutan">
-                      <p>
-                        {" "}
-                        Lorem ipsum dolor sit amet consectetur adipisicing elit.
-                        Officia excepturi, modi, perferendis quasi neque, illum
-                        molestiae nulla atque debitis adipisci est facere
-                        repellendus dolorem facilis nostrum veniam possimus qui.
-                        Nulla?
-                      </p>
-                      <br />
-                      <br />
-                      <h6>Dr. Agus Wimbadi M.pd</h6>
-                      <p>Kepala Sekolah SMKN 2</p>
-                    </div>
-                    <Image className="page2-img2" src={img3} />
-                  </Col>
-                  <Col></Col>
-                  <Col>
-                    <Image className="page2-img3" src={img4} />
-                  </Col>
-                </Row>
+                  <img className="" src={img6} />
+                </div>
               </div>
             </Container>
           </div>
 
-          {/* Page 3 */}
-          <div className="page3">
+          {/* Page Sambutan */}
+          <div className="pt-52 pb-10">
             <Container>
-              <h1 className="page3-title">
+              <div className="md:flex">
+                <div className="hidden md:block -ml-44 -mt-14 ">
+                  <Image className="" src={img2} />
+                </div>
+                <div className="w-full ml-0 md:w-9/12 md:ml-16">
+                  <h4 className="text-left md:text-right text-3xl md:text-2xl font-medium md:font-semibold tracking-widest">
+                    KATA SAMBUTAN {""}
+                    <br className="block md:hidden" />
+                    <span className="gradient-text"> KEPALA SEKOLAH</span>
+                  </h4>
+                  <br />
+                  <div className="bg-gray-500 py-8 pl-4 pr-4 md:pl-60 md:pr-4 rounded-xl">
+                    <p>
+                      {" "}
+                      Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                      Officia excepturi, modi, perferendis quasi neque, illum
+                      molestiae nulla atque debitis adipisci est facere
+                      repellendus dolorem facilis nostrum veniam possimus qui.
+                      Nulla?
+                    </p>
+                    <br />
+                    <br />
+                    <h6>Dr. Agus Wimbadi M.pd</h6>
+                    <p>Kepala Sekolah SMKN 2</p>
+                  </div>
+                </div>
+              </div>
+              <Image className="-mt-40 md:-mt-96 ml-32" src={img3} />
+              <div className="hidden">
+                <Image className="" src={img4} />
+              </div>
+            </Container>
+          </div>
+
+          {/* Page Jurusan */}
+          <div className="pt-32">
+            <Container>
+              <h1 className="max-w-md text-title">
                 Beberapa list <span className="gradient-text"> Jurusan.</span>
               </h1>
               <br />
-              <Row>
-                <Col md={4} className="col">
-                  <div className="page3-box">
-                    <Container>
-                      <div className="profile-kaprog d-flex">
-                        <Row>
-                          <Col md={3} xs={3}>
-                            <Image className="imgKaprog" src={kaprog1} />
-                          </Col>
-                          <Col md={9} xs={9}>
-                            <h6>Nama Kaprog</h6>
-                            <p>Jabatan</p>
-                          </Col>
-                        </Row>
+              <div className=" md:flex justify-between ">
+                <div className="w-full pt-4 md:pt-0 md:w-1/3">
+                  <div className="w-min mx-auto bg-gray-500 p-3  rounded-xl">
+                    <div className="flex">
+                      <div className="profile">
+                        <img className="w-14" src={kaprogRPL} />
                       </div>
-                    </Container>
-                    <Image className="page3-img1" src={kodok} />
-                  </div>
-                </Col>
 
-                <Col md={4} className="col">
-                  <div className="page3-box">
-                    <Container>
-                      <div className="profile-kaprog d-flex">
-                        <Row>
-                          <Col md={3} xs={3}>
-                            <Image className="imgKaprog" src={kaprog1} />
-                          </Col>
-                          <Col md={9} xs={9}>
-                            <h6>Nama Kaprog</h6>
-                            <p>Jabatan</p>
-                          </Col>
-                        </Row>
+                      <div className="ml-4 mt-2">
+                        <h6 className="-mb-1 text-base tracking-wider">
+                          Andi Susandi, S.Kom
+                        </h6>
+                        <p className="text-sm font-light tracking-widest">
+                          Ketua Pemrograman RPL
+                        </p>
                       </div>
-                    </Container>
-                    <Image className="page3-img1" src={kodok} />
+                    </div>
+                    <Image
+                      className="max-w-xs mx-auto rounded-xl pt-2"
+                      src={jurusanRPL}
+                    />
                   </div>
-                </Col>
-
-                <Col md={4} className="col">
-                  <div className="page3-box">
-                    <Container>
-                      <div className="profile-kaprog d-flex">
-                        <Row>
-                          <Col md={3} xs={3}>
-                            <Image className="imgKaprog" src={kaprog1} />
-                          </Col>
-                          <Col md={9} xs={9}>
-                            <h6>Nama Kaprog</h6>
-                            <p>Jabatan</p>
-                          </Col>
-                        </Row>
+                </div>
+                <div className="w-full pt-4 md:pt-0 md:w-1/3">
+                  <div className="w-min mx-auto bg-gray-500 p-3  rounded-xl">
+                    <div className="flex">
+                      <div className="profile">
+                        <img className="" src={kaprog1} />
                       </div>
-                    </Container>
-                    <Image className="page3-img1" src={kodok} />
-                  </div>
-                </Col>
-
-                <Col md={4} className="col">
-                  <div className="page3-box">
-                    <Container>
-                      <div className="profile-kaprog d-flex">
-                        <Row>
-                          <Col md={3} xs={3}>
-                            <Image className="imgKaprog" src={kaprog1} />
-                          </Col>
-                          <Col md={9} xs={9}>
-                            <h6>Nama Kaprog</h6>
-                            <p>Jabatan</p>
-                          </Col>
-                        </Row>
+                      <div className="ml-4 mt-1">
+                        <h6 className="-mb-1 text-base tracking-wider">
+                          Nama Kaprog
+                        </h6>
+                        <p className="text-sm font-light tracking-widest">
+                          Jabatan
+                        </p>
                       </div>
-                    </Container>
-                    <Image className="page3-img1" src={kodok} />
+                    </div>
+                    <Image
+                      className="max-w-xs mx-auto rounded-xl"
+                      src={kodok}
+                    />
                   </div>
-                </Col>
-
-                <Col md={4} className="col">
-                  <div className="page3-box">
-                    <Container>
-                      <div className="profile-kaprog d-flex">
-                        <Row>
-                          <Col md={3} xs={3}>
-                            <Image className="imgKaprog" src={kaprog1} />
-                          </Col>
-                          <Col md={9} xs={9}>
-                            <h6>Nama Kaprog</h6>
-                            <p>Jabatan</p>
-                          </Col>
-                        </Row>
+                </div>
+                <div className="w-full pt-4 md:pt-0 md:w-1/3">
+                  <div className="w-min mx-auto bg-gray-500 p-3  rounded-xl">
+                    <div className="flex">
+                      <div className="profile">
+                        <img className="" src={kaprog1} />
                       </div>
-                    </Container>
-                    <Image className="page3-img1" src={kodok} />
-                  </div>
-                </Col>
-
-                <Col md={4} className="col">
-                  <div className="page3-box">
-                    <Container>
-                      <div className="profile-kaprog d-flex">
-                        <Row>
-                          <Col md={3} xs={3}>
-                            <Image className="imgKaprog" src={kaprog1} />
-                          </Col>
-                          <Col md={9} xs={9}>
-                            <h6>Nama Kaprog</h6>
-                            <p>Jabatan</p>
-                          </Col>
-                        </Row>
+                      <div className="ml-4 mt-1">
+                        <h6 className="-mb-1 text-base tracking-wider">
+                          Nama Kaprog
+                        </h6>
+                        <p className="text-sm font-light tracking-widest">
+                          Jabatan
+                        </p>
                       </div>
-                    </Container>
-                    <Image className="page3-img1" src={kodok} />
+                    </div>
+                    <Image
+                      className="max-w-xs mx-auto rounded-xl"
+                      src={kodok}
+                    />
                   </div>
-                </Col>
-              </Row>
-            </Container>
-          </div>
+                </div>
+              </div>
 
-          {/* Delete  */}
-          {/* Page 4 */}
-          <div className="page4">
-            <Container>
-              <Row>
-                <Col md={8}>
-                  <Image className="page4-img1" src={img5} />
-                </Col>
-                <Col md={4}>
-                  <h1 className="page4-title text-end">
-                    Galery Foto
-                    <br />
-                    <span className="gradient-text">Siswa.</span>
-                  </h1>
-                </Col>
-              </Row>
-              <div className="slide-galery">
-                <Image className="galery" src={galery} />
+              <div className=" md:flex justify-between">
+                <div className="w-full pt-4 md:pt-0 md:w-1/3">
+                  <div className="w-min mx-auto bg-gray-500 p-3  rounded-xl">
+                    <div className="flex">
+                      <div className="profile">
+                        <img className="" src={kaprog1} />
+                      </div>
+                      <div className="ml-4 mt-1">
+                        <h6 className="-mb-1 text-base tracking-wider">
+                          Nama Kaprog
+                        </h6>
+                        <p className="text-sm font-light tracking-widest">
+                          Jabatan
+                        </p>
+                      </div>
+                    </div>
+                    <Image
+                      className="max-w-xs mx-auto rounded-xl"
+                      src={kodok}
+                    />
+                  </div>
+                </div>
+                <div className="w-full pt-4 md:pt-0 md:w-1/3">
+                  <div className="w-min mx-auto bg-gray-500 p-3  rounded-xl">
+                    <div className="flex">
+                      <div className="profile">
+                        <img className="" src={kaprog1} />
+                      </div>
+                      <div className="ml-4 mt-1">
+                        <h6 className="-mb-1 text-base tracking-wider">
+                          Nama Kaprog
+                        </h6>
+                        <p className="text-sm font-light tracking-widest">
+                          Jabatan
+                        </p>
+                      </div>
+                    </div>
+                    <Image
+                      className="max-w-xs mx-auto rounded-xl"
+                      src={kodok}
+                    />
+                  </div>
+                </div>
+                <div className="w-full pt-4 md:pt-0 md:w-1/3">
+                  <div className="w-min mx-auto bg-gray-500 p-3  rounded-xl">
+                    <div className="flex">
+                      <div className="profile">
+                        <img className="" src={kaprog1} />
+                      </div>
+                      <div className="ml-4 mt-1">
+                        <h6 className="-mb-1 text-base tracking-wider">
+                          Nama Kaprog
+                        </h6>
+                        <p className="text-sm font-light tracking-widest">
+                          Jabatan
+                        </p>
+                      </div>
+                    </div>
+                    <Image
+                      className="max-w-xs mx-auto rounded-xl"
+                      src={kodok}
+                    />
+                  </div>
+                </div>
               </div>
             </Container>
           </div>
-          {/* Delete */}
 
-          {/* Page 5 */}
-          <div className="page5">
+          {/* Page Tim Pembuat */}
+          <div className="pt-56">
             <Container>
-              <Row>
-                <Col md={5}>
-                  <h1 className="page5-title">
+              <div className="flex ">
+                <div className="w-full md:w-5/12">
+                  <h1 className="text-title">
                     Tim Pembuat <span className="gradient-text">Website.</span>
                   </h1>
-                </Col>
-                <Col className="garis" md={1}>
-                  <Image className="page5-img1" src={garis} />
-                </Col>
-                <Col md={4}>
-                  <p className="page5-text">
+                </div>
+                <div className="hidden md:block w-1/12">
+                  <Image className="h-36 -ml-4" src={garis} />
+                </div>
+                <div className="hidden md:block w-4/12">
+                  <p className="-ml-7 ">
                     Lorem ipsum dolor sit amet consectetur, adipisicing elit.
                     Fugit, molestiae obcaecati rerum illo velit earum
                     perferendis! Velit quod voluptatibus, tenetur qui illum,
                     dolorem iste tempore accusantium delectus rem, ipsa
                     molestias?
                   </p>
-                </Col>
-                <Col md={1}>
-                  <Image className="page5-img2" src={img6} />
-                </Col>
-              </Row>
+                </div>
+                <div className="-mt-12 -mr-36 md:-mr-40">
+                  <Image className="" src={img6} />
+                </div>
+              </div>
               <br />
-              <Row>
-                <Col md={4} className="col">
-                  <div className="box-team">
-                    <Image className="varits" src={team1} />
-                  </div>
-                </Col>
-                <Col md={4} className="col">
-                  <div className="box-team">
-                    <Image className="fajar" src={team2} />
-                  </div>
-                </Col>
-                <Col md={4} className="col">
-                  <div className="box-team">
-                    <Image className="rafly" src={team3} />
-                  </div>
-                </Col>
-              </Row>
 
-              <Row>
-                <Col md={4} className="col">
-                  <div className="box-team">
-                    <Image className="angga" src={team4} />
+              <div className=" md:flex -mt-32">
+                <div className="w-full mt-4 md:w-1/3 md:mt-0">
+                  <div className="w-fit mx-auto bg-white/30 backdrop-blur-sm rounded-xl">
+                    <Image className="mx-auto" src={team1} />
                   </div>
-                </Col>
-                <Col md={4} className="col">
-                  <div className="box-team">
-                    <Image className="ade" src={team5} />
+                </div>
+                <div className="w-full mt-4 md:w-1/3 md:mt-0">
+                  <div className="w-fit mx-auto bg-white/30 backdrop-blur-sm pt-2 rounded-xl">
+                    <Image className=" mx-auto" src={team2} />
                   </div>
-                </Col>
-                <Col md={4} className="col">
-                  <div className="box-team">
-                    <Image className="raka" src={team6} />
+                </div>
+                <div className="w-full mt-4 md:w-1/3 md:mt-0">
+                  <div className="w-fit mx-auto bg-white/30 backdrop-blur-sm pt-1 rounded-xl">
+                    <Image className="mx-auto" src={team3} />
                   </div>
-                </Col>
-              </Row>
+                </div>
+              </div>
 
-              <Row>
-                <Col md={4} className="col">
-                  <div className="box-team">
-                    <Image className="abel" src={team7} />
+              <div className="md:flex md:pt-3">
+                <div className="w-full mt-4 md:w-1/3 md:mt-0">
+                  <div className="w-fit mx-auto bg-white/30 backdrop-blur-sm rounded-xl">
+                    <Image className="pt-3 mx-auto" src={team4} />
                   </div>
-                </Col>
-                <Col md={4} className="col">
-                  <div className="box-team">
-                    <Image className="maghvi" src={team8} />
+                </div>
+                <div className="w-full mt-4 md:w-1/3 md:mt-0">
+                  <div className="w-fit mx-auto bg-white/30 backdrop-blur-sm pt-2 rounded-xl">
+                    <Image className=" mx-auto" src={team5} />
                   </div>
-                </Col>
-                <Col md={4} className="col">
-                  <div className="box-team">
-                    <Image className="fadil" src={team9} />
+                </div>
+                <div className="w-full mt-4 md:w-1/3 md:mt-0">
+                  <div className="w-fit mx-auto bg-white/30 backdrop-blur-sm pt-1 rounded-xl">
+                    <Image className="pt-1 mx-auto" src={team6} />
                   </div>
-                </Col>
-              </Row>
+                </div>
+              </div>
+
+              <div className="md:flex md:pt-3">
+                <div className="w-full mt-4 md:w-1/3 md:mt-0">
+                  <div className="w-fit mx-auto bg-white/30 backdrop-blur-sm rounded-xl">
+                    <Image className="pt-3 mx-auto" src={team7} />
+                  </div>
+                </div>
+                <div className="w-full mt-4 md:w-1/3 md:mt-0">
+                  <div className="w-fit mx-auto bg-white/30 backdrop-blur-sm pt-2 rounded-xl">
+                    <Image className=" mx-auto" src={team8} />
+                  </div>
+                </div>
+                <div className="w-full mt-4 md:w-1/3 md:mt-0">
+                  <div className="w-fit mx-auto bg-white/30 backdrop-blur-sm pt-1 rounded-xl">
+                    <Image className="pt-4 mx-auto" src={team9} />
+                  </div>
+                </div>
+              </div>
             </Container>
           </div>
 
+          {/* Footer */}
           <br />
           <br />
           <br />
-          <div className="footer">
+          <div className="pt-10 bg-gray-600">
             <Container>
-              <div className="footer-logo">
-                <Image className="footer-logo-img" src={logo} />
+              <div className="">
+                <Image className="w-48" src={logo} />
               </div>
-              <Row style={{ paddingTop: "6px" }}>
-                <Col md={5}>
-                  <div className="footer-text">
-                    <p>
-                      Lorem ipsum dolor, sit amet consectetur adipisicing elit.
-                      Aspernatur, tempore tenetur. Atque velit aliquid
-                      quibusdam, saepe et nihil beatae necessitatibus, enim eum
-                      impedit inventore ut, eveniet temporibus debitis possimus
-                      quasi!
-                    </p>
-                    <p style={{ paddingTop: "6px" }}>
-                      &copy; Copyright by 12 RPL 3 Team
-                    </p>
+              <div className="py-2 md:flex justify-between">
+                <div className="w-full md:w-5/12">
+                  <p className="tracking-wide">
+                    Lorem ipsum dolor, sit amet consectetur adipisicing elit.
+                    Aspernatur, tempore tenetur. Atque velit aliquid quibusdam,
+                    saepe et nihil beatae necessitatibus, enim eum impedit
+                    inventore ut, eveniet temporibus debitis possimus quasi!
+                  </p>
+                  <p className="pt-2 tracking-wide">
+                    &copy; Copyright by 12 RPL 3 Team
+                  </p>
+                </div>
+                <div className="hidden md:block w-6/12">
+                  <div className="flex justify-between">
+                    <h6 className="menu-footer">Home</h6>
+                    <h6 className="menu-footer">Guru</h6>
+                    <h6 className="menu-footer">TEI</h6>
+                    <h6 className="menu-footer">TSM</h6>
+                    <h6 className="menu-footer">TKJ</h6>
+                    <h6 className="menu-footer">AK</h6>
+                    <h6 className="menu-footer">RPL</h6>
+                    <h6 className="menu-footer">TET</h6>
                   </div>
-                </Col>
-                <Col md={{ span: 6, offset: 1 }}>
-                  <div className="footer-menu d-flex">
-                    <h6>Home</h6>
-                    <h6>Guru</h6>
-                    <h6>TEI</h6>
-                    <h6>TSM</h6>
-                    <h6>TKJ</h6>
-                    <h6>AK</h6>
-                    <h6>RPL</h6>
-                    <h6>TET</h6>
-                  </div>
-                </Col>
-              </Row>
+                </div>
+              </div>
             </Container>
           </div>
         </div>
