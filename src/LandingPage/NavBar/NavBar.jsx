@@ -28,7 +28,7 @@ export default function NavBar() {
           {/* Nav dekstop */}
           <div className="hidden md:block">
             <Nav>
-              <Nav.Link to="/">Home</Nav.Link>
+              <Nav.Link href="/">Home</Nav.Link>
               <Nav.Link href="#deets" className="ml-8">
                 Guru
               </Nav.Link>

@@ -46,3 +46,7 @@ code {
 .text-title{
   @apply text-4xl font-medium  md:text-left md:text-5xl  md:font-semibold tracking-wide;
 }
+
+.bg-maker{
+  @apply w-fit h-fit mx-auto bg-white/30 backdrop-blur-sm  rounded-xl;
+}
