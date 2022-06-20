@@ -63,7 +63,7 @@ const SiswaList = () => {
             <Link
               to={{ pathname: `/admin/siswa/tambah/`, state: { id: kelas_id } }}
             >
-              <button className="bg-sky-600 py-2 px-4 rounded hover:bg-sky-800 text-white text-sm font-medium flex items-center">
+              <button className="bg-sky-600 py-2 px-4 no-underline rounded hover:bg-sky-800 text-white text-sm font-medium flex items-center">
                 <FontAwesomeIcon icon={faPlus} />
                 &ensp;Add
               </button>

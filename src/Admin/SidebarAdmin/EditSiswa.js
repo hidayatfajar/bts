@@ -1,10 +1,11 @@
 import React, { useState, useEffect } from "react";
-import { Link, useParams, useHistory } from "react-router-dom";
+import { Link, useParams, useHistory, useLocation } from "react-router-dom";
 import axios from "axios";
-import { Card, Button, Container, Row, Col, Form } from "react-bootstrap";
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import { faImage } from "@fortawesome/free-solid-svg-icons";
 import Swal from "sweetalert2";
 
-const EditSiswa = () => {
+const EditSiswa = (props) => {
   const [nis, setNis] = useState("");
   const [nama, setNama] = useState("");
   const [image, setImage] = useState("");
@@ -21,6 +22,8 @@ const EditSiswa = () => {
     setPreview(URL.createObjectURL(img));
     console.log(kelas);
   };
+
+  const location = useLocation();
 
   const getDataById = async () => {
     const res = await axios.get(`/siswa/${siswa_id}`);
@@ -78,6 +81,7 @@ const EditSiswa = () => {
       console.log(data);
     } catch (error) {
       console.log(error);
+      console.log(location.state.id);
     }
   };
 
@@ -88,97 +92,130 @@ const EditSiswa = () => {
 
   return (
     <div>
-      <Container>
-        <Card>
-          <Card.Body>
-            <Card.Title>Edit Siswa</Card.Title>
-            <hr />
-            <Form onSubmit={updateSiswa}>
-              <Card.Text as="div">
-                <Row>
-                  <Col md={8}>
-                    <Form.Group className="mb-3">
-                      <Form.Label>NIS</Form.Label>
-                      <Form.Control
-                        type="text"
-                        placeholder="NIS"
-                        value={nis}
+      <div className="container">
+      <p className="text-3xl font-semibold mb-3">Ubah Siswa</p>
+        <div className="w-full shadow rounded border-2 border-gray-200">
+          <div className="p-2">
+          <form onSubmit={updateSiswa}>
+              <div className="grid grid-cols-3 gap-4 pt-4">
+                <div className="col-span-2  rounded p-4 ">
+                  <div className="form-group mb-3">
+                    <label className="block font-semibold">
+                      <span className="block text-md text-gray-700 mb-2">
+                        NIS <span className="text-red-500">*</span>
+                      </span>
+                      <input
+                        className="form-control placeholder:italic placeholder:text-sm"
+                        type="number"
+                        placeholder="Masukkan NIS Siswa *"
                         onChange={(e) => setNis(e.target.value)}
+                        value={nis}
                       />
-                    </Form.Group>
-                    <Form.Group className="mb-3">
-                      <Form.Label>Nama</Form.Label>
-                      <Form.Control
+                    </label>
+                  </div>
+                  <div className="form-group mb-3">
+                    <label className="block font-semibold">
+                      <span className=" block text-md text-gray-700 whitespace-nowrap mb-2">
+                        Nama <span className="text-red-500">*</span>
+                      </span>
+                      <input
+                        className="form-control placeholder:italic placeholder:text-sm"
                         type="text"
                         placeholder="Nama"
-                        value={nama}
                         onChange={(e) => setNama(e.target.value)}
+                        value={nama}
                       />
-                    </Form.Group>
-                    <Form.Group className="mb-3">
-                      <Form.Label>Quote</Form.Label>
-                      <Form.Control
+                    </label>
+                  </div>
+                  <div className="form-group mb-3">
+                    <label className="block font-semibold">
+                      <span className="block text-md text-gray-700 whitespace-nowrap mb-2">
+                        Quote <span className="text-red-500">*</span>
+                      </span>
+                      <textarea
+                        className="form-control placeholder:italic placeholder:text-sm"
+                        rows="3"
                         type="text"
-                        placeholder="Quotes"
-                        value={quotes}
+                        placeholder="Masukkan Quotes * ( Max : 100 Karakter )"
                         onChange={(e) => setQuotes(e.target.value)}
+                        value={quotes}
                       />
-                    </Form.Group>
-                    <Form.Group className="mb-3">
-                      <Form.Label>Kelas</Form.Label>
-                      <Form.Select name="kelasid" onChange={handleChange}>
+                    </label>
+                  </div>
+
+                  <div className="form-group mb-3">
+                    <label className="block font-semibold">
+                      <span className="block text-md text-gray-700 whitespace-nowrap mb-2">
+                        Kelas <span className="text-red-500">*</span>
+                      </span>
+                      <select
+                        className="form-control italic text-sm"
+                        onChange={handleChange}
+                        name="kelas_id"
+                      >
                         <option value="">=== Pilih Kelas ===</option>
                         {kelas.map((kelasid, index) => (
                           <option key={index} value={kelasid.kelas_id}>
                             {kelasid.kelas_nama}
                           </option>
                         ))}
-                      </Form.Select>
-                    </Form.Group>
-                  </Col>
-                  <Col>
-                    <Form.Group className="mb-3">
-                      <Form.Label>Gambar</Form.Label>
-                      <Form.Control
-                        type="file"
-                        name="image"
-                        accept="image/*"
-                        onChange={loadGambar}
-                      />
-                    </Form.Group>
+                      </select>
+                    </label>
+                  </div>
+                <div className="inline-flex">
+                  <button className="bg-sky-600 py-2 px-4 no-underline rounded hover:bg-sky-800 text-white text-sm font-medium flex items-center">
+                    Add
+                  </button>
+                  {/* <Link to={`/admin/siswa/kelas/${location.state.id}`}> */}
+                    <button className="bg-gray-600 py-2 px-4 rounded no-underline hover:bg-gray-800 text-white text-sm font-medium flex items-center ml-3">
+                      Back
+                    </button>
+                  {/* </Link> */}
+                </div>
+                </div>
+                <div className="flex flex-col justify-center items-center -mt-20">
+                  <div className="flex flex-col justify-center items-center ">
+                    <div className="flex w-full text-left">
+                      <span className="font-semibold">
+                        Gambar <span className="text-red-500">*</span>
+                      </span>
+                    </div>
                     {preview ? (
                       <img
                         src={preview}
                         alt="preview"
-                        width={200}
-                        height={245}
-                        style={{
-                          marginLeft: "20px",
-                          border: "1px solid black",
-                        }}
+                        className="mt-3 w-64 h-64 object-cover rounded border-2 border-gray-300 flex justify-center items-center mb-3"
                       />
-                    ) : ( 
+                    ) : (
                       <img
-                        src={"http://localhost:8000/public/images/ak/ak3/" + image}
+                        src={
+                          "http://localhost:8000/public/images/ak/ak3/" + image
+                        }
                         alt="preview"
-                        width={190}
-                        height={245}
-                        style={{
-                          marginLeft: "20px",
-                          border: "1px solid black",
-                        }}
+                        className="mt-3 w-64 h-64 object-cover rounded border-2 border-gray-300 flex justify-center items-center mb-3"
                       />
                     )}
-                  </Col>
-                </Row>
-              </Card.Text>
-              <Button variant="primary" type="submit">
-                Edit
-              </Button>
-            </Form>
-          </Card.Body>
-        </Card>
-      </Container>
+                        <label className="block font-semibold">
+                          <input
+                            type="file"
+                            className="block w-full text-sm text-slate-500
+                            file:mr-4 file:py-2 file:px-4
+                            file:rounded-full file:border-0
+                            file:text-sm file:font-semibold
+                            file:bg-gray-100 file:text-gray-700
+                            hover:file:bg-gray-200
+                          "
+                            onChange={loadGambar}
+                          />
+                    </label>
+                  </div>
+                </div>
+                      {/* DISINI */}
+              </div>
+            </form>
+          </div>
+        </div>
+      </div>
     </div>
   );
 };
