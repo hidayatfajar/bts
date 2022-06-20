@@ -7,7 +7,15 @@ module.exports = {
       spacing: {
         'custom': '28rem',
         '128': '32rem',
-      }
+      },
+      screens: {
+        'tablet': '640px',
+
+        'laptop': '1024px',
+
+        'desktop': '1280px',
+
+      },
     },
   },
   plugins: [],
