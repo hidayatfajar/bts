@@ -15,7 +15,13 @@ import {
   Carousel,
 } from "react-bootstrap";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import { faTimes, faArrowLeft, faArrowRight } from "@fortawesome/free-solid-svg-icons";
+import {
+  faTimes,
+  faArrowLeft,
+  faArrowRight,
+  faChevronLeft,
+  faChevronRight,
+} from "@fortawesome/free-solid-svg-icons";
 
 import NavBar from "../../LandingPage/NavBar/NavBar";
 import NavBarMagic from "../../LandingPage/NavBarMagic/NavBarMagic";
@@ -89,17 +95,20 @@ export default function RPL1() {
               <div className="flex justify-center">
                 <div className="back mt-60 ">
                   <button
-                    className="bg-slate-600 md:p-3 md:w-14 md:h-14 sm:p-2 sm:w-12 sm:h-12 rounded-full"
+                    className="bg-none md:bg-slate-600 sm:p-0 md:p-3 sm:w-auto md:w-14 sm:h-auto md:h-14 rounded-full"
                     disabled={siswaIndex === 0 ? true : false}
                     onClick={(e) => {
                       setSiswaIndex(siswaIndex - 1);
                     }}
                   >
-                    <FontAwesomeIcon  icon={faArrowLeft} />
+                    <FontAwesomeIcon
+                      className="text-3xl md:text-base"
+                      icon={faChevronLeft}
+                    />
                   </button>
                 </div>
                 {/* <!-- Modal content --> */}
-                <div className="modal-content md:mx-3 sm:mx-2">
+                <div className="modal-content md:mx-3 -mx-1  ">
                   <FontAwesomeIcon
                     icon={faTimes}
                     className="close"
@@ -115,12 +124,15 @@ export default function RPL1() {
                 </div>
                 <div className="next mt-60">
                   <button
-                    className="bg-slate-600 md:p-3 md:w-14 md:h-14 sm:p-2 sm:w-12 sm:h-12 rounded-full"
+                    className="bg-none md:bg-slate-600 sm:p-0 md:p-3 sm:w-auto md:w-14 sm:h-auto md:h-14 rounded-full"
                     onClick={(e) => {
                       setSiswaIndex(siswaIndex + 1);
                     }}
                   >
-                    <FontAwesomeIcon icon={faArrowRight}/>
+                    <FontAwesomeIcon
+                      className="text-3xl md:text-base"
+                      icon={faChevronRight}
+                    />
                   </button>
                 </div>
               </div>
@@ -135,17 +147,18 @@ export default function RPL1() {
         {/* Foto Kelas Slide */}
         <Carousel className="z-0">
           {gambar.map((item, index) => {
-            return (
-              item.gambar_jenis == 'wajib' ? (<Carousel.Item key={index}>
+            return item.gambar_jenis == "wajib" ? (
+              <Carousel.Item key={index}>
                 <img
                   className="d-block w-100"
                   src={
-                    'http://localhost:8000/public/images/ak/ak1/' + item.gambar_nama
+                    "http://localhost:8000/public/images/ak/ak1/" +
+                    item.gambar_nama
                   }
                   alt={item.gambar_nama}
                 />
-              </Carousel.Item>) : null
-            );
+              </Carousel.Item>
+            ) : null;
           })}
         </Carousel>
 
@@ -191,19 +204,19 @@ export default function RPL1() {
         <Container>
           <Row>
             {gambar.map((item, index) => {
-              return (
-                item.gambar_jenis == 'bebas' ? (<Col md={6} xs={12} className="col">
-                <Image 
-                  key={index}
-                  src={
-                    'http://localhost:8000/public/images/ak/ak1/' + item.gambar_nama
-                  }
-                  style={{ width: "100%", height: "100%" }}
-                />
-              </Col>) : null
-              )
+              return item.gambar_jenis == "bebas" ? (
+                <Col md={6} xs={12} className="col">
+                  <Image
+                    key={index}
+                    src={
+                      "http://localhost:8000/public/images/ak/ak1/" +
+                      item.gambar_nama
+                    }
+                    style={{ width: "100%", height: "100%" }}
+                  />
+                </Col>
+              ) : null;
             })}
-            
           </Row>
         </Container>
         <br />

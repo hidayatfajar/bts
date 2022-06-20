@@ -60,12 +60,12 @@ const NavBarMagic = () => {
         expand="lg"
         variant="dark"
         id="nav"
-        className="bg-white/30 backdrop-blur-xl"
+        className="bg-white/30 backdrop-blur-xl flex items-center"
         style={{ top: visible ? "-220px" : "0" }}
       >
         <Container>
           <Navbar.Brand href="#home">
-            <Image src={logo} className="mt-2" />
+            <Image src={logo} className="w-24 " />
           </Navbar.Brand>
           <Navbar.Toggle aria-controls="offcanvasNavbar" />
 

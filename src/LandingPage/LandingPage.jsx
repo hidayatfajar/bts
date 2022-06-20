@@ -256,8 +256,8 @@ export default class LandingPage extends Component {
                 Beberapa list <span className="gradient-text"> Jurusan.</span>
               </h1>
               <br />
-              <div className=" md:flex justify-between ">
-                <div className="w-full pt-4 md:pt-0 md:w-1/3">
+              <div className=" md:grid grid-cols-3 space-y-4 md:space-y-0 gap-4 mx-auto ">
+                <div className="w-full pt-0 md:pt-0 ">
                   <div className="w-min mx-auto bg-gray-500 p-3  rounded-xl">
                     <div className="flex">
                       <div className="profile">
@@ -279,51 +279,119 @@ export default class LandingPage extends Component {
                     />
                   </div>
                 </div>
-                <div className="w-full pt-4 md:pt-0 md:w-1/3">
+                <div className="w-full pt-0 md:pt-0 ">
                   <div className="w-min mx-auto bg-gray-500 p-3  rounded-xl">
                     <div className="flex">
                       <div className="profile">
-                        <img className="" src={kaprog1} />
+                        <img className="w-14" src={kaprogRPL} />
                       </div>
-                      <div className="ml-4 mt-1">
+
+                      <div className="ml-4 mt-2">
                         <h6 className="-mb-1 text-base tracking-wider">
-                          Nama Kaprog
+                          Andi Susandi, S.Kom
                         </h6>
                         <p className="text-sm font-light tracking-widest">
-                          Jabatan
+                          Ketua Pemrograman RPL
                         </p>
                       </div>
                     </div>
                     <Image
-                      className="max-w-xs mx-auto rounded-xl"
-                      src={kodok}
+                      className="max-w-xs mx-auto rounded-xl pt-2"
+                      src={jurusanRPL}
                     />
                   </div>
                 </div>
-                <div className="w-full pt-4 md:pt-0 md:w-1/3">
+                <div className="w-full pt-0 md:pt-0 ">
                   <div className="w-min mx-auto bg-gray-500 p-3  rounded-xl">
                     <div className="flex">
                       <div className="profile">
-                        <img className="" src={kaprog1} />
+                        <img className="w-14" src={kaprogRPL} />
                       </div>
-                      <div className="ml-4 mt-1">
+
+                      <div className="ml-4 mt-2">
                         <h6 className="-mb-1 text-base tracking-wider">
-                          Nama Kaprog
+                          Andi Susandi, S.Kom
                         </h6>
                         <p className="text-sm font-light tracking-widest">
-                          Jabatan
+                          Ketua Pemrograman RPL
                         </p>
                       </div>
                     </div>
                     <Image
-                      className="max-w-xs mx-auto rounded-xl"
-                      src={kodok}
+                      className="max-w-xs mx-auto rounded-xl pt-2"
+                      src={jurusanRPL}
+                    />
+                  </div>
+                </div>
+                <div className="w-full pt-0 md:pt-0 ">
+                  <div className="w-min mx-auto bg-gray-500 p-3  rounded-xl">
+                    <div className="flex">
+                      <div className="profile">
+                        <img className="w-14" src={kaprogRPL} />
+                      </div>
+
+                      <div className="ml-4 mt-2">
+                        <h6 className="-mb-1 text-base tracking-wider">
+                          Andi Susandi, S.Kom
+                        </h6>
+                        <p className="text-sm font-light tracking-widest">
+                          Ketua Pemrograman RPL
+                        </p>
+                      </div>
+                    </div>
+                    <Image
+                      className="max-w-xs mx-auto rounded-xl pt-2"
+                      src={jurusanRPL}
+                    />
+                  </div>
+                </div>
+                <div className="w-full pt-0 md:pt-0 ">
+                  <div className="w-min mx-auto bg-gray-500 p-3  rounded-xl">
+                    <div className="flex">
+                      <div className="profile">
+                        <img className="w-14" src={kaprogRPL} />
+                      </div>
+
+                      <div className="ml-4 mt-2">
+                        <h6 className="-mb-1 text-base tracking-wider">
+                          Andi Susandi, S.Kom
+                        </h6>
+                        <p className="text-sm font-light tracking-widest">
+                          Ketua Pemrograman RPL
+                        </p>
+                      </div>
+                    </div>
+                    <Image
+                      className="max-w-xs mx-auto rounded-xl pt-2"
+                      src={jurusanRPL}
+                    />
+                  </div>
+                </div>
+                <div className="w-full pt-0 md:pt-0 ">
+                  <div className="w-min mx-auto bg-gray-500 p-3  rounded-xl">
+                    <div className="flex">
+                      <div className="profile">
+                        <img className="w-14" src={kaprogRPL} />
+                      </div>
+
+                      <div className="ml-4 mt-2">
+                        <h6 className="-mb-1 text-base tracking-wider">
+                          Andi Susandi, S.Kom
+                        </h6>
+                        <p className="text-sm font-light tracking-widest">
+                          Ketua Pemrograman RPL
+                        </p>
+                      </div>
+                    </div>
+                    <Image
+                      className="max-w-xs mx-auto rounded-xl pt-2"
+                      src={jurusanRPL}
                     />
                   </div>
                 </div>
               </div>
 
-              <div className=" md:flex justify-between">
+              {/* <div className=" md:flex justify-between">
                 <div className="w-full pt-4 md:pt-0 md:w-1/3">
                   <div className="w-min mx-auto bg-gray-500 p-3  rounded-xl">
                     <div className="flex">
@@ -387,7 +455,7 @@ export default class LandingPage extends Component {
                     />
                   </div>
                 </div>
-              </div>
+              </div> */}
             </Container>
           </div>
 
