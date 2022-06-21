@@ -451,31 +451,31 @@ export default class LandingPage extends Component {
 
               <div className="md:grid grid-cols-3 space-y-4 md:space-y-0 gap-4 -mt-24 md:-mt-36">
                 <div className="bg-maker ">
-                  <Image className="" src={team1} />
+                  <Image className="w-full" src={team1} />
                 </div>
                 <div className="bg-maker">
-                  <Image className="pt-2" src={team2} />
+                  <Image className="w-full pt-2" src={team2} />
                 </div>
                 <div className="bg-maker">
-                  <Image className="pt-1" src={team3} />
+                  <Image className="w-full pt-1" src={team3} />
                 </div>{" "}
                 <div className="bg-maker">
-                  <Image className="pt-3 " src={team4} />
+                  <Image className="w-full pt-3 " src={team4} />
                 </div>{" "}
                 <div className="bg-maker">
-                  <Image className=" pt-2" src={team5} />
+                  <Image className="w-full pt-2" src={team5} />
                 </div>
                 <div className="bg-maker">
-                  <Image className="pt-2 " src={team6} />
+                  <Image className="w-full pt-2 " src={team6} />
                 </div>{" "}
                 <div className="bg-maker">
-                  <Image className="pt-3 " src={team7} />
+                  <Image className="w-full pt-3 " src={team7} />
                 </div>{" "}
                 <div className="bg-maker">
-                  <Image className="pt-2  " src={team8} />
+                  <Image className="w-full pt-2  " src={team8} />
                 </div>{" "}
                 <div className="bg-maker">
-                  <Image className="pt-4 " src={team9} />
+                  <Image className="w-full pt-4 " src={team9} />
                 </div>
               </div>
             </Container>
