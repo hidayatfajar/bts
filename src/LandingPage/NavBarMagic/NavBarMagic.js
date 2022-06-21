@@ -65,34 +65,30 @@ const NavBarMagic = () => {
       >
         <Container>
           <Navbar.Brand href="#home">
-            <Image src={logo} className="w-24 " />
+            <Image src={logo} className="w-28 md:w-auto " />
           </Navbar.Brand>
           <Navbar.Toggle aria-controls="offcanvasNavbar" />
 
           {/* Nav dekstop */}
           <div className="hidden md:block">
             <Nav>
-              <Nav.Link to="/">Home</Nav.Link>
+              <Nav.Link href="/">Home</Nav.Link>
               <Nav.Link href="#deets" className="ml-8">
                 Guru
               </Nav.Link>
-              {jurusan.map((jurusan, index) => {
-                  return (
-                    <Nav.Link
-                      key={index}
-                      to={`/jurusan/${jurusan.jurusan_id}`}
-                      style={{
-                        marginTop: "10px",
-                        color: "#0275d8",
-                        fontSize: "18px",
-                        fontWeight: "600",
-                        letterSpacing: "2px",
-                      }}
-                    >
-                      {jurusan.jurusan_nama}
-                    </Nav.Link>
-                  );
-                })}
+              {jurusan.map(
+                (jurusan) => (
+                  <Nav.Link
+                    as={Link}
+                    className="ml-8"
+                    to={`/jurusan/${jurusan.jurusan_id}`}
+                    key={jurusan.jurusan_id}
+                  >
+                    {jurusan.jurusan_nama}
+                  </Nav.Link>
+                ),
+                []
+              )}
             </Nav>
           </div>
 
@@ -105,109 +101,40 @@ const NavBarMagic = () => {
           >
             <Offcanvas.Header closeButton>
               <Offcanvas.Title id="offcanvasNavbarLabel">
-                <Image src={logo2} style={{ paddingTop: "14px" }} />
+                <Image src={logo2}  />
               </Offcanvas.Title>
             </Offcanvas.Header>
             <Offcanvas.Body>
-              <Nav className="justify-content-end flex-grow-1 pe-3">
+              <Nav >
                 <Nav.Link
                   href="/"
-                  style={{
-                    marginTop: "10px",
-                    color: "#0275d8",
-                    fontSize: "18px",
-                    fontWeight: "600",
-                    letterSpacing: "2px",
-                  }}
+                  className="text-blue-600 text-lg font-semibold tracking-widest"
                 >
                   Home
                 </Nav.Link>
 
                 <Nav.Link
                   href="#deets"
-                  style={{
-                    marginTop: "10px",
-                    color: "#0275d8",
-                    fontSize: "18px",
-                    fontWeight: "600",
-                    letterSpacing: "2px",
-                  }}
+                  className="mt-[10px] text-blue-600 text-lg font-semibold tracking-widest"                  
                 >
                   Guru
                 </Nav.Link>
 
+              {jurusan.map(
+                (jurusan) => (
                 <Nav.Link
+                  as={Link}
                   href="#deets"
-                  style={{
-                    marginTop: "10px",
-                    color: "#0275d8",
-                    fontSize: "18px",
-                    fontWeight: "600",
-                    letterSpacing: "2px",
-                  }}
+                  className="mt-[10px] text-blue-600 text-lg font-semibold tracking-widest"  
+                  to={`/jurusan/${jurusan.jurusan_id}`}
+                  key={jurusan.jurusan_id}  
                 >
-                  TEI
+                  {jurusan.jurusan_nama}
+
                 </Nav.Link>
-                <Nav.Link
-                  href="#deets"
-                  style={{
-                    marginTop: "10px",
-                    color: "#0275d8",
-                    fontSize: "18px",
-                    fontWeight: "600",
-                    letterSpacing: "2px",
-                  }}
-                >
-                  TBSM
-                </Nav.Link>
-                <Nav.Link
-                  href="rpl"
-                  style={{
-                    marginTop: "10px",
-                    color: "#0275d8",
-                    fontSize: "18px",
-                    fontWeight: "600",
-                    letterSpacing: "2px",
-                  }}
-                >
-                  TKJ
-                </Nav.Link>
-                <Nav.Link
-                  href="#deets"
-                  style={{
-                    marginTop: "10px",
-                    color: "#0275d8",
-                    fontSize: "18px",
-                    fontWeight: "600",
-                    letterSpacing: "2px",
-                  }}
-                >
-                  AK
-                </Nav.Link>
-                <Nav.Link
-                  href="rpl"
-                  style={{
-                    marginTop: "10px",
-                    color: "#0275d8",
-                    fontSize: "18px",
-                    fontWeight: "600",
-                    letterSpacing: "2px",
-                  }}
-                >
-                  RPL
-                </Nav.Link>
-                <Nav.Link
-                  href="#deets"
-                  style={{
-                    marginTop: "10px",
-                    color: "#0275d8",
-                    fontSize: "18px",
-                    fontWeight: "600",
-                    letterSpacing: "2px",
-                  }}
-                >
-                  TET
-                </Nav.Link>
+                ),
+                []
+              )}
               </Nav>
             </Offcanvas.Body>
           </Navbar.Offcanvas>

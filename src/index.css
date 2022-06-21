@@ -48,5 +48,5 @@ code {
 }
 
 .bg-maker{
-  @apply w-fit h-fit mx-auto bg-white/30 backdrop-blur-sm  rounded-xl;
+  @apply w-auto h-auto mx-auto bg-white/30 backdrop-blur-sm  rounded-xl;
 }

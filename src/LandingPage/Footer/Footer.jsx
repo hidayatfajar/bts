@@ -29,7 +29,7 @@ export default class Footer extends Component {
             </div>
             <div className="py-2 md:flex justify-between">
               <div className="w-full md:w-5/12">
-                <p className="tracking-wide">
+                <p className="pt-2 tracking-wide">
                   Lorem ipsum dolor, sit amet consectetur adipisicing elit.
                   Aspernatur, tempore tenetur. Atque velit aliquid quibusdam,
                   saepe et nihil beatae necessitatibus, enim eum impedit

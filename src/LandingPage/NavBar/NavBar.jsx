@@ -21,7 +21,7 @@ export default function NavBar() {
       <Navbar collapseOnSelect expand="lg" variant="dark">
         <Container>
           <Navbar.Brand href="#home">
-            <Image src={logo} className="mt-2" />
+            <Image src={logo} className="w-28 md:w-auto" />
           </Navbar.Brand>
           <Navbar.Toggle aria-controls="offcanvasNavbar" />
 
@@ -57,53 +57,39 @@ export default function NavBar() {
           >
             <Offcanvas.Header closeButton>
               <Offcanvas.Title id="offcanvasNavbarLabel">
-                <Image src={logo2} style={{ paddingTop: "14px" }} />
+                <Image src={logo2} />
               </Offcanvas.Title>
             </Offcanvas.Header>
             <Offcanvas.Body>
-              <Nav className="justify-content-end flex-grow-1 pe-3">
+              <Nav>
                 <Nav.Link
                   href="/"
-                  style={{
-                    marginTop: "10px",
-                    color: "#0275d8",
-                    fontSize: "18px",
-                    fontWeight: "600",
-                    letterSpacing: "2px",
-                  }}
+                  className="text-blue-600 text-lg font-semibold tracking-widest"
                 >
                   Home
                 </Nav.Link>
 
                 <Nav.Link
                   href="#deets"
-                  style={{
-                    marginTop: "10px",
-                    color: "#0275d8",
-                    fontSize: "18px",
-                    fontWeight: "600",
-                    letterSpacing: "2px",
-                  }}
+                  className="mt-[10px] text-blue-600 text-lg font-semibold tracking-widest"
                 >
                   Guru
                 </Nav.Link>
-                {jurusan.map((jurusan, index) => {
-                  return (
+
+                {jurusan.map(
+                  (jurusan) => (
                     <Nav.Link
-                      key={index}
+                      as={Link}
+                      href="#deets"
+                      className="mt-[10px] text-blue-600 text-lg font-semibold tracking-widest"
                       to={`/jurusan/${jurusan.jurusan_id}`}
-                      style={{
-                        marginTop: "10px",
-                        color: "#0275d8",
-                        fontSize: "18px",
-                        fontWeight: "600",
-                        letterSpacing: "2px",
-                      }}
+                      key={jurusan.jurusan_id}
                     >
                       {jurusan.jurusan_nama}
                     </Nav.Link>
-                  );
-                })}
+                  ),
+                  []
+                )}
               </Nav>
             </Offcanvas.Body>
           </Navbar.Offcanvas>
