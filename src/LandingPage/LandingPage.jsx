@@ -58,7 +58,6 @@ import NavBar from "./NavBar/NavBar";
 
 // import css
 import "./LandingPage.css";
-import Navig from "../User/RPL/Navig";
 import Footer from "./Footer/Footer";
 
 export default class LandingPage extends Component {
