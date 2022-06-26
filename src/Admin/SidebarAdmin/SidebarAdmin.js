@@ -9,7 +9,6 @@ import {
   faChartArea,
 } from "@fortawesome/free-solid-svg-icons";
 import axios from "axios";
-import "./SidebarAdmin.css";
 import Navigation from "./Navigation";
 import KelasList from "./KelasList";
 import Dashboard from "./Dashboard";
@@ -21,13 +20,7 @@ import AddGuru from './AddGuru';
 import FotoList from "./FotoList";
 
 const SideBar = () => {
-  const [sidebar, setSidebar] = useState("sidebar");
-  const [main, setMain] = useState("main");
-  const [text, setText] = useState("block");
-  const [button, setbutton] = useState("button");
-  const [btnleft, setBtnleft] = useState("block");
-  const [btnright, setBtnright] = useState("none");
-  const [mode, setMode] = useState(1);
+
   const [content, setContent] = useState([]);
   const [guru, setGuru] = useState([]);
 
@@ -44,49 +37,29 @@ const SideBar = () => {
     getContent();
   }, []);
 
-  const changeSidebar = () => {
-    if (mode === 0) {
-      setSidebar("sidebar1");
-      setMain("main1");
-      setbutton("button1");
-      setText("none");
-      setBtnleft("none");
-      setBtnright("block");
-      setMode(1);
-    } else {
-      setSidebar("sidebar");
-      setMain("main");
-      setbutton("button");
-      setText("block");
-      setBtnleft("block");
-      setBtnright("none");
-      setMode(0);
-    }
-  };
+ 
 
   return (
     <div>
-      <div className="admin">
         <Navigation />
 
-        <div className={sidebar}>
-          <div className="admin">
+        <div className="hidden tablet:hidden laptop:block h-full w-60 fixed z-10 top-10 left-0 bg-[#25262D] overflow-auto overflow-x-hidden overflow-y-auto">
             <br />
             <br />
-            <Link to={`/admin`}>
-              <span className="icon" style={{ color: "white" }}>
+            <Link to={`/admin`} className="menu-sidebar">
+              <span >
                 <FontAwesomeIcon
                   icon={faChartArea}
-                  style={{ marginLeft: "3px" }}
+                  className="ml-1"
                 />{" "}
                 Dashboard
               </span>
             </Link>
-            <Link to={`/admin/guru`}>
-              <span className="icon" style={{ color: "white" }}>
+            <Link to={`/admin/guru`} className="menu-sidebar">
+              <span  >
                 <FontAwesomeIcon
                   icon={faChartArea}
-                  style={{ marginLeft: "3px" }}
+                  className="ml-1"
                 />{" "}
                 Guru
               </span>
@@ -94,11 +67,11 @@ const SideBar = () => {
             {content.map((jurusan, index) => {
               return (
                 <div key={index}>
-                  <Link to={`/admin/jurusan/${jurusan.jurusan_id}`}>
-                    <span className="icon">
+                  <Link to={`/admin/jurusan/${jurusan.jurusan_id}`} className="menu-sidebar">
+                    <span >
                       <FontAwesomeIcon
                         icon={faChartArea}
-                        style={{ marginLeft: "3px" }}
+                        className="ml-1"
                       />{" "}
                       {jurusan.jurusan_nama}
                     </span>
@@ -107,23 +80,10 @@ const SideBar = () => {
               );
             })}
 
-            <div className={button}>
-              <FontAwesomeIcon
-                style={{ display: btnleft }}
-                icon={faChevronLeft}
-                onClick={changeSidebar}
-              />
-              <FontAwesomeIcon
-                style={{ display: btnright }}
-                icon={faChevronRight}
-                onClick={changeSidebar}
-              />
-            </div>
-          </div>
         </div>
 
         {/* Route in class main */}
-        <div className={main}>
+        <div className="mt-24 ml-1 tablet:ml-1 laptop:ml-64 mr-2 tablet:mr-2 md:mr-3">
           <Route exact path="/admin/">
             <Dashboard />
           </Route>
@@ -156,7 +116,6 @@ const SideBar = () => {
           </Route>
         </div>
       </div>
-    </div>
   );
 };
 

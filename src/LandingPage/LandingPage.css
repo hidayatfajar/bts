@@ -1,7 +1,6 @@
 /* gradient for text */
 .gradient-text{
     background:  -webkit-linear-gradient(135deg, #FAE196 0%, #F58994 50.7%, #9694E9 100%);
-    font-weight: 780;
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
 }
@@ -11,17 +10,6 @@
 max-width: 480px;
 }
 
-
-
-/* Background */
-.bg-bts{
-    width: 100%;
-    height: auto;
-    background-color: #303C3A;
-    background-size: cover;
-    color: #fff;
-    overflow: hidden;
-}
 
 .player-wrapper {
     position: relative;

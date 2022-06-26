@@ -6,8 +6,16 @@ import axios from "axios";
 import KelasFotoSlide from "./KelasFotoSlide";
 import KelasFotoFooter from "./KelasFotoFooter";
 import KelasCardListing from "./KelasCardListing";
-import {LazyLoadImage} from "react-lazy-load-image-component";
-import { Form, FloatingLabel, Container, InputGroup, Card, Col, Row } from "react-bootstrap";
+import { LazyLoadImage } from "react-lazy-load-image-component";
+import {
+  Form,
+  FloatingLabel,
+  Container,
+  InputGroup,
+  Card,
+  Col,
+  Row,
+} from "react-bootstrap";
 
 export default function RPL1() {
   const [gambar, setGambar] = useState([]);
@@ -54,7 +62,7 @@ export default function RPL1() {
   }, [null]);
   return (
     <div>
-      <div className="bg-jurusan min-h-screen">
+      <div className="bg-bts min-h-screen">
         <NavBarMagic />
         <NavBar />
         {<KelasFotoSlide props={{ gambar, loading }} />}
@@ -80,7 +88,7 @@ export default function RPL1() {
           </Container>
         )}
         {<KelasCardListing siswa={siswa} search={search} loading={loading} />}
-        
+
         <br />
         {<KelasFotoFooter gambar={gambar} />}
         <br />

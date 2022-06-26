@@ -15,9 +15,13 @@ export default function KelasCardListing(props) {
   const siswa = props.siswa;
   console.log(props.input);
 
-  const filteredSiswa = siswa.filter((siswa) => {
-      return siswa.siswa_nama.toLowerCase().includes("Anam");
-  })
+  const filteredData = siswa.filter((el) => {
+    if (props.search === "") {
+      return el;
+    } else {
+      return el.siswa_nama.toLowerCase().includes(props.search);
+    }
+  });
 
   const onModal = (e, siswa_id) => {
     e.preventDefault();
@@ -90,7 +94,7 @@ export default function KelasCardListing(props) {
           <Container>
             <div className="md:flex justify-between">
               <Row xs={1} md={4} className="g-4">
-                {siswa.map((siswa, index) => (
+                {filteredData.map((siswa, index) => (
                   <div className="w-full md:w-3/12 pt-7" key={siswa.siswa_id}>
                     <Col>
                       <Card className="xs:h-auto md:h-custom mx-auto my-0 p-1 rounded-xl">

@@ -16,6 +16,9 @@ module.exports = {
         'desktop': '1280px',
 
       },
+      fontFamily: {
+        'body': ['Mulish'],
+      },
     },
   },
   plugins: [],

@@ -64,7 +64,7 @@ export default class LandingPage extends Component {
   render() {
     return (
       <div>
-        <div className="bg-bts">
+        <div className="bg-bts ">
           <NavBarMagic />
 
           <NavBar />
@@ -74,7 +74,7 @@ export default class LandingPage extends Component {
           <br />
 
           {/* Page1 */}
-          <div className="-mt-10  md:pt-16 pb-36">
+          <div className="-mt-12 md:pt-20 pb-36">
             <div>
               <Container className="md:flex justify-between">
                 <div className="w-full text-center md:w-6/12 ">
@@ -100,15 +100,15 @@ export default class LandingPage extends Component {
                   <br />
                   <br />
                 </div>
+              </Container>
+
+              <div className="md:flex justify-end">
                 <img
                   src={img1}
-                  className="w-[1250px] h-[835px] mt-[-240px] mr-[-210px]
+                  className=" w-[1020px] h-auto mt-[-600px] mr-[-100px]
                   hidden md:block "
                   alt=""
                 />
-              </Container>
-
-              <div>
                 <img
                   src={img1_2}
                   className="mt-2 w-full mx-auto md:hidden md:mt-0 "
@@ -127,7 +127,7 @@ export default class LandingPage extends Component {
                     REWIND VIDEO <br />
                     <span className="gradient-text">EXIST 16.</span>{" "}
                   </h1>
-                  <p className=" max-w-[420px] pt-4 text-lg font-normal tracking-wider md:font-light  ">
+                  <p className="max-w-xs md:max-w-[420px] pt-4 text-lg font-light md:font-normal tracking-wider ">
                     Beberapa video rewind untuk mengenang kebersamaan kita
                     angkatan 16, sebagai bagian dari siswa SMKN 2.
                   </p>
@@ -169,18 +169,14 @@ export default class LandingPage extends Component {
                 </div>
                 <div className="w-full ml-0 pt-3 md:w-8/12 md:ml-14 md:pt-0">
                   <div className="text-center">
-                    <h1 className="max-w-none mt-5 text-3xl  md:max-w-2xl  md:text-5xl md:font-semibold md:text-left tracking-wide">
+                    <h1 className="max-w-none mt-5 text-3xl font-semibold font-body md:max-w-2xl  md:text-5xl md:font-bold md:text-left tracking-wide">
                       THIS IS OUR SCHOOL
                       <br />
                       <span className="gradient-text">
                         SMKN 2 KOTA BEKASI.
                       </span>{" "}
                     </h1>
-                    <p
-                      className="pt-4 pb-3  text-base 
-                    tracking-wider
-                    md:text-lg md:text-left md:tracking-wide"
-                    >
+                    <p className="pt-4 pb-3 text-light tracking-wider text-lg md:text-left md:tracking-wide">
                       Sekolah yang memiliki 6 jurusan didalam nya, serta kelas
                       unggulan yang siap untuk memajukan perkembangan industri
                       di indonesia. berikut ini adalah pengenalan sekolah kami.
@@ -212,7 +208,7 @@ export default class LandingPage extends Component {
                   <Image className="" src={img2} />
                 </div>
                 <div className="w-full ml-0 md:w-9/12 md:ml-16">
-                  <h4 className="text-left md:text-right text-3xl md:text-2xl font-medium md:font-semibold tracking-widest">
+                  <h4 className="text-left md:text-right text-3xl md:text-2xl font-semibold font-body md:font-bold tracking-widest">
                     KATA SAMBUTAN {""}
                     <br className="block md:hidden" />
                     <span className="gradient-text"> KEPALA SEKOLAH</span>
@@ -244,7 +240,7 @@ export default class LandingPage extends Component {
           {/* Page Jurusan */}
           <div className="pt-32">
             <Container>
-              <h1 className="max-w-md text-title">
+              <h1 className="max-w-sm md:max-w-md text-title">
                 Beberapa list <span className="gradient-text"> Jurusan.</span>
               </h1>
               <br />
@@ -352,72 +348,6 @@ export default class LandingPage extends Component {
                   <img className="rounded-lg pt-2" src={jurusanRPL} />
                 </div>
               </div>
-
-              {/* <div className=" md:flex justify-between">
-                <div className="w-full pt-4 md:pt-0 md:w-1/3">
-                  <div className="w-min mx-auto bg-gray-500 p-3  rounded-xl">
-                    <div className="flex">
-                      <div className="profile">
-                        <img className="" src={kaprog1} />
-                      </div>
-                      <div className="ml-4 mt-1">
-                        <h6 className="-mb-1 text-base tracking-wider">
-                          Nama Kaprog
-                        </h6>
-                        <p className="text-sm font-light tracking-widest">
-                          Jabatan
-                        </p>
-                      </div>
-                    </div>
-                    <Image
-                      className="max-w-xs mx-auto rounded-xl"
-                      src={kodok}
-                    />
-                  </div>
-                </div>
-                <div className="w-full pt-4 md:pt-0 md:w-1/3">
-                  <div className="w-min mx-auto bg-gray-500 p-3  rounded-xl">
-                    <div className="flex">
-                      <div className="profile">
-                        <img className="" src={kaprog1} />
-                      </div>
-                      <div className="ml-4 mt-1">
-                        <h6 className="-mb-1 text-base tracking-wider">
-                          Nama Kaprog
-                        </h6>
-                        <p className="text-sm font-light tracking-widest">
-                          Jabatan
-                        </p>
-                      </div>
-                    </div>
-                    <Image
-                      className="max-w-xs mx-auto rounded-xl"
-                      src={kodok}
-                    />
-                  </div>
-                </div>
-                <div className="w-full pt-4 md:pt-0 md:w-1/3">
-                  <div className="w-min mx-auto bg-gray-500 p-3  rounded-xl">
-                    <div className="flex">
-                      <div className="profile">
-                        <img className="" src={kaprog1} />
-                      </div>
-                      <div className="ml-4 mt-1">
-                        <h6 className="-mb-1 text-base tracking-wider">
-                          Nama Kaprog
-                        </h6>
-                        <p className="text-sm font-light tracking-widest">
-                          Jabatan
-                        </p>
-                      </div>
-                    </div>
-                    <Image
-                      className="max-w-xs mx-auto rounded-xl"
-                      src={kodok}
-                    />
-                  </div>
-                </div>
-              </div> */}
             </Container>
           </div>
 

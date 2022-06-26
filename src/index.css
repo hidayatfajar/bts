@@ -1,15 +1,22 @@
+@import url('https://fonts.googleapis.com/css2?family=Mulish:wght@200;300;400;500;600;700;800;900&display=swap');
+
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
 
+
 body {
   margin: 0;
   font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
-    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
+    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue','Poppins'
     sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
 
+}
+
+h1,h2,h3,h4,h5,h6,p{
+  @apply font-body;
 }
 
 /* scroll bar custom */
@@ -44,9 +51,17 @@ code {
 }
 
 .text-title{
-  @apply text-4xl font-medium  md:text-left md:text-5xl  md:font-semibold tracking-wide;
+  @apply text-4xl font-semibold  md:text-left md:text-5xl  md:font-bold tracking-wide;
 }
 
 .bg-maker{
   @apply w-auto h-auto mx-auto bg-white/30 backdrop-blur-sm  rounded-xl;
+} 
+
+.menu-sidebar{
+  @apply pt-5 pb-2 pl-4 pr-0 no-underline text-base  flex font-normal text-[#f1f1f1] hover:text-sky-500;
+}
+
+.bg-bts{
+  @apply w-full h-auto bg-[#303C3A] bg-cover text-white overflow-hidden;
 }

@@ -10,7 +10,7 @@ import JurusanFooter from "./JurusanFooter";
 export default function RPL(props) {
   return (
     <div>
-      <div className="bg-jurusan">
+      <div className="bg-bts">
         <NavBarMagic />
         <NavBar />
         <br />

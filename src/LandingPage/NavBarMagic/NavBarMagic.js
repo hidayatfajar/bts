@@ -70,9 +70,14 @@ const NavBarMagic = () => {
           <Navbar.Toggle aria-controls="offcanvasNavbar" />
 
           {/* Nav dekstop */}
-          <div className="hidden md:block">
+          <div className="hidden tablet:hidden laptop:block md:block">
             <Nav>
-              <Nav.Link href="/">Home</Nav.Link>
+            <Nav.Link as={Link} to={`/`}>
+                Home
+              </Nav.Link>
+              <Nav.Link as={Link} to={`/wisuda`} className="ml-8">
+                Wisuda
+              </Nav.Link>              
               <Nav.Link href="#deets" className="ml-8">
                 Guru
               </Nav.Link>

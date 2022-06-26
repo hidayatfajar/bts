@@ -1,17 +1,6 @@
-
-/* Background */
-.bg-jurusan{
-    width: 100%;
-    height: auto;
-    background-color: #303C3A;
-    background-size: cover;
-    color: #fff;
-    overflow: hidden;
-}
-
-
+  
 /* The Modal (background) */
-.bg-jurusan .modal {
+.bg-bts .modal {
     display: block; /* Hidden by default */
     position: fixed; /* Stay in place */
     z-index: 1; /* Sit on top */
@@ -26,7 +15,7 @@
   }
   
   /* Modal Content */
-  .bg-jurusan .modal-content {
+  .bg-bts .modal-content {
     background: none;
     padding: auto;
     border: none;
@@ -34,7 +23,7 @@
     z-index: 2;
   }
 
-  .bg-jurusan .modal-content .close{
+  .bg-bts .modal-content .close{
       width: fit-content;
       float: right;
       position: absolute;
@@ -51,18 +40,63 @@
     height: 280px;
     object-fit: cover;
   }
+
+
+  .image-galery{
+    width: 100%;
+    max-width: 950px;
+    margin: 0 auto;
+    padding: 50px 20px;
+    display: grid;
+    grid-template-columns: repeat(auto-fit,minmax(200px,1fr));
+    grid-auto-rows:200px ;
+    
+    grid-auto-flow: dense;
+    grid-gap: 20px;
+}
+
+.image-galery .image-box{
+    position: relative;
+    background: #d7d7d8;
+    overflow: hidden;
+}
+
+.image-galery .image-box:nth-child(7n+1){
+    grid-column: span 2;
+    grid-row: span 2;
+}
+
+.image-galery .image-box img{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: all 0.5s ease;
+}
+
+@media only screen and (max-width: 440px) {
+    .image-galery{
+      padding: 5px 0;
+       grid-template-columns: repeat(auto-fit,minmax(150px,1fr));
+    grid-auto-rows:150px ;
+        grid-gap: 5px;
+    }
+
+
+  }
+
+
 /* Phone Display or Responsive */
 @media (max-width:991px) {
 
-    .bg-jurusan .modal{
+    .bg-bts .modal{
         padding-top: 120px;
     }
 
-    .bg-jurusan .modal-content {
+    .bg-bts .modal-content {
         width: 90%;
       }
 
-      .bg-jurusan .modal-content .close{
+      .bg-bts .modal-content .close{
           top: -35px;
           margin-right: -10px;
           font-size: 30px;
