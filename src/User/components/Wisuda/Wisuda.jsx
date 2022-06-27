@@ -23,7 +23,7 @@ export default function Wisuda() {
         <Container>
           <WisudaHeader />
           <br />
-          <h1 className="mt-4 -mb-5 text-center text-3xl font-semibold tracking-wider">
+          <h1 className="mt-4 -mb-0 text-center text-3xl font-semibold tracking-wider tablet:-mb-6 laptop:-mb-8">
             Galery
           </h1>
           <WisudaGalery />

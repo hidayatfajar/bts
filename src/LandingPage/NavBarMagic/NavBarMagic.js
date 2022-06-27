@@ -112,11 +112,15 @@ const NavBarMagic = () => {
             <Offcanvas.Body>
               <Nav >
                 <Nav.Link
-                  href="/"
+                  as={Link} to={`/`}
                   className="text-blue-600 text-lg font-semibold tracking-widest"
                 >
                   Home
                 </Nav.Link>
+
+                <Nav.Link as={Link} to={`/wisuda`} className="text-blue-600 text-lg font-semibold tracking-widest">
+                Wisuda
+              </Nav.Link>
 
                 <Nav.Link
                   href="#deets"

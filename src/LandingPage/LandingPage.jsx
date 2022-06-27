@@ -356,12 +356,12 @@ export default class LandingPage extends Component {
             <Container>
               <div className="flex ">
                 <div className="w-full md:w-5/12">
-                  <h1 className="text-title ">
+                  <h1 className="text-title max-w-sm">
                     Tim Pembuat <span className="gradient-text">Website.</span>
                   </h1>
                 </div>
                 <div className="hidden md:block w-1/12">
-                  <Image className="h-36 -ml-4" src={garis} />
+                  <Image className="h-32 -ml-4" src={garis} />
                 </div>
                 <div className="hidden md:block w-4/12">
                   <p className="-ml-7 ">

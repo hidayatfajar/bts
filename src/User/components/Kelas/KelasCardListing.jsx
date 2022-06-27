@@ -114,7 +114,9 @@ export default function KelasCardListing(props) {
                           </p>
                           <Card.Text as="div">
                             <footer className="text-gray-600 text-sm font-normal tracking-wide -mt-2">
-                              <cite>"{siswa.siswa_quote}"</cite>
+                              <p className="text-sm font-normal italic">
+                                "{siswa.siswa_quote}"
+                              </p>
                             </footer>
                           </Card.Text>
                         </Card.Body>
