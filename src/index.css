@@ -51,7 +51,7 @@ code {
 }
 
 .text-title{
-  @apply text-4xl font-semibold  md:text-left md:text-5xl  md:font-bold tracking-wide;
+  @apply text-4xl font-semibold md:text-left md:text-5xl  md:font-bold tracking-wide;
 }
 
 .bg-maker{

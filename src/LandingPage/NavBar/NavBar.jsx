@@ -34,7 +34,7 @@ export default function NavBar() {
               <Nav.Link as={Link} to={`/wisuda`} className="ml-8">
                 Wisuda
               </Nav.Link>
-              <Nav.Link href="#deets" className="ml-8">
+              <Nav.Link as={Link} to={`/guru`} className="ml-8">
                 Guru
               </Nav.Link>
               {jurusan.map(
@@ -84,7 +84,8 @@ export default function NavBar() {
                 </Nav.Link>
 
                 <Nav.Link
-                  href="#deets"
+                  as={Link}
+                  to={`/guru`}
                   className="mt-[10px] text-blue-600 text-lg font-semibold tracking-widest"
                 >
                   Guru
