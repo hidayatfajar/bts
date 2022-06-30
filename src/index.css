@@ -63,5 +63,5 @@ code {
 }
 
 .bg-bts{
-  @apply w-full h-auto bg-[#303C3A] bg-cover text-white overflow-hidden;
+  @apply w-full h-auto bg-[#303C3A] bg-cover text-white overflow-hidden min-h-screen;
 }

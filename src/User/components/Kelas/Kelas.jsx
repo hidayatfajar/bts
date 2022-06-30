@@ -7,7 +7,11 @@ import KelasFotoSlide from "./KelasFotoSlide";
 import KelasFotoFooter from "./KelasFotoFooter";
 import KelasCardListing from "./KelasCardListing";
 import { LazyLoadImage } from "react-lazy-load-image-component";
+<<<<<<< HEAD
 import { useParams } from "react-router-dom";
+=======
+import {useParams} from "react-router-dom";
+>>>>>>> 8a0a30330cc1024b3114c3b96de15d99df37620f
 import {
   Form,
   FloatingLabel,
@@ -23,11 +27,16 @@ export default function RPL1() {
   const [siswa, setSiswa] = useState([]);
   const [search, setSearch] = useState("");
   const [loading, setLoading] = useState(true);
+<<<<<<< HEAD
   const [modal, setModal] = useState(false);
   const [siswaIndex, setSiswaIndex] = useState(1);
   const route = useParams();
   const { kelasId } = route;
 
+=======
+  const routeParams = useParams();
+  const {kelasId} = routeParams;
+>>>>>>> 8a0a30330cc1024b3114c3b96de15d99df37620f
   const sort = (a, b) => {
     if (a.siswa_nama < b.siswa_nama) {
       return -1;
@@ -37,21 +46,8 @@ export default function RPL1() {
     }
   };
 
-  const filteredData = siswa.filter((el) => {
-    if (search === "") {
-      return el;
-    } else {
-      return el.siswa_nama.toLowerCase().includes(search);
-    }
-  });
-
-  const onModal = (e, siswa_id) => {
-    e.preventDefault();
-    setModal(!modal);
-    setSiswaIndex(siswa_id);
-  };
-
   const getData = async () => {
+<<<<<<< HEAD
     const gambar = await axios.get(
       `http://localhost:8000/kelas/gambar/${kelasId}/`
     );
@@ -59,14 +55,20 @@ export default function RPL1() {
     const siswa = await axios.get(
       `http://localhost:8000/siswa/kelas/${kelasId}/`
     );
+=======
+    const gambar = await axios.get(`http://localhost:8000/kelas/gambar/${kelasId}/`);
+    setGambar(gambar.data.data);
+    const siswa = await axios.get(`http://localhost:8000/siswa/kelas/${kelasId}/`);
+>>>>>>> 8a0a30330cc1024b3114c3b96de15d99df37620f
     setSiswa(siswa.data.data.sort(sort));
   };
   useEffect(() => {
     setTimeout(() => {
       getData();
       setLoading(false);
-    }, 3000);
+    }, 1000);
   }, [null]);
+
   return (
     <div>
       <div className="bg-bts min-h-screen">

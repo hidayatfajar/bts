@@ -1,13 +1,43 @@
-import React from "react";
-import { Container } from "react-bootstrap";
+import React, { useEffect, useState } from "react";
+import { Container, Spinner } from "react-bootstrap";
 import NavBar from "../../../LandingPage/NavBar/NavBar";
 import NavBarMagic from "../../../LandingPage/NavBarMagic/NavBarMagic";
 import "../../components/RPL.css";
 import JurusanHeader from "./JurusanHeader";
 import JurusanCardList from "./JurusanCardList";
 import JurusanFooter from "./JurusanFooter";
+import { useParams } from "react-router-dom";
+import axios from "axios";
 
-export default function RPL(props) {
+export default function RPL() {
+  const { jurusanId } = useParams();
+
+  const [kelas, setKelas] = useState([]);
+  const [jurusan, setJurusan] = useState([]);
+  const [loading, setLoading] = useState(true);
+
+  useEffect(() => {
+    setTimeout(() => {
+      getKelas();
+      getJurusan();
+      setLoading(false);
+    }, 1000);
+  }, [jurusanId, loading]);
+
+  const getKelas = async () => {
+    const result = await axios.get(
+      `http://localhost:8000/kelas/jurusan/${jurusanId}`
+    );
+    setKelas(result.data.data);
+  };
+
+  const getJurusan = async () => {
+    const result = await axios.get(
+      `http://localhost:8000/jurusan/${jurusanId}`
+    );
+    setJurusan(result.data.data);
+  };
+
   return (
     <div>
       <div className="bg-bts">
@@ -15,15 +45,23 @@ export default function RPL(props) {
         <NavBar />
         <br />
         <br />
-        <Container>
-          <JurusanHeader />
-          <br />
-          <br />
-          <JurusanCardList />
-          <br />
-          <br />
-        </Container>
-        <JurusanFooter />
+        {loading ? (
+          <center>
+            <Spinner animation="border" />
+          </center>
+        ) : (
+          <>
+            <Container>
+              <JurusanHeader jurusan={jurusan} />
+              <br />
+              <br />
+              <JurusanCardList kelas={kelas} />
+              <br />
+              <br />
+            </Container>
+            <JurusanFooter />
+          </>
+        )}
       </div>
     </div>
   );
