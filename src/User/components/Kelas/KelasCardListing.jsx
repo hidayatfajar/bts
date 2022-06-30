@@ -59,11 +59,7 @@ export default function KelasCardListing(props) {
                   <img
                     src={
                       "http://localhost:8000/public/images/" +
-<<<<<<< HEAD
-                      siswa[siswaIndex].siswa_gambar
-=======
                       filteredData[siswaIndex].siswa_gambar
->>>>>>> 8a0a30330cc1024b3114c3b96de15d99df37620f
                     }
                     alt={filteredData[siswaIndex].siswa_nama}
                   />
