@@ -8,13 +8,17 @@ import { Link } from "react-router-dom";
 
 export default function NavBar() {
   const [jurusan, setJurusan] = useState([]);
+  const [loading, setLoading] = useState(true);
+  const getJurusan = async () => {
+    const data = await axios.get("http://localhost:8000/jurusan/");
+    setJurusan(data.data.data);
+  };
   useEffect(() => {
-    const getJurusan = async () => {
-      const data = await axios.get("http://localhost:8000/jurusan/");
-      setJurusan(data.data.data);
-    };
-    getJurusan();
-  }, []);
+    if(loading === true){
+      getJurusan();
+      setLoading(false);
+    }
+  }, [loading]);
   return (
     <div>
       {" "}

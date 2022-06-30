@@ -6,7 +6,6 @@ import {
   faChevronLeft,
   faChevronRight,
 } from "@fortawesome/free-solid-svg-icons";
-import { LazyLoadImage } from "react-lazy-load-image-component";
 import "../RPL.css";
 
 export default function KelasCardListing(props) {
@@ -56,13 +55,13 @@ export default function KelasCardListing(props) {
                   className="close"
                   onClick={onModal}
                 />
-                {siswa[siswaIndex].siswa_gambar ? (
+                {filteredData[siswaIndex].siswa_gambar ? (
                   <img
                     src={
-                      "http://localhost:8000/public/images/ak/ak1/" +
-                      siswa[siswaIndex].siswa_gambar
+                      "http://localhost:8000/public/images/" +
+                      filteredData[siswaIndex].siswa_gambar
                     }
-                    alt={siswa[siswaIndex].siswa_nama}
+                    alt={filteredData[siswaIndex].siswa_nama}
                   />
                 ) : (
                   <Spinner animation="border" />
@@ -98,11 +97,11 @@ export default function KelasCardListing(props) {
                   <div className="w-full md:w-3/12 pt-7" key={siswa.siswa_id}>
                     <Col>
                       <Card className="xs:h-auto md:h-custom mx-auto my-0 p-1 rounded-xl">
-                        <LazyLoadImage
+                        <img
                           className="img-siswa"
                           variant="top"
                           src={
-                            "http://localhost:8000/public/images/ak/ak1/" +
+                            "http://localhost:8000/public/images/" +
                             siswa.siswa_gambar
                           }
                           onClick={(e) => onModal(e, index)}

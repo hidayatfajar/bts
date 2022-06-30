@@ -7,6 +7,7 @@ import KelasFotoSlide from "./KelasFotoSlide";
 import KelasFotoFooter from "./KelasFotoFooter";
 import KelasCardListing from "./KelasCardListing";
 import { LazyLoadImage } from "react-lazy-load-image-component";
+import {useParams} from "react-router-dom";
 import {
   Form,
   FloatingLabel,
@@ -22,9 +23,8 @@ export default function RPL1() {
   const [siswa, setSiswa] = useState([]);
   const [search, setSearch] = useState("");
   const [loading, setLoading] = useState(true);
-  const [modal, setModal] = useState(false);
-  const [siswaIndex, setSiswaIndex] = useState(1);
-
+  const routeParams = useParams();
+  const {kelasId} = routeParams;
   const sort = (a, b) => {
     if (a.siswa_nama < b.siswa_nama) {
       return -1;
@@ -34,24 +34,10 @@ export default function RPL1() {
     }
   };
 
-  const filteredData = siswa.filter((el) => {
-    if (search === "") {
-      return el;
-    } else {
-      return el.siswa_nama.toLowerCase().includes(search);
-    }
-  });
-
-  const onModal = (e, siswa_id) => {
-    e.preventDefault();
-    setModal(!modal);
-    setSiswaIndex(siswa_id);
-  };
-
   const getData = async () => {
-    const gambar = await axios.get("http://localhost:8000/kelas/gambar/1/");
+    const gambar = await axios.get(`http://localhost:8000/kelas/gambar/${kelasId}/`);
     setGambar(gambar.data.data);
-    const siswa = await axios.get("http://localhost:8000/siswa/kelas/1/");
+    const siswa = await axios.get(`http://localhost:8000/siswa/kelas/${kelasId}/`);
     setSiswa(siswa.data.data.sort(sort));
   };
   useEffect(() => {
@@ -60,6 +46,7 @@ export default function RPL1() {
       setLoading(false);
     }, 3000);
   }, [null]);
+
   return (
     <div>
       <div className="bg-bts min-h-screen">

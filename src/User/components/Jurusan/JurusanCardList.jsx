@@ -1,104 +1,69 @@
-import React, {useEffect, useState} from "react";
+import React, { useEffect, useState } from "react";
 import { Link, useParams } from "react-router-dom";
 import bgBtn from "../../assets/bgBtn.png";
-import axios from 'axios'
+import axios from "axios";
 
 export default function JurusanCardList() {
   const { jurusanId } = useParams();
 
   const [kelas, setKelas] = useState([]);
+  let jurusanNama = []
 
   useEffect(() => {
     getKelas();
   }, [jurusanId]);
 
+  const [loading, setLoading] = useState(true);
   const getKelas = async () => {
     const result = await axios.get(
       `http://localhost:8000/kelas/jurusan/${jurusanId}`
     );
     setKelas(result.data.data);
   };
+  useEffect(() => {
+    if(loading === true){
+      getKelas();
+      setLoading(false);
+    }
+  }, [loading]);
+
+  
+  kelas.map((item) => {
+    console.log(item.kelas_nama);
+    const lastChar = item.kelas_nama.slice(-1);
+    if(item.jurusan_id === 1){
+      jurusanNama.push("AK " + lastChar);
+    } else if(item.jurusan_id === 2){
+      jurusanNama.push("RPL " + lastChar);
+    } else if(item.jurusan_id === 3){
+      jurusanNama.push("TKJ " + lastChar);
+    } else if(item.jurusan_id === 4){
+      jurusanNama.push("TEI " + lastChar);
+    } else if(item.jurusan_id === 5){
+      jurusanNama.push("TBSM " + lastChar);
+    } else if(item.jurusan_id === 6){
+      jurusanNama.push("TET " + lastChar);
+    }
+  })
+  console.log(jurusanNama)
   return (
-    <div>
-      {kelas ? (
-        kelas.length == 4 ? (
-          <div>
-            <div className="md:flex justify-between">
-              <Link to={`/kelas/${kelas[0].kelas_id}`} className="no-underline">
-                <div className="w-full mt-4 md:w-1/2 ">
-                  <div className="w-min mx-auto bg-white/30 backdrop-blur-xl px-3 pt-4 pb-16 rounded-md z-0 ">
-                    <img src={bgBtn} alt="" className="max-w-xs object-cover" />
-                    <h1 className="z-10 -mt-24 text-center text-5xl font-semibold tracking-wider text-white">
-                      {kelas[0].kelas_nama}
-                    </h1>
-                  </div>
-                </div>
-              </Link>
-              <Link to={`/kelas/${kelas[1].kelas_id}`} className="no-underline">
-                <div className="w-full mt-4 md:w-1/2 ">
-                  <div className="w-min mx-auto bg-white/30 backdrop-blur-xl px-3 pt-4 pb-16 rounded-md z-0 ">
-                    <img src={bgBtn} alt="" className="max-w-xs object-cover" />
-                    <h1 className="z-10 -mt-24 text-center text-5xl font-semibold tracking-wider text-white">
-                      {kelas[1].kelas_nama}
-                    </h1>
-                  </div>
-                </div>
-              </Link>
+    <div className="flex flex-col md:grid grid-cols-3 gap-4">
+      {kelas.map((kelas, index) => {
+        return (
+          <Link
+            to={`/kelas/${kelas.kelas_id}`}
+            className="no-underline"
+            key={kelas.kelas_id}
+          >
+            <div className="relative flex items-center justify-center rounded bg-white/30 p-3">
+              <img src={"http://localhost:8000/public/images/" + kelas.kelas_gambar} alt={kelas.kelas_gambar} className="object-fit" />
+              <p className="absolute text-white text-center text-[2rem] md:text-xl lg:text-2xl font-semibold tracking-wide">
+                {jurusanNama[index]}
+              </p>
             </div>
-            <div className="md:flex justify-center">
-              <Link to={`/kelas/${kelas[2].kelas_id}`} className="no-underline">
-                <div className="w-full mt-4 md:w-1/2 ">
-                  <div className="w-min mx-auto bg-white/30 backdrop-blur-xl px-3 pt-4 pb-16 rounded-md z-0 ">
-                    <img src={bgBtn} alt="" className="max-w-xs object-cover" />
-                    <h1 className="z-10 -mt-24 text-center text-5xl font-semibold tracking-wider text-white">
-                      {kelas[2].kelas_nama}
-                    </h1>
-                  </div>
-                </div>
-              </Link>
-              <Link to={`/kelas/${kelas[3].kelas_id}`} className="no-underline">
-                <div className="w-full mt-4 md:w-1/2 ">
-                  <div className="w-min mx-auto bg-white/30 backdrop-blur-xl px-3 pt-4 pb-16 rounded-md z-0">
-                    <img src={bgBtn} alt="" className="max-w-xs object-cover" />
-                    <h1 className="z-10 -mt-24 text-center text-5xl font-semibold tracking-wider text-white">
-                      {kelas[3].kelas_nama}
-                    </h1>
-                  </div>
-                </div>
-              </Link>
-            </div>
-          </div>
-        ) : (
-          <div className="md:flex justify-between">
-            {kelas
-              ? kelas.map((kelas, index) => {
-                  return (
-                    <Link
-                      to={`/kelas/${kelas.kelas_id}`}
-                      className="no-underline"
-                      key={kelas.kelas_id}
-                    >
-                      <div className="w-full mt-4 md:w-1/3 ">
-                        <div className="w-min mx-auto bg-white/30 backdrop-blur-xl px-3 pt-4 pb-16 rounded-md z-0 ">
-                          <img
-                            src={bgBtn}
-                            alt=""
-                            className="max-w-xs object-cover"
-                          />
-                          <h1 className="z-10 -mt-24 text-center text-5xl font-semibold tracking-wider text-white">
-                            {kelas.kelas_nama}
-                          </h1>
-                        </div>
-                      </div>
-                    </Link>
-                  );
-                })
-              : null}
-          </div>
-        )
-      ) : (
-        console.warn("tidak tersedia")
-      )}{" "}
+          </Link>
+        );
+      })}
     </div>
   );
 }
