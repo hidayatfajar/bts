@@ -59,7 +59,7 @@ export default function KelasCardListing(props) {
                 {siswa[siswaIndex].siswa_gambar ? (
                   <img
                     src={
-                      "http://localhost:8000/public/images/ak/ak1/" +
+                      "http://localhost:8000/public/images/" +
                       siswa[siswaIndex].siswa_gambar
                     }
                     alt={siswa[siswaIndex].siswa_nama}
@@ -102,7 +102,7 @@ export default function KelasCardListing(props) {
                           className="img-siswa"
                           variant="top"
                           src={
-                            "http://localhost:8000/public/images/ak/ak1/" +
+                            "http://localhost:8000/public/images/" +
                             siswa.siswa_gambar
                           }
                           onClick={(e) => onModal(e, index)}

@@ -35,22 +35,25 @@ import img4 from "./asset/bg3.png";
 import img5 from "./asset/bg4.png";
 import img6 from "./asset/bg5.png";
 
-import kaprog1 from "./asset/kaprog1.png";
-import kodok from "./asset/kodok.png";
 import kaprogRPL from "./asset/jurusan/kaprog-rpl.svg";
-import jurusanRPL from "./asset/jurusan/jurusan-rpl.JPG";
+import RPL from "./asset/jurusan/RPL.png";
+import AK from "./asset/jurusan/AK.png";
+import TEI from "./asset/jurusan/TEI.png";
+import TET from "./asset/jurusan/TET.png";
+import TKJ from "./asset/jurusan/TKJ.png";
+import TSM from "./asset/jurusan/TSM.png";
 
 import galery from "./asset/Galery.png";
 
-import team1 from "./asset/varits.svg";
-import team2 from "./asset/fajar.svg";
-import team3 from "./asset/rafly.svg";
-import team4 from "./asset/angga.svg";
-import team5 from "./asset/ade.svg";
-import team6 from "./asset/raka.svg";
-import team7 from "./asset/abel.svg";
-import team8 from "./asset/maghvi.svg";
-import team9 from "./asset/fadil.svg";
+import team1 from "./asset/varits.png";
+import team2 from "./asset/fajar.png";
+import team3 from "./asset/rafly.png";
+import team4 from "./asset/angga.png";
+import team5 from "./asset/ade.png";
+import team6 from "./asset/raka.png";
+import team7 from "./asset/abel.png";
+// import team8 from "./asset/maghvi.png";
+import team9 from "./asset/fadil.png";
 
 // import folder
 import NavBarMagic from "./NavBarMagic/NavBarMagic";
@@ -217,11 +220,20 @@ export default class LandingPage extends Component {
                   <div className="bg-gray-500 py-8 pl-4 pr-4 md:pl-60 md:pr-4 rounded-xl">
                     <p>
                       {" "}
-                      Lorem ipsum dolor sit amet consectetur adipisicing elit.
-                      Officia excepturi, modi, perferendis quasi neque, illum
-                      molestiae nulla atque debitis adipisci est facere
-                      repellendus dolorem facilis nostrum veniam possimus qui.
-                      Nulla?
+                      Bismillah Wal Hamdulillah,
+                      <br />
+                      Sukacita dan rasa gembira mengiringi keberhasilan yang
+                      diraih, yaitu LULUS dari SMKN 2 Kota Bekasi. Tetaplah
+                      berpijak pada keyakinan bahwa KITA BISA dan PASTI BISA
+                      meraih sukses di masa depan dengan gemilang. Selamat atas
+                      Kelulusan yang sudah dicapai, dan semoga sukses selalu
+                      anak-anak ku Angkatan ke 16 SMKN 2 Kota Bekasi. Semoga
+                      Alloh SWT, Tuhan Yang Maha Esa memberikan kemudahan dan
+                      kelancaran dalam setiap langkah mengarungi perjalanan
+                      kehidupan. Mohon maaf apabila saya, para guru dan karyawan
+                      pernah memiliki khilaf dan salah. Terima kasih.
+                      <br />
+                      Wasassalamu’alaikum Wr Wb.
                     </p>
                     <br />
                     <br />
@@ -260,7 +272,7 @@ export default class LandingPage extends Component {
                       </p>
                     </div>
                   </div>
-                  <img className="rounded-lg pt-2" src={jurusanRPL} />
+                  <img className="rounded-lg pt-2" src={AK} />
                 </div>
                 <div className="w-auto mx-auto bg-gray-500 p-3 rounded-xl">
                   <div className="flex ">
@@ -277,7 +289,7 @@ export default class LandingPage extends Component {
                       </p>
                     </div>
                   </div>
-                  <img className="rounded-lg pt-2" src={jurusanRPL} />
+                  <img className="rounded-lg pt-2" src={RPL} />
                 </div>
                 <div className="w-auto mx-auto bg-gray-500 p-3 rounded-xl">
                   <div className="flex ">
@@ -294,7 +306,7 @@ export default class LandingPage extends Component {
                       </p>
                     </div>
                   </div>
-                  <img className="rounded-lg pt-2" src={jurusanRPL} />
+                  <img className="rounded-lg pt-2" src={TKJ} />
                 </div>
                 <div className="w-auto mx-auto bg-gray-500 p-3 rounded-xl">
                   <div className="flex ">
@@ -311,7 +323,7 @@ export default class LandingPage extends Component {
                       </p>
                     </div>
                   </div>
-                  <img className="rounded-lg pt-2" src={jurusanRPL} />
+                  <img className="rounded-lg pt-2" src={TEI} />
                 </div>
                 <div className="w-auto mx-auto bg-gray-500 p-3 rounded-xl">
                   <div className="flex ">
@@ -328,7 +340,7 @@ export default class LandingPage extends Component {
                       </p>
                     </div>
                   </div>
-                  <img className="rounded-lg pt-2" src={jurusanRPL} />
+                  <img className="rounded-lg pt-2" src={TSM} />
                 </div>
                 <div className="w-auto mx-auto bg-gray-500 p-3 rounded-xl">
                   <div className="flex ">
@@ -345,7 +357,7 @@ export default class LandingPage extends Component {
                       </p>
                     </div>
                   </div>
-                  <img className="rounded-lg pt-2" src={jurusanRPL} />
+                  <img className="rounded-lg pt-2" src={TET} />
                 </div>
               </div>
             </Container>
@@ -378,33 +390,33 @@ export default class LandingPage extends Component {
               </div>
               <br />
 
-              <div className="md:grid grid-cols-3 space-y-4 md:space-y-0 gap-4 -mt-24 md:-mt-36">
-                <div className="bg-maker ">
+              <div className="md:grid grid-cols-4 space-y-4 md:space-y-0 gap-4 -mt-24 md:-mt-36">
+                <div className="">
                   <Image className="w-full" src={team1} />
                 </div>
-                <div className="bg-maker">
-                  <Image className="w-full pt-2" src={team2} />
+                <div className="">
+                  <Image className="w-full " src={team2} />
                 </div>
-                <div className="bg-maker">
-                  <Image className="w-full pt-1" src={team3} />
+                <div className="">
+                  <Image className="w-full pt-[3px]" src={team3} />
                 </div>{" "}
-                <div className="bg-maker">
-                  <Image className="w-full pt-3 " src={team4} />
+                <div className="">
+                  <Image className="w-full" src={team4} />
                 </div>{" "}
-                <div className="bg-maker">
-                  <Image className="w-full pt-2" src={team5} />
+                <div className="">
+                  <Image className="w-full pt-1" src={team5} />
                 </div>
-                <div className="bg-maker">
-                  <Image className="w-full pt-2 " src={team6} />
+                <div className="">
+                  <Image className="w-full" src={team6} />
                 </div>{" "}
-                <div className="bg-maker">
-                  <Image className="w-full pt-3 " src={team7} />
+                <div className="">
+                  <Image className="w-full" src={team7} />
                 </div>{" "}
-                <div className="bg-maker">
+                {/* <div className="">
                   <Image className="w-full pt-2  " src={team8} />
-                </div>{" "}
-                <div className="bg-maker">
-                  <Image className="w-full pt-4 " src={team9} />
+                </div>{" "} */}
+                <div className="">
+                  <Image className="w-full" src={team9} />
                 </div>
               </div>
             </Container>
