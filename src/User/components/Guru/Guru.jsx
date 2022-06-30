@@ -11,6 +11,7 @@ import {
   FloatingLabel,
   Container,
   InputGroup,
+  Spinner,
 } from "react-bootstrap";
 
 export default function Guru() {
@@ -32,54 +33,63 @@ export default function Guru() {
 
   const getData = async () => {
     const guru = await axios.get("http://localhost:8000/guru/");
-    console.log(guru)
+    console.log(guru);
     setGuru(guru.data.data.sort(sort));
   };
   useEffect(() => {
     setTimeout(() => {
       getData();
       setLoading(false);
-    }, 3000);
+    }, 1000);
   }, [null]);
   return (
     <>
-      <div className="bg-bts ">
+      <div className="bg-bts min-h-screen">
         <NavBarMagic />
         <NavBar />
         <br />
-        <Container>
-          <div className="">
-            <h1 className="max-w-sm text-title">
-              Foto Seluruh <span className="gradient-text">Guru & Staf</span>{" "}
-            </h1>
-          </div>
-        </Container>
-        <br />
-        <Container>
-          <GuruHeader />
-          <br />
-          <Container>
-            <FloatingLabel
-              style={{ color: "black" }}
-              controlId="floatingInput"
-              className="mb-3"
-            >
-              <InputGroup className="mb-3">
-                <Form.Control
-                  size="lg"
-                  type="email"
-                  placeholder="Search here..."
-                  onChange={(e) => setSearch(e.target.value.toLowerCase())}
-                />
-                <InputGroup.Text>Q</InputGroup.Text>
-              </InputGroup>
-            </FloatingLabel>
-          </Container>
-          <GuruCardList guru={guru} search={search} loading={loading} />
-        </Container>
-        <br />
-        <br />
-        <GuruFooter />
+        {loading ? (
+          <center>
+            <Spinner animation="border" />
+          </center>
+        ) : (
+          <>
+            <Container>
+              <div className="">
+                <h1 className="max-w-sm text-title">
+                  Foto Seluruh{" "}
+                  <span className="gradient-text">Guru & Staf</span>{" "}
+                </h1>
+              </div>
+            </Container>
+            <br />
+            <Container>
+              <GuruHeader loading={loading} />
+              <br />
+              <Container>
+                <FloatingLabel
+                  style={{ color: "black" }}
+                  controlId="floatingInput"
+                  className="mb-3"
+                >
+                  <InputGroup className="mb-3">
+                    <Form.Control
+                      size="lg"
+                      type="email"
+                      placeholder="Search here..."
+                      onChange={(e) => setSearch(e.target.value.toLowerCase())}
+                    />
+                    <InputGroup.Text>Q</InputGroup.Text>
+                  </InputGroup>
+                </FloatingLabel>
+              </Container>
+              <GuruCardList guru={guru} search={search} loading={loading} />
+            </Container>
+            <br />
+            <br />
+            <GuruFooter />
+          </>
+        )}
       </div>
     </>
   );

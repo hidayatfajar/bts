@@ -90,7 +90,7 @@ export default function GuruCardList(props) {
           <Spinner variant="success" animation="border" />
         </center>
       ) : (
-        <div className="md:grid grid-cols-4 space-y-4 md:space-y-0 gap-4 mx-auto">
+        <div className="md:grid grid-cols-4 space-y-4 md:space-y-0 gap-4 mx-auto min-h-screen">
           {filteredData.map((guru, index) => (
             <div className="w-full pt-7" key={guru.guru_id}>
               <Card className="xs:h-auto laptop:h-96 mx-auto my-0 p-1 rounded-xl">

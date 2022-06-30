@@ -86,7 +86,7 @@ export default function KelasCardListing(props) {
       ) : null}
       {props.loading ? (
         <center>
-          <Spinner variant="success" animation="border" />
+          <Spinner animation="border" />
         </center>
       ) : (
         <div>

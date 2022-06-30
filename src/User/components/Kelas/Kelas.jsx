@@ -44,7 +44,7 @@ export default function RPL1() {
     setTimeout(() => {
       getData();
       setLoading(false);
-    }, 3000);
+    }, 1000);
   }, [null]);
 
   return (
