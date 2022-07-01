@@ -37,7 +37,6 @@ export default function JurusanHeader(props) {
       });
     }
   });
-  console.log(jurusanHeader);
 
   return (
     <div className="bg-white/30 backdrop-blur-xl p-4 rounded-md">

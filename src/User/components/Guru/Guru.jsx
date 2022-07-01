@@ -15,12 +15,9 @@ import {
 } from "react-bootstrap";
 
 export default function Guru() {
-  const [gambar, setGambar] = useState([]);
   const [guru, setGuru] = useState([]);
   const [search, setSearch] = useState("");
   const [loading, setLoading] = useState(true);
-  const [modal, setModal] = useState(false);
-  const [siswaIndex, setSiswaIndex] = useState(1);
 
   const sort = (a, b) => {
     if (a.guru_nama < b.guru_nama) {
@@ -37,8 +34,8 @@ export default function Guru() {
     setGuru(guru.data.data.sort(sort));
   };
   useEffect(() => {
+    getData();
     setTimeout(() => {
-      getData();
       setLoading(false);
     }, 1000);
   }, [null]);
@@ -52,7 +49,7 @@ export default function Guru() {
           <center>
             <Spinner animation="border" />
           </center>
-        ) : (
+        ) : guru.length !== 0 ? (
           <>
             <Container>
               <div className="">
@@ -89,6 +86,10 @@ export default function Guru() {
             <br />
             <GuruFooter />
           </>
+        ) : (
+          <div className="text-center">
+            <h1>Gagal mengambil data guru</h1>
+          </div>
         )}
       </div>
     </>

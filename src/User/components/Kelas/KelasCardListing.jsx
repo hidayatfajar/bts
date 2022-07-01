@@ -84,50 +84,44 @@ export default function KelasCardListing(props) {
           </div>
         </div>
       ) : null}
-      {props.loading ? (
-        <center>
-          <Spinner animation="border" />
-        </center>
-      ) : (
-        <div>
-          <Container>
-            <div className="md:flex justify-between">
-              <Row xs={1} md={4} className="g-4">
-                {filteredData.map((siswa, index) => (
-                  <div className="w-full md:w-3/12 pt-7" key={siswa.siswa_id}>
-                    <Col>
-                      <Card className="xs:h-auto md:h-custom mx-auto my-0 p-1 rounded-xl">
-                        <img
-                          className="img-siswa"
-                          variant="top"
-                          src={
-                            "http://localhost:8000/public/images/" +
-                            siswa.siswa_gambar
-                          }
-                          onClick={(e) => onModal(e, index)}
-                          loading="lazy"
-                        />
-                        <Card.Body>
-                          <p className="text-black text-base font-medium tracking-wide -mt-1">
-                            {siswa.siswa_nama}
-                          </p>
-                          <Card.Text as="div">
-                            <footer className="text-gray-600 text-sm font-normal tracking-wide -mt-2">
-                              <p className="text-sm font-normal italic">
-                                "{siswa.siswa_quote}"
-                              </p>
-                            </footer>
-                          </Card.Text>
-                        </Card.Body>
-                      </Card>
-                    </Col>
-                  </div>
-                ))}
-              </Row>
-            </div>
-          </Container>
-        </div>
-      )}
+      <div>
+        <Container>
+          <div className="md:flex justify-between">
+            <Row xs={1} md={4} className="g-4">
+              {filteredData.map((siswa, index) => (
+                <div className="w-full md:w-3/12 pt-7" key={siswa.siswa_id}>
+                  <Col>
+                    <Card className="xs:h-auto md:h-custom mx-auto my-0 p-1 rounded-xl">
+                      <img
+                        className="img-siswa"
+                        variant="top"
+                        src={
+                          "http://localhost:8000/public/images/" +
+                          siswa.siswa_gambar
+                        }
+                        onClick={(e) => onModal(e, index)}
+                        loading="lazy"
+                      />
+                      <Card.Body>
+                        <p className="text-black text-base font-medium tracking-wide -mt-1">
+                          {siswa.siswa_nama}
+                        </p>
+                        <Card.Text as="div">
+                          <footer className="text-gray-600 text-sm font-normal tracking-wide -mt-2">
+                            <p className="text-sm font-normal italic">
+                              "{siswa.siswa_quote}"
+                            </p>
+                          </footer>
+                        </Card.Text>
+                      </Card.Body>
+                    </Card>
+                  </Col>
+                </div>
+              ))}
+            </Row>
+          </div>
+        </Container>
+      </div>
     </div>
   );
 }

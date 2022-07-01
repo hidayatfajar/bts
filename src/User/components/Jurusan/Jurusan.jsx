@@ -17,9 +17,9 @@ export default function RPL() {
   const [loading, setLoading] = useState(true);
 
   useEffect(() => {
+    getKelas();
+    getJurusan();
     setTimeout(() => {
-      getKelas();
-      getJurusan();
       setLoading(false);
     }, 1000);
   }, [jurusanId, loading]);
@@ -50,6 +50,7 @@ export default function RPL() {
             <Spinner animation="border" />
           </center>
         ) : (
+          jurusan.length !== 0 || kelas.length !== 0 ? (
           <>
             <Container>
               <JurusanHeader jurusan={jurusan} />
@@ -61,6 +62,13 @@ export default function RPL() {
             </Container>
             <JurusanFooter />
           </>
+          ) : (
+            <div className="text-center">
+              <h1>
+                Gagal mengambil data Jurusan
+              </h1>
+            </div>
+          )
         )}
       </div>
     </div>
