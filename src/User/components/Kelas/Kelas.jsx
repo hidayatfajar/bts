@@ -6,10 +6,6 @@ import axios from "axios";
 import KelasFotoSlide from "./KelasFotoSlide";
 import KelasFotoFooter from "./KelasFotoFooter";
 import KelasCardListing from "./KelasCardListing";
-<<<<<<< HEAD
-=======
-import { LazyLoadImage } from "react-lazy-load-image-component";
->>>>>>> 11c7d52c32932203f535e6b4e08cd665fcccb523
 import { useParams } from "react-router-dom";
 import {
   Form,

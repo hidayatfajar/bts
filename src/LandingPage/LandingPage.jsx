@@ -14,6 +14,7 @@ import {
   Offcanvas,
 } from "react-bootstrap";
 import ReactPlayer from "react-player/lazy";
+import { Link, useParams } from "react-router-dom";
 
 // import image
 import logo from "./asset/Logo.png";
@@ -35,7 +36,13 @@ import img4 from "./asset/bg3.png";
 import img5 from "./asset/bg4.png";
 import img6 from "./asset/bg5.png";
 
-import kaprogRPL from "./asset/jurusan/kaprog-rpl.svg";
+import kaprogRPL from "./asset/jurusan/kaprog-rpl.png";
+import kaprogAK from "./asset/jurusan/kaprog-ak.png";
+import kaprogTEI from "./asset/jurusan/kaprog-tei.png";
+import kaprogTET from "./asset/jurusan/kaprog-tet.png";
+import kaprogTKJ from "./asset/jurusan/kaprog-tkj.png";
+import kaprogTSM from "./asset/jurusan/kaprog-tsm.png";
+
 import RPL from "./asset/jurusan/RPL.png";
 import AK from "./asset/jurusan/AK.png";
 import TEI from "./asset/jurusan/TEI.png";
@@ -64,6 +71,16 @@ import "./LandingPage.css";
 import Footer from "./Footer/Footer";
 
 export default class LandingPage extends Component {
+  constructor(props) {
+    super(props);
+    this.state = {
+      readMore: false,
+    };
+  }
+  handleClick = () => {
+    this.setState(!readMore);
+  };
+
   render() {
     return (
       <div>
@@ -219,7 +236,6 @@ export default class LandingPage extends Component {
                   <br />
                   <div className="bg-gray-500 py-8 pl-4 pr-4 md:pl-60 md:pr-4 rounded-xl">
                     <p>
-                      {" "}
                       Bismillah Wal Hamdulillah,
                       <br />
                       Sukacita dan rasa gembira mengiringi keberhasilan yang
@@ -257,108 +273,128 @@ export default class LandingPage extends Component {
               </h1>
               <br />
               <div className=" md:grid grid-cols-3 space-y-4 md:space-y-0 gap-4 mx-auto ">
-                <div className="w-auto mx-auto bg-gray-500 p-3 rounded-xl">
-                  <div className="flex ">
-                    <div className="profile">
-                      <img className="w-14" src={kaprogRPL} />
-                    </div>
+                {/* AK */}
+                <Link to="/jurusan/1" className="no-underline text-white">
+                  <div className="w-auto mx-auto bg-gray-500 p-3 rounded-xl">
+                    <div className="flex ">
+                      <div className="profile">
+                        <img className="w-14" src={kaprogAK} />
+                      </div>
 
-                    <div className="ml-4 mt-2">
-                      <h6 className="-mb-1 text-base tracking-wider">
-                        Andi Susandi, S.Kom
-                      </h6>
-                      <p className="text-sm font-light tracking-widest">
-                        Ketua Pemrograman RPL
-                      </p>
+                      <div className="ml-4 mt-2">
+                        <h6 className="-mb-1 text-base tracking-wider">
+                          SRI SUPRIATININGSIH, S. Pd.
+                        </h6>
+                        <p className="text-sm font-light tracking-widest">
+                          Kepala Program AK
+                        </p>
+                      </div>
                     </div>
+                    <img className="rounded-lg pt-2" src={AK} />
                   </div>
-                  <img className="rounded-lg pt-2" src={AK} />
-                </div>
-                <div className="w-auto mx-auto bg-gray-500 p-3 rounded-xl">
-                  <div className="flex ">
-                    <div className="profile">
-                      <img className="w-14" src={kaprogRPL} />
-                    </div>
+                </Link>
 
-                    <div className="ml-4 mt-2">
-                      <h6 className="-mb-1 text-base tracking-wider">
-                        Andi Susandi, S.Kom
-                      </h6>
-                      <p className="text-sm font-light tracking-widest">
-                        Ketua Pemrograman RPL
-                      </p>
-                    </div>
-                  </div>
-                  <img className="rounded-lg pt-2" src={RPL} />
-                </div>
-                <div className="w-auto mx-auto bg-gray-500 p-3 rounded-xl">
-                  <div className="flex ">
-                    <div className="profile">
-                      <img className="w-14" src={kaprogRPL} />
-                    </div>
+                {/* RPL */}
+                <Link to="/jurusan/2" className="no-underline text-white">
+                  <div className="w-auto mx-auto bg-gray-500 p-3 rounded-xl">
+                    <div className="flex ">
+                      <div className="profile">
+                        <img className="w-14" src={kaprogRPL} />
+                      </div>
 
-                    <div className="ml-4 mt-2">
-                      <h6 className="-mb-1 text-base tracking-wider">
-                        Andi Susandi, S.Kom
-                      </h6>
-                      <p className="text-sm font-light tracking-widest">
-                        Ketua Pemrograman RPL
-                      </p>
+                      <div className="ml-4 mt-2">
+                        <h6 className="-mb-1 text-base tracking-wider">
+                          ANDI SUSANDI, S.Kom.
+                        </h6>
+                        <p className="text-sm font-light tracking-widest">
+                          Kepala Program RPL
+                        </p>
+                      </div>
                     </div>
+                    <img className="rounded-lg pt-2" src={RPL} />
                   </div>
-                  <img className="rounded-lg pt-2" src={TKJ} />
-                </div>
-                <div className="w-auto mx-auto bg-gray-500 p-3 rounded-xl">
-                  <div className="flex ">
-                    <div className="profile">
-                      <img className="w-14" src={kaprogRPL} />
-                    </div>
+                </Link>
+                {/* TKJ */}
+                <Link to="/jurusan/3" className="no-underline text-white">
+                  <div className="w-auto mx-auto bg-gray-500 p-3 rounded-xl">
+                    <div className="flex ">
+                      <div className="profile">
+                        <img className="w-14" src={kaprogTKJ} />
+                      </div>
 
-                    <div className="ml-4 mt-2">
-                      <h6 className="-mb-1 text-base tracking-wider">
-                        Andi Susandi, S.Kom
-                      </h6>
-                      <p className="text-sm font-light tracking-widest">
-                        Ketua Pemrograman RPL
-                      </p>
+                      <div className="ml-4 mt-2">
+                        <h6 className="-mb-1 text-base tracking-wider">
+                          DANI KURNAWAN, S.Kom.
+                        </h6>
+                        <p className="text-sm font-light tracking-widest">
+                          Kepala Program TKJ
+                        </p>
+                      </div>
                     </div>
+                    <img className="rounded-lg pt-2" src={TKJ} />
                   </div>
-                  <img className="rounded-lg pt-2" src={TEI} />
-                </div>
-                <div className="w-auto mx-auto bg-gray-500 p-3 rounded-xl">
-                  <div className="flex ">
-                    <div className="profile">
-                      <img className="w-14" src={kaprogRPL} />
-                    </div>
+                </Link>
 
-                    <div className="ml-4 mt-2">
-                      <h6 className="-mb-1 text-base tracking-wider">
-                        Andi Susandi, S.Kom
-                      </h6>
-                      <p className="text-sm font-light tracking-widest">
-                        Ketua Pemrograman RPL
-                      </p>
-                    </div>
-                  </div>
-                  <img className="rounded-lg pt-2" src={TSM} />
-                </div>
-                <div className="w-auto mx-auto bg-gray-500 p-3 rounded-xl">
-                  <div className="flex ">
-                    <div className="profile">
-                      <img className="w-14" src={kaprogRPL} />
-                    </div>
+                {/* TEI */}
+                <Link to="/jurusan/4" className="no-underline text-white">
+                  <div className="w-auto mx-auto bg-gray-500 p-3 rounded-xl">
+                    <div className="flex ">
+                      <div className="profile">
+                        <img className="w-14" src={kaprogTEI} />
+                      </div>
 
-                    <div className="ml-4 mt-2">
-                      <h6 className="-mb-1 text-base tracking-wider">
-                        Andi Susandi, S.Kom
-                      </h6>
-                      <p className="text-sm font-light tracking-widest">
-                        Ketua Pemrograman RPL
-                      </p>
+                      <div className="ml-4 mt-2">
+                        <h6 className="-mb-1 text-base tracking-wider">
+                          DEWI MARLINA, S.Pd.
+                        </h6>
+                        <p className="text-sm font-light tracking-widest">
+                          Kepala Program TEI
+                        </p>
+                      </div>
                     </div>
+                    <img className="rounded-lg pt-2" src={TEI} />
                   </div>
-                  <img className="rounded-lg pt-2" src={TET} />
-                </div>
+                </Link>
+                {/* TBSM */}
+                <Link to="/jurusan/5" className="no-underline text-white">
+                  <div className="w-auto mx-auto bg-gray-500 p-3 rounded-xl">
+                    <div className="flex ">
+                      <div className="profile">
+                        <img className="w-14" src={kaprogTSM} />
+                      </div>
+
+                      <div className="ml-4 mt-2">
+                        <h6 className="-mb-1 text-base tracking-wider">
+                          ROHADI YUSUF, S.Pd.
+                        </h6>
+                        <p className="text-sm font-light tracking-widest">
+                          Kepala Program TBSM
+                        </p>
+                      </div>
+                    </div>
+                    <img className="rounded-lg pt-2" src={TSM} />
+                  </div>
+                </Link>
+                {/* TET */}
+                <Link to="/jurusan/6" className="no-underline text-white">
+                  <div className="w-auto mx-auto bg-gray-500 p-3 rounded-xl">
+                    <div className="flex ">
+                      <div className="profile">
+                        <img className="w-14" src={kaprogTET} />
+                      </div>
+
+                      <div className="ml-4 mt-2">
+                        <h6 className="-mb-1 text-base tracking-wider">
+                          IMAM NURSYAHIED, S.Pd.
+                        </h6>
+                        <p className="text-sm font-light tracking-widest">
+                          Kepala Program TET
+                        </p>
+                      </div>
+                    </div>
+                    <img className="rounded-lg pt-2" src={TET} />
+                  </div>
+                </Link>
               </div>
             </Container>
           </div>

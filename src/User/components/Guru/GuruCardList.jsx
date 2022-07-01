@@ -6,7 +6,6 @@ import {
   faChevronLeft,
   faChevronRight,
 } from "@fortawesome/free-solid-svg-icons";
-import { LazyLoadImage } from "react-lazy-load-image-component";
 import "../RPL.css";
 
 export default function GuruCardList(props) {
@@ -56,13 +55,13 @@ export default function GuruCardList(props) {
                   className="close"
                   onClick={onModal}
                 />
-                {guru[guruIndex].guru_gambar ? (
+                {filteredData[guruIndex].guru_gambar ? (
                   <img
                     src={
                       "http://localhost:8000/public/images/" +
-                      guru[guruIndex].guru_gambar
+                      filteredData[guruIndex].guru_gambar
                     }
-                    alt={guru[guruIndex].guru_nama}
+                    alt={filteredData[guruIndex].guru_nama}
                   />
                 ) : (
                   <Spinner animation="border" />
@@ -71,6 +70,9 @@ export default function GuruCardList(props) {
               <div className="next mt-60">
                 <button
                   className="bg-none md:bg-slate-600 sm:p-0 md:p-3 sm:w-auto md:w-14 sm:h-auto md:h-14 rounded-full"
+                  disabled={
+                    guruIndex === filteredData.length + 1 ? true : false
+                  }
                   onClick={(e) => {
                     setGuruIndex(guruIndex + 1);
                   }}
@@ -94,12 +96,11 @@ export default function GuruCardList(props) {
           {filteredData.map((guru, index) => (
             <div className="w-full pt-7" key={guru.guru_id}>
               <Card className="xs:h-auto laptop:h-96 mx-auto my-0 p-1 rounded-xl">
-                <LazyLoadImage
+                <img
                   className="img-siswa"
                   variant="top"
                   src={
-                    "http://localhost:8000/public/images/" +
-                    guru.guru_gambar
+                    "http://localhost:8000/public/images/" + guru.guru_gambar
                   }
                   onClick={(e) => onModal(e, index)}
                   loading="lazy"
