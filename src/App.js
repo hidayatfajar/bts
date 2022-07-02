@@ -18,7 +18,6 @@ export default class App extends Component {
         <BrowserRouter>
             <Switch>
               <Route path="/" exact component={LandingPage} />
-              {/* <Route path="/Admin" exact component={Admin} /> */}
               <Route path="/auth/login" component={Login} />
               <Route path="/admin" component={SidebarAdmin} />
               <Route path="/jurusan/:jurusanId" component={Jurusan} />
