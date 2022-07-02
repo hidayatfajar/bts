@@ -5,6 +5,7 @@ import NavBarMagic from "../../../LandingPage/NavBarMagic/NavBarMagic";
 import WisudaGalery from "./WisudaGalery";
 import WisudaHeader from "./WisudaHeader";
 import axios from "axios";
+import Spinner from "react-bootstrap/Spinner";
 
 export default function Wisuda() {
   const [data, setData] = useState([]);
