@@ -7,6 +7,7 @@ const EditGuru = () => {
   const [jabatan, setJabatan] = useState("");
   const [image, setImage] = useState("");
   const [preview, setPreview] = useState("");
+  document.title = "BTS - Ubah Guru";
 
   const history = useHistory();
   const { guru_id } = useParams();
@@ -68,37 +69,37 @@ const EditGuru = () => {
   return (
     <div>
       <div className="container">
-        <p className="text-3xl text-black font-semibold mb-3">Add Guru</p>
+        <p className="text-3xl text-black font-semibold mb-3">Ubah Guru</p>
         <div className="shadow rounded border-2 border-gray-200">
           <div className="px-5 py-5">
             <form onSubmit={updateGuru}>
               <div className="columns-2">
                   <div className="form-group mb-3">
-                    <label className="font-semibold text-sm text-gray-800 mb-2">
+                    <label className="font-semibold text-sm text-gray-700 mb-2">
                       Nama Guru<span className="text-red-500">*</span>
                     </label>
                     <input
                       className="form-control placeholder:italic placeholder:text-sm"
                       type="text"
-                      placeholder="Nama Guru"
+                      placeholder="Nama Guru *"
                       value={guru}
                       onChange={(e) => setGuru(e.target.value)}
                     />
                   </div>
                   <div className="form-group mb-3">
-                    <label className="font-semibold text-sm text-gray-800 mb-2">
+                    <label className="font-semibold text-sm text-gray-700 mb-2">
                       Jabatan<span className="text-red-500">*</span>
                     </label>
                     <input
                       className="form-control placeholder:italic placeholder:text-sm"
                       type="text"
-                      placeholder="Jabatan"
+                      placeholder="Jabatan *"
                       value={jabatan}
                       onChange={(e) => setJabatan(e.target.value)}
                     />
                   </div>
                   <div className="form-group mb-3">
-                    <label className="font-semibold text-sm text-gray-800 mb-2">Foto<span className="text-red-500">*</span></label>
+                    <label className="font-semibold text-sm text-gray-700 mb-2">Foto<span className="text-red-500">*</span></label>
                     <input
                       type="file"
                       className="block w-full text-sm text-slate-500
@@ -117,7 +118,7 @@ const EditGuru = () => {
                   </button>
                   &ensp;
                   <Link to={`/admin/guru/`} >
-                    <button className="bg-gray-600 py-2 px-4 no-underline rounded hover:bg-gray-800 text-white text-sm font-medium flex items-center ml-3">
+                    <button className="bg-gray-600 py-2 px-4 no-underline rounded hover:bg-gray-700 text-white text-sm font-medium flex items-center ml-3">
                     Batal
                     </button>
                   </Link>

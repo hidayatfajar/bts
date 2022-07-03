@@ -1,12 +1,15 @@
 import React, { useState, useEffect } from "react";
 import { useParams, Link } from "react-router-dom";
 import axios from "axios";
+import Spinner from "react-bootstrap/Spinner";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import { faTrash, faPen, faEye } from "@fortawesome/free-solid-svg-icons";
+import { faTrash, faPen } from "@fortawesome/free-solid-svg-icons";
 const FotoList = () => {
   const { kelas_id } = useParams();
   const [foto, setFoto] = useState([]);
   const [order, setOrder] = useState("asc");
+  const [Isloading, SetIsloading] = useState(true);
+  document.title = "BTS - List Foto";
 
   const getFoto = async () => {
     const res = await axios.get(`/kelas/gambar/${kelas_id}`);
@@ -20,9 +23,9 @@ const FotoList = () => {
 
   const autoSort = (a, b) => {
     if (order === "asc") {
-      return a.gambar_nama.localeCompare(b.gambar_nama);
+      return a.gambar_jenis.localeCompare(b.gambar_jenis);
     } else {
-      return b.gambar_nama.localeCompare(a.gambar_nama);
+      return b.gambar_jenis.localeCompare(a.gambar_jenis);
     }
   };
 
@@ -34,14 +37,18 @@ const FotoList = () => {
       console.log(error);
     }
   };
+
   useEffect(() => {
+    setTimeout(() => {
     getFoto();
+    SetIsloading(false);
+    }, 1000);
   }, [kelas_id]);
 
   return (
     <div>
       <div className="container w-full">
-        <p className="text-3xl font-bold mb-5">Data Foto</p>
+        <p className="text-3xl font-bold mb-5">Data Foto Kelas</p>
         <div className="md:flex justify-between mb-3">
           <div>
             <Link
@@ -56,6 +63,15 @@ const FotoList = () => {
             </Link>
           </div>
         </div>
+        {Isloading ? (
+          <center>
+            <Spinner
+              className="justify-center"
+              variant="dark"
+              animation="border"
+            />
+          </center>
+        ) : (
         <div className="overflow-auto rounded-lg shadow mt-14 md:mt-0">
           <table className="w-full border-2 border-gray-200">
             <thead className="bg-gray-50 border-b-2 border-gray-200">
@@ -82,7 +98,6 @@ const FotoList = () => {
                   </td>
                   <td className="p-3 text-sm text-gray-700 whitespace-nowrap">
                     <img
-                      // src={`${process.env.REACT_APP_IMAGE_URL}` + foto.gambar_nama}
                       src={
                         `http://localhost:8000/public/images/` +
                         foto.gambar_nama
@@ -95,21 +110,19 @@ const FotoList = () => {
                     {foto.gambar_jenis}
                   </td>
                   <td className="p-3 text-sm text-gray-700 whitespace-nowrap">
-                    <button className="text-black text-left">
-                      <FontAwesomeIcon icon={faEye} onClick={""} />
-                    </button>
+                    
                     <Link
                       to={{
                         pathname: `/admin/foto/kelas/ubah/${foto.gambar_id}`,
                         state: { id: kelas_id },
                       }}
                     >
-                      <button className="text-black text-center px-4">
+                      <button className="text-black">
                         <FontAwesomeIcon icon={faPen} />
                       </button>
                     </Link>
                     <button
-                      className="text-black text-end"
+                      className="text-black px-4 text-end"
                       onClick={() => deleteFoto(foto.gambar_id)}
                     >
                       <FontAwesomeIcon icon={faTrash} />
@@ -120,6 +133,7 @@ const FotoList = () => {
             </tbody>
           </table>
         </div>
+        )}
       </div>
     </div>
   );

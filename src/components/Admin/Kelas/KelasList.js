@@ -1,16 +1,10 @@
 import React, { useState, useEffect } from "react";
 import { Link, useParams } from "react-router-dom";
 import axios from "axios";
-import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import {
-  faChartArea,
-  faCircle,
-  faCircleInfo,
-  faInfoCircle,
-} from "@fortawesome/free-solid-svg-icons";
 
 const KelasList = () => {
   const [kelas, setKelas] = useState([]);
+  document.title = "BTS - List Kelas";
 
   const { jurusan_id } = useParams();
 

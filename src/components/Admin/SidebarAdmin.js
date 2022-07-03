@@ -13,10 +13,12 @@ import KelasList from "./Kelas/KelasList";
 import SiswaList from "./Siswa/SiswaList";
 import AddSiswa from "./Siswa/AddSiswa";
 import EditSiswa from "./Siswa/EditSiswa";
+import ViewSiswa from './Siswa/ViewSiswa';
 
 import GuruList from "./Guru/GuruList";
 import AddGuru from './Guru/AddGuru';
 import EditGuru from './Guru/EditGuru';
+import ViewGuru from "./Guru/ViewGuru";
 
 import FotoList from "./Photo/FotoList";
 import AddFoto from './Photo/AddFoto';
@@ -94,11 +96,13 @@ const SideBar = () => {
           <ProtectedRoutes exact path="/admin/guru/" component={GuruList} />
           <ProtectedRoutes path="/admin/guru/tambah" component={AddGuru} />
           <ProtectedRoutes path="/admin/guru/ubah/:guru_id" component={EditGuru} />
+          <ProtectedRoutes path="/admin/guru/view/:guru_id" component={ViewGuru} />
 
           {/* SISWA */}
           <ProtectedRoutes  exact path="/admin/siswa/kelas/:kelas_id" component={SiswaList} />
           <ProtectedRoutes path="/admin/siswa/tambah" component={AddSiswa} />
           <ProtectedRoutes path="/admin/siswa/ubah/:siswa_id" component={EditSiswa} />
+          <ProtectedRoutes path="/admin/siswa/view/:siswa_id" component={ViewSiswa} />
           
           {/* PHOTO */}
           <ProtectedRoutes exact path="/admin/foto/kelas/:kelas_id" component={FotoList} />
