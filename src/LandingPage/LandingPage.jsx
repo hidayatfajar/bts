@@ -41,14 +41,14 @@ import kaprogAK from "./asset/jurusan/kaprog-ak.png";
 import kaprogTEI from "./asset/jurusan/kaprog-tei.png";
 import kaprogTET from "./asset/jurusan/kaprog-tet.png";
 import kaprogTKJ from "./asset/jurusan/kaprog-tkj.png";
-import kaprogTSM from "./asset/jurusan/kaprog-tsm.png";
+import kaprogTBSM from "./asset/jurusan/kaprog-tsm.png";
 
 import RPL from "./asset/jurusan/RPL.png";
 import AK from "./asset/jurusan/AK.png";
 import TEI from "./asset/jurusan/TEI.png";
 import TET from "./asset/jurusan/TET.png";
 import TKJ from "./asset/jurusan/TKJ.png";
-import TSM from "./asset/jurusan/TSM.png";
+import TBSM from "./asset/jurusan/TSM.png";
 
 import galery from "./asset/Galery.png";
 
@@ -96,18 +96,18 @@ export default class LandingPage extends Component {
           {/* Page1 */}
           <div className="-mt-12 md:pt-20 pb-36">
             <div>
-              <Container className="md:flex justify-between">
-                <div className="w-full text-center md:w-6/12 ">
-                  <h1 className="max-w-md text-title">
+              <Container className="laptop:flex justify-between">
+                <div className="w-full text-center laptop:w-6/12 ">
+                  <h1 className="max-w-md text-title tablet:max-w-none laptop:max-w-md tablet:text-center laptop:text-left">
                     LET'S WRITE OUR STORY{" "}
-                    <span className="gradient-text">EXIST 16.</span>{" "}
+                    <span className="gradient-text">EXIST 16.</span>
                   </h1>
 
-                  <p className="max-w-lg pt-4 text-lg font-light tracking-wider md:font-normal  md:text-left">
+                  <p className="max-w-lg pt-4 text-lg font-light tracking-wider tablet:mx-auto laptop:mx-0    laptop:font-normal laptop:text-left">
                     Kumpulan foto untuk mengenang masa kita Bersama selama 3
                     tahun di SMKN 2 Kota Bekasi.
                   </p>
-                  <div className="flex justify-center pt-4 md:justify-start">
+                  <div className="flex justify-center pt-4 laptop:justify-start">
                     <button
                       variant="outline-success"
                       className="w-28 h-9 rounded-full transition delay-150 outline 
@@ -122,16 +122,16 @@ export default class LandingPage extends Component {
                 </div>
               </Container>
 
-              <div className="md:flex justify-end">
+              <div className="laptop:flex justify-end">
                 <img
                   src={img1}
                   className=" w-[1020px] h-auto mt-[-600px] mr-[-100px]
-                  hidden md:block "
+                  hidden laptop:block "
                   alt=""
                 />
                 <img
                   src={img1_2}
-                  className="mt-2 w-full mx-auto md:hidden md:mt-0 "
+                  className="mt-2 w-full mx-auto tablet:mt-0 tablet:w-[80%] laptop:hidden laptop:mt-0 "
                   alt=""
                 />
               </div>
@@ -139,15 +139,15 @@ export default class LandingPage extends Component {
           </div>
 
           {/* Page akt */}
-          <div className="-mt-16 md:-mt-52">
+          <div className="-mt-16 laptop:-mt-52">
             <Container>
-              <div className="md:flex justify-between">
+              <div className="laptop:flex justify-between">
                 <div className="w-full pt-0">
-                  <h1 className="text-title  md:pt-3">
+                  <h1 className="text-title  laptop:pt-3">
                     REWIND VIDEO <br />
                     <span className="gradient-text">EXIST 16.</span>{" "}
                   </h1>
-                  <p className="max-w-xs md:max-w-[420px] pt-4 text-lg font-light md:font-normal tracking-wider ">
+                  <p className="max-w-xs laptop:max-w-[420px] pt-4 text-lg font-light laptop:font-normal tracking-wider ">
                     Beberapa video rewind untuk mengenang kebersamaan kita
                     angkatan 16, sebagai bagian dari siswa SMKN 2.
                   </p>
@@ -162,7 +162,7 @@ export default class LandingPage extends Component {
                     </button>
                   </div>
                 </div>
-                <div className="w-full pt-20 mx-auto md:pt-0">
+                <div className="w-full pt-20 mx-auto laptop:pt-0">
                   <div className="player-wrapper">
                     <ReactPlayer
                       className="react-player "
@@ -178,33 +178,33 @@ export default class LandingPage extends Component {
           </div>
 
           {/* Page Sekolah */}
-          <div className="pt-40 md:pt-56">
+          <div className="pt-40 laptop:pt-56">
             <Container>
-              <div className="md:flex">
-                <div className="md:-ml-16">
+              <div className="laptop:flex">
+                <div className="laptop:-ml-16">
                   <img
-                    className="w-64 mx-auto md:w-96 pt-16  md:mx-0"
+                    className="w-64 mx-auto tablet:w-72 laptop:w-96 pt-16  laptop:mx-0"
                     src={smk}
                   />
                 </div>
-                <div className="w-full ml-0 pt-3 md:w-8/12 md:ml-14 md:pt-0">
+                <div className="w-full ml-0 pt-3 laptop:w-8/12 laptop:ml-14 laptop:pt-0">
                   <div className="text-center">
-                    <h1 className="max-w-none mt-5 text-3xl font-semibold font-body md:max-w-2xl  md:text-5xl md:font-bold md:text-left tracking-wide">
+                    <h1 className="max-w-none mt-5 text-3xl font-semibold font-body laptop:max-w-2xl  laptop:text-5xl laptop:font-bold laptop:text-left tracking-wide">
                       THIS IS OUR SCHOOL
                       <br />
                       <span className="gradient-text">
                         SMKN 2 KOTA BEKASI.
                       </span>{" "}
                     </h1>
-                    <p className="pt-4 pb-3 text-light tracking-wider text-lg md:text-left md:tracking-wide">
+                    <p className="pt-4 pb-3 text-light tracking-wider text-lg laptop:text-left laptop:tracking-wide">
                       Sekolah yang memiliki 6 jurusan didalam nya, serta kelas
                       unggulan yang siap untuk memajukan perkembangan industri
                       di indonesia. berikut ini adalah pengenalan sekolah kami.
                     </p>
                   </div>
-                  <div className="flex justify-center  md:justify-start">
+                  <div className="flex justify-center  laptop:justify-start">
                     <button
-                      className="w-40 md:w-32 h-9 rounded-full transition delay-150 outline
+                      className="w-40 laptop:w-32 h-9 rounded-full transition delay-150 outline
                     text-green-700 outline-green-700 hover:bg-green-700 hover:text-white
                     "
                     >
@@ -212,7 +212,7 @@ export default class LandingPage extends Component {
                     </button>
                   </div>
                 </div>
-                <div className="hidden md:block mt-10 -mr-40 ">
+                <div className="hidden laptop:block mt-10 -mr-40 ">
                   {" "}
                   <img className="" src={img6} />
                 </div>
@@ -223,18 +223,18 @@ export default class LandingPage extends Component {
           {/* Page Sambutan */}
           <div className="pt-52 pb-10">
             <Container>
-              <div className="md:flex">
-                <div className="hidden md:block -ml-44 -mt-14 ">
+              <div className="laptop:flex">
+                <div className="hidden laptop:block -ml-44 -mt-14 ">
                   <Image className="" src={img2} />
                 </div>
-                <div className="w-full ml-0 md:w-9/12 md:ml-16">
-                  <h4 className="text-left md:text-right text-3xl md:text-2xl font-semibold font-body md:font-bold tracking-widest">
+                <div className="w-full ml-0 laptop:w-9/12 laptop:ml-16">
+                  <h4 className="text-left laptop:text-right text-3xl laptop:text-2xl font-semibold font-body laptop:font-bold tracking-widest">
                     KATA SAMBUTAN {""}
-                    <br className="block md:hidden" />
+                    <br className="block laptop:hidden" />
                     <span className="gradient-text"> KEPALA SEKOLAH</span>
                   </h4>
                   <br />
-                  <div className="bg-gray-500 py-8 pl-4 pr-4 md:pl-60 md:pr-4 rounded-xl">
+                  <div className="bg-gray-500 py-8 pl-4 pr-4 laptop:pl-60 laptop:pr-4 rounded-xl">
                     <p>
                       Bismillah Wal Hamdulillah,
                       <br />
@@ -258,7 +258,7 @@ export default class LandingPage extends Component {
                   </div>
                 </div>
               </div>
-              <Image className="-mt-40 md:-mt-96 ml-32" src={img3} />
+              <Image className="-mt-40 laptop:-mt-96 ml-32" src={img3} />
               <div className="hidden">
                 <Image className="" src={img4} />
               </div>
@@ -268,131 +268,149 @@ export default class LandingPage extends Component {
           {/* Page Jurusan */}
           <div className="pt-32">
             <Container>
-              <h1 className="max-w-sm md:max-w-md text-title">
+              <h1 className="max-w-sm laptop:max-w-md text-title">
                 Beberapa list <span className="gradient-text"> Jurusan.</span>
               </h1>
               <br />
-              <div className=" md:grid grid-cols-3 space-y-4 md:space-y-0 gap-4 mx-auto ">
+              <div className=" laptop:grid grid-cols-3 space-y-4 space-x-4 laptop:space-x-0 laptop:space-y-0 gap-4 mx-auto ">
                 {/* AK */}
                 <Link to="/jurusan/1" className="no-underline text-white">
-                  <div className="w-auto mx-auto bg-gray-500 p-3 rounded-xl">
-                    <div className="flex ">
+                  <div className="w-auto mx-auto bg-gray-500 mini:p-2 mobile:p-[10px] tablet:p-6 laptop:p-3 rounded-xl">
+                    <div className="flex flex-row items-center">
                       <div className="profile">
-                        <img className="w-14" src={kaprogAK} />
+                        <img
+                          className="mobile:w-14 tablet:w-20 laptop:w-14"
+                          src={kaprogAK}
+                        />
                       </div>
 
-                      <div className="ml-4 mt-2">
-                        <h6 className="-mb-1 text-base tracking-wider">
+                      <div className="mini:ml-3 mobile:ml-4 laptop:ml-4 mt-2">
+                        <h6 className="-mb-1 mini:text-sm mobile:text-base tablet:text-xl laptop:text-base tracking-wider">
                           SRI SUPRIATININGSIH, S. Pd.
                         </h6>
-                        <p className="text-sm font-light tracking-widest">
+                        <p className="mobile:text-sm tablet:text-base laptop:text-sm font-light tracking-widest">
                           Kepala Program AK
                         </p>
                       </div>
                     </div>
-                    <img className="rounded-lg pt-2" src={AK} />
+                    <img className="w-full rounded-lg pt-2" src={AK} />
                   </div>
                 </Link>
 
                 {/* RPL */}
                 <Link to="/jurusan/2" className="no-underline text-white">
-                  <div className="w-auto mx-auto bg-gray-500 p-3 rounded-xl">
-                    <div className="flex ">
+                  <div className="w-auto mx-auto bg-gray-500 mini:p-2 mobile:p-[10px] tablet:p-6 laptop:p-3 rounded-xl">
+                    <div className="flex flex-row items-center">
                       <div className="profile">
-                        <img className="w-14" src={kaprogRPL} />
+                        <img
+                          className="mobile:w-14 tablet:w-20 laptop:w-14"
+                          src={kaprogRPL}
+                        />
                       </div>
 
-                      <div className="ml-4 mt-2">
-                        <h6 className="-mb-1 text-base tracking-wider">
+                      <div className="mini:ml-3 mobile:ml-4 laptop:ml-4 mt-2">
+                        <h6 className="-mb-1 mini:text-sm mobile:text-base tablet:text-xl laptop:text-base tracking-wider">
                           ANDI SUSANDI, S.Kom.
                         </h6>
-                        <p className="text-sm font-light tracking-widest">
+                        <p className="mobile:text-sm tablet:text-base laptop:text-sm font-light tracking-widest">
                           Kepala Program RPL
                         </p>
                       </div>
                     </div>
-                    <img className="rounded-lg pt-2" src={RPL} />
+                    <img className="w-full rounded-lg pt-2" src={RPL} />
                   </div>
                 </Link>
                 {/* TKJ */}
                 <Link to="/jurusan/3" className="no-underline text-white">
-                  <div className="w-auto mx-auto bg-gray-500 p-3 rounded-xl">
-                    <div className="flex ">
+                  <div className="w-auto mx-auto bg-gray-500 mini:p-2 mobile:p-[10px] tablet:p-6 laptop:p-3 rounded-xl">
+                    <div className="flex flex-row items-center">
                       <div className="profile">
-                        <img className="w-14" src={kaprogTKJ} />
+                        <img
+                          className="mobile:w-14 tablet:w-20 laptop:w-14"
+                          src={kaprogTKJ}
+                        />
                       </div>
 
-                      <div className="ml-4 mt-2">
-                        <h6 className="-mb-1 text-base tracking-wider">
-                          DANI KURNAWAN, S.Kom.
+                      <div className="mini:ml-3 mobile:ml-4 laptop:ml-4 mt-2">
+                        <h6 className="-mb-1 mini:text-sm mobile:text-base tablet:text-xl laptop:text-base tracking-wider">
+                          DANI KURNAWAN, S.Kom.{" "}
                         </h6>
-                        <p className="text-sm font-light tracking-widest">
+                        <p className="mobile:text-sm tablet:text-base laptop:text-sm font-light tracking-widest">
                           Kepala Program TKJ
                         </p>
                       </div>
                     </div>
-                    <img className="rounded-lg pt-2" src={TKJ} />
+                    <img className="w-full rounded-lg pt-2" src={TKJ} />
                   </div>
                 </Link>
 
                 {/* TEI */}
                 <Link to="/jurusan/4" className="no-underline text-white">
-                  <div className="w-auto mx-auto bg-gray-500 p-3 rounded-xl">
-                    <div className="flex ">
+                  <div className="w-auto mx-auto bg-gray-500 mini:p-2 mobile:p-[10px] tablet:p-6 laptop:p-3 rounded-xl">
+                    <div className="flex flex-row items-center">
                       <div className="profile">
-                        <img className="w-14" src={kaprogTEI} />
+                        <img
+                          className="mobile:w-14 tablet:w-20 laptop:w-14"
+                          src={kaprogTEI}
+                        />
                       </div>
 
-                      <div className="ml-4 mt-2">
-                        <h6 className="-mb-1 text-base tracking-wider">
-                          DEWI MARLINA, S.Pd.
+                      <div className="mini:ml-3 mobile:ml-4 laptop:ml-4 mt-2">
+                        <h6 className="-mb-1 mini:text-sm mobile:text-base tablet:text-xl laptop:text-base tracking-wider">
+                          DEWI MARLINA, S.Pd.{" "}
                         </h6>
-                        <p className="text-sm font-light tracking-widest">
+                        <p className="mobile:text-sm tablet:text-base laptop:text-sm font-light tracking-widest">
                           Kepala Program TEI
                         </p>
                       </div>
                     </div>
-                    <img className="rounded-lg pt-2" src={TEI} />
+                    <img className="w-full rounded-lg pt-2" src={TEI} />
                   </div>
                 </Link>
                 {/* TBSM */}
                 <Link to="/jurusan/5" className="no-underline text-white">
-                  <div className="w-auto mx-auto bg-gray-500 p-3 rounded-xl">
-                    <div className="flex ">
+                  <div className="w-auto mx-auto bg-gray-500 mini:p-2 mobile:p-[10px] tablet:p-6 laptop:p-3 rounded-xl">
+                    <div className="flex flex-row items-center">
                       <div className="profile">
-                        <img className="w-14" src={kaprogTSM} />
+                        <img
+                          className="mobile:w-14 tablet:w-20 laptop:w-14"
+                          src={kaprogTBSM}
+                        />
                       </div>
 
-                      <div className="ml-4 mt-2">
-                        <h6 className="-mb-1 text-base tracking-wider">
-                          ROHADI YUSUF, S.Pd.
+                      <div className="mini:ml-3 mobile:ml-4 laptop:ml-4 mt-2">
+                        <h6 className="-mb-1 mini:text-sm mobile:text-base tablet:text-xl laptop:text-base tracking-wider">
+                          ROHADI YUSUF, S.Pd.{" "}
                         </h6>
-                        <p className="text-sm font-light tracking-widest">
+                        <p className="mobile:text-sm tablet:text-base laptop:text-sm font-light tracking-widest">
                           Kepala Program TBSM
                         </p>
                       </div>
                     </div>
-                    <img className="rounded-lg pt-2" src={TSM} />
+                    <img className="w-full rounded-lg pt-2" src={TBSM} />
                   </div>
                 </Link>
                 {/* TET */}
                 <Link to="/jurusan/6" className="no-underline text-white">
-                  <div className="w-auto mx-auto bg-gray-500 p-3 rounded-xl">
-                    <div className="flex ">
+                  <div className="w-auto mx-auto bg-gray-500 mini:p-2 mobile:p-[10px] tablet:p-6 laptop:p-3 rounded-xl">
+                    <div className="flex flex-row items-center">
                       <div className="profile">
-                        <img className="w-14" src={kaprogTET} />
+                        <img
+                          className="mobile:w-14 tablet:w-20 laptop:w-14"
+                          src={kaprogTET}
+                        />
                       </div>
 
-                      <div className="ml-4 mt-2">
-                        <h6 className="-mb-1 text-base tracking-wider">
-                          IMAM NURSYAHIED, S.Pd.
+                      <div className="mini:ml-3 mobile:ml-4 laptop:ml-4 mt-2">
+                        <h6 className="-mb-1 mini:text-sm mobile:text-base tablet:text-xl laptop:text-base tracking-wider">
+                          IMAM NURSYAHIED, S.Pd.{" "}
                         </h6>
-                        <p className="text-sm font-light tracking-widest">
+                        <p className="mobile:text-sm tablet:text-base laptop:text-sm font-light tracking-widest">
                           Kepala Program TET
                         </p>
                       </div>
                     </div>
-                    <img className="rounded-lg pt-2" src={TET} />
+                    <img className="w-full rounded-lg pt-2" src={TET} />
                   </div>
                 </Link>
               </div>
@@ -403,15 +421,15 @@ export default class LandingPage extends Component {
           <div className="pt-56">
             <Container>
               <div className="flex ">
-                <div className="w-full md:w-5/12">
+                <div className="w-full laptop:w-5/12">
                   <h1 className="text-title max-w-sm">
                     Tim Pembuat <span className="gradient-text">Website.</span>
                   </h1>
                 </div>
-                <div className="hidden md:block w-1/12">
+                <div className="hidden laptop:block w-1/12">
                   <Image className="h-32 -ml-4" src={garis} />
                 </div>
-                <div className="hidden md:block w-4/12">
+                <div className="hidden laptop:block w-4/12">
                   <p className="-ml-7 ">
                     Lorem ipsum dolor sit amet consectetur, adipisicing elit.
                     Fugit, molestiae obcaecati rerum illo velit earum
@@ -420,15 +438,18 @@ export default class LandingPage extends Component {
                     molestias?
                   </p>
                 </div>
-                <div className="-mt-12 -mr-36 md:-mr-40">
+                <div className="-mt-12 -mr-36 laptop:-mr-40">
                   <Image className="" src={img6} />
                 </div>
               </div>
               <br />
 
-              <div className="md:grid grid-cols-4 space-y-4 md:space-y-0 gap-4 -mt-24 md:-mt-36">
+              <div className="tablet:grid laptop:grid tablet:grid-cols-2 laptop:grid-cols-4 space-y-4 laptop:space-y-0 gap-4 mini:-mt-12 mobile:-mt-24 tablet:-mt-28 laptop:-mt-36">
                 <div className="">
-                  <Image className="w-full" src={team1} />
+                  <Image
+                    className="w-full mobile:mt-0 tablet:mt-3 laptop:mt-0"
+                    src={team1}
+                  />
                 </div>
                 <div className="">
                   <Image className="w-full " src={team2} />

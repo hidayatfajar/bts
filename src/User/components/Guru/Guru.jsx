@@ -53,8 +53,8 @@ export default function Guru() {
           <>
             <Container>
               <div className="">
-                <h1 className="max-w-sm text-title">
-                  Foto Seluruh{" "}
+                <h1 className="text-title">
+                  Foto Seluruh <br />
                   <span className="gradient-text">Guru & Staf</span>{" "}
                 </h1>
               </div>

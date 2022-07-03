@@ -15,7 +15,7 @@ body {
 
 }
 
-h1,h2,h3,h4,h5,h6,p{
+h1,h2,h3,h4,h5,h6,p,b{
   @apply font-body;
 }
 
@@ -51,7 +51,7 @@ code {
 }
 
 .text-title{
-  @apply text-4xl font-semibold md:text-left md:text-5xl  md:font-bold tracking-wide;
+  @apply text-4xl font-semibold leading-tight md:text-left md:text-5xl  md:font-bold tracking-wide;
 }
 
 .bg-maker{

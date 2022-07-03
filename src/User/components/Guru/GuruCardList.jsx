@@ -92,12 +92,12 @@ export default function GuruCardList(props) {
           <Spinner variant="success" animation="border" />
         </center>
       ) : (
-        <div className="md:grid grid-cols-4 space-y-4 md:space-y-0 gap-4 mx-auto min-h-screen">
+        <div className="tablet:grid laptop:grid tablet:grid-cols-2 laptop:grid-cols-4 space-y-4 md:space-y-0 gap-4 mx-auto min-h-screen">
           {filteredData.map((guru, index) => (
             <div className="w-full pt-7" key={guru.guru_id}>
-              <Card className="xs:h-auto laptop:h-96 mx-auto my-0 p-1 rounded-xl">
+              <Card className="w-fit mobile:h-auto laptop:h-96 mx-auto my-0 p-1 rounded-xl">
                 <img
-                  className="img-siswa"
+                  className="mobile:w-auto laptop:w-[280px] mobile:h-[356px] laptop:h-[270px] object-cover"
                   variant="top"
                   src={
                     "http://localhost:8000/public/images/" + guru.guru_gambar
