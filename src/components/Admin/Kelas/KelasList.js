@@ -70,14 +70,14 @@ const KelasList = () => {
                   </td>
                   <td className="p-3 text-sm text-gray-700 whitespace-nowrap">
                     <Link to={`/admin/siswa/kelas/${kelas.kelas_id}`}>
-                      <button className="text-black h-8 w-32 rounded bg-gray-200 font-semibold">
+                      <button className="text-black h-8 w-32 rounded bg-gray-200 font-body font-semibold">
                         go to foto siswa
                       </button>
                     </Link>
                   </td>
                   <td className="p-3 text-sm text-gray-700 whitespace-nowrap">
                     <Link to={`/admin/foto/kelas/${kelas.kelas_id}`}>
-                      <button className="text-black h-8 w-32 rounded bg-gray-200 font-bold">
+                      <button className="text-black h-8 w-32 rounded bg-gray-200 font-body font-semibold">
                         <p>go to foto kelas</p>
                       </button>
                     </Link>

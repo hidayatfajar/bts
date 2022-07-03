@@ -39,23 +39,23 @@ export default function JurusanHeader(props) {
   });
 
   return (
-    <div className="bg-white/30 backdrop-blur-xl p-2 rounded-md">
+    <div className="bg-white/30 backdrop-blur-xl p-3 laptop:p-2 rounded-md">
       {jurusan.map((item, index) => {
         return (
-          <div className="flex" key={index}>
+          <div className="laptop:flex" key={index}>
             <div className="">
               <img
                 src={"http://localhost:8000/public/images/" + item.jurusan_logo}
-                className="w-56 mr-8"
+                className="w-56 mr-0 laptop:mr-8 mx-auto"
                 alt={item.jurusan_nama}
                 // style={{ width: "150px", height: "150px" }}
               />
             </div>
-            <div className="desc pl-9 flex flex-col justify-center ">
-              <h1 className=" text-3xl tracking-wider">
+            <div className="desc pl-0 laptop:pl-9 flex flex-col justify-center text-center">
+              <h1 className=" text-3xl laptop:text-left tracking-wider">
                 {jurusanHeader[index].jurusanNama}
               </h1>
-              <p className="max-w-xl pt-2">
+              <p className="max-w-xl pt-2 font-light laptop:font-normal tracking-wider text-justify laptop:text-left">
                 {jurusanHeader[index].jurusanDesc}
               </p>
             </div>
