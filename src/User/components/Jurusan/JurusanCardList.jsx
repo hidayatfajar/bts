@@ -9,6 +9,7 @@ export default function JurusanCardList(props) {
   let jurusanNama = [];
   kelas.map((item) => {
     const lastChar = item.kelas_nama.slice(-1);
+    console.log(item.kelas_nama);
     if (item.jurusan_id === 1) {
       jurusanNama.push("XII AK " + lastChar);
     } else if (item.jurusan_id === 2) {
@@ -18,7 +19,7 @@ export default function JurusanCardList(props) {
     } else if (item.jurusan_id === 4) {
       jurusanNama.push("XII TEI " + lastChar);
     } else if (item.jurusan_id === 5) {
-      jurusanNama.push(" XIITBSM " + lastChar);
+      jurusanNama.push(" XII TBSM " + lastChar);
     } else if (item.jurusan_id === 6) {
       jurusanNama.push("XII TET " + lastChar);
     }

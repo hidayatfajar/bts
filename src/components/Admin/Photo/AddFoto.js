@@ -12,6 +12,7 @@ const AddFoto = (props) => {
   const [preview, setPreview] = useState("");
   const [kelas, setKelas] = useState([]);
 
+  document.title = "BTS - Tambah Foto";
   const history = useHistory();
   const location = useLocation();
 
@@ -74,8 +75,10 @@ const AddFoto = (props) => {
         <div className="px-4 py-4">
           <form onSubmit={addFoto}>
             <div className="columns-2">
-              <div className="form-group">
-                <label className="mb-2">Jenis</label>
+              <div className="form-group mb-3">
+                <label className="text-md text-gray-700 mb-2 font-semibold">
+                  Jenis <span className="text-red-500">*</span>
+                </label>
                 <select
                   className="form-select italic text-sm mb-3"
                   type="text"
@@ -87,8 +90,10 @@ const AddFoto = (props) => {
                   <option value="bebas">Bebas</option>
                 </select>
               </div>
-              <div className="form-group">
-                <label className="mb-2">Kelas</label>
+              <div className="form-group mb-3">
+                <label className="text-md text-gray-700 mb-2 font-semibold">
+                  Kelas <span className="text-red-500">*</span>
+                </label>
                 <select
                   className="form-select italic text-sm mb-3"
                   onChange={(e) => setKelas_id(e.target.value)}
@@ -102,13 +107,21 @@ const AddFoto = (props) => {
                   ))}
                 </select>
               </div>
-              <div className="form-group">
-                <label className="mb-2">Photo</label>
-                <input
-                  className="form-control mb-3"
-                  type="file"
-                  onChange={loadGambar}
-                />
+              <div className="form-group mb-3">
+                <label className="text-md text-gray-700 mb-2 font-semibold">
+                  Photo <span className="text-red-500">*</span>
+                </label> 
+                  <input
+                    type="file"
+                    className="block w-full text-sm text-slate-500
+                            file:mr-4 file:py-2 file:px-4
+                            file:rounded-full file:border-0
+                            file:text-sm file:font-semibold
+                            file:bg-gray-100 file:text-gray-700
+                            hover:file:bg-gray-200
+                          "
+                    onChange={loadGambar}
+                  /> 
               </div>
               <div className="inline-flex">
                 <button className="bg-sky-600 py-2 px-4 rounded hover:bg-sky-800 text-white text-sm font-medium flex items-center">
@@ -122,7 +135,7 @@ const AddFoto = (props) => {
                 </Link>
               </div>
               <div className="flex flex-col justify-center items-center">
-                <label className="flex w-full text-left font-semibold">
+                <label className="flex w-full text-left text-md text-gray-700 mb-2 font-semibold">
                   Preview :
                 </label>
                 {preview ? (

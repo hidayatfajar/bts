@@ -9,6 +9,7 @@ import Swal from 'sweetalert2';
 export const Login = () => {
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
+  document.title = "BTS - Login Page";
 
   const history = useHistory();
 

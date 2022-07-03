@@ -3,7 +3,7 @@ import { Link, useParams, useHistory, useLocation } from "react-router-dom";
 import axios from "axios";
 import Swal from "sweetalert2";
 
-const EditSiswa = (props) => {
+const ViewSiswa = (props) => {
   const [nis, setNis] = useState("");
   const [nama, setNama] = useState("");
   const [image, setImage] = useState("");
@@ -11,17 +11,9 @@ const EditSiswa = (props) => {
   const [quotes, setQuotes] = useState("");
   const [kelas, setKelas] = useState([]);
   const [kelas_id, setKelas_id] = useState("");
-  document.title = "BTS - Ubah Siswa";
+  document.title = "BTS - View Siswa";
 
-  const { siswa_id } = useParams();
-  const history = useHistory();
-
-  const loadGambar = (e) => {
-    const img = e.target.files[0];
-    setImage(img);
-    setPreview(URL.createObjectURL(img));
-    console.log(kelas);
-  };
+  const { siswa_id } = useParams(); 
 
   const location = useLocation();
 
@@ -31,52 +23,16 @@ const EditSiswa = (props) => {
     setNama(res.data.data[0].siswa_nama);
     setQuotes(res.data.data[0].siswa_quote);
     setKelas_id(res.data.data[0].kelas_id);
-    setImage(res.data.data[0].siswa_gambar);
-    console.log(res.data.data);
+    setImage(res.data.data[0].siswa_gambar); 
     console.log(res.data.data[0].kelas_id);
   };
 
   const getKelas = async () => {
     const res = await axios.get("/kelas");
     try {
-      setKelas(res.data.data);
-      //   console.log(res.data.data);
+      setKelas(res.data.data); 
     } catch (error) {
       console.log(error);
-    }
-  };
-
-  const updateSiswa = async (e) => {
-    e.preventDefault();
-    const data = new FormData();
-    data.append("nama", nama);
-    data.append("image", image);
-    data.append("quote", quotes);
-    data.append("kelas_id", kelas_id);
-    try {
-      const res = await axios.put(`/siswa/ubah/${siswa_id}`, data, {
-        headers: {
-          "Content-type": "multipart/form-data",
-        },
-      });
-      if (res.data.error === true) {
-        Swal.fire({
-          icon: "error",
-          title: "Oops...",
-          text: `${res.data.message}`,
-        });
-      } else {
-        Swal.fire({
-          icon: "success",
-          title: "Good Job!",
-          text: `${res.data.message}`,
-        });
-        history.push(`/admin/siswa/kelas/${location.state.id}`);
-      }
-      console.log(data);
-    } catch (error) {
-      console.log(error);
-      console.log(location.state.id);
     }
   };
 
@@ -88,10 +44,10 @@ const EditSiswa = (props) => {
   return (
     <div>
       <div className="container">
-        <p className="text-3xl font-semibold mb-3">Ubah Siswa</p>
+        <p className="text-3xl font-semibold mb-3">View Siswa</p>
         <div className="w-full shadow rounded border-2 border-gray-200">
           <div className="p-2">
-            <form onSubmit={updateSiswa}>
+            <form>
               <div className="grid grid-cols-3 gap-4 pt-4">
                 <div className="col-span-2  rounded p-4 ">
                   <div className="form-group mb-3">
@@ -102,7 +58,7 @@ const EditSiswa = (props) => {
                       className="form-control placeholder:italic placeholder:text-sm"
                       type="number"
                       placeholder="Masukkan NIS Siswa *"
-                      onChange={(e) => setNis(e.target.value)}
+                      disabled
                       value={nis}
                     />
                   </div>
@@ -114,7 +70,7 @@ const EditSiswa = (props) => {
                       className="form-control placeholder:italic placeholder:text-sm"
                       type="text"
                       placeholder="Nama"
-                      onChange={(e) => setNama(e.target.value)}
+                      disabled
                       value={nama}
                     />
                   </div>
@@ -127,7 +83,7 @@ const EditSiswa = (props) => {
                       rows="3"
                       type="text"
                       placeholder="Masukkan Quotes * ( Max : 100 Karakter )"
-                      onChange={(e) => setQuotes(e.target.value)}
+                      disabled
                       value={quotes}
                     />
                   </div>
@@ -136,8 +92,8 @@ const EditSiswa = (props) => {
                       Kelas <span className="text-red-500">*</span>
                     </label>
                     <select
-                      className="form-select italic text-sm mb-3"
-                      onChange={(e) => setKelas_id(e.target.value)}
+                      className="form-control text-sm mb-3"
+                      disabled
                       value={kelas_id}
                     >
                       <option value="">=== Pilih Kelas ===</option>
@@ -148,16 +104,11 @@ const EditSiswa = (props) => {
                       ))}
                     </select>
                   </div>
-                  <div className="inline-flex">
-                    <button className="bg-sky-600 py-2 px-4 no-underline rounded hover:bg-sky-800 text-white text-sm font-medium flex items-center">
-                      Ubah
+                  <Link to={`/admin/siswa/kelas/${location.state.id}`}>
+                    <button className="bg-gray-600 py-2 px-4 rounded no-underline hover:bg-gray-800 text-white text-sm font-medium flex items-center">
+                      Batal
                     </button>
-                    <Link to={`/admin/siswa/kelas/${location.state.id}`}>
-                      <button className="bg-gray-600 py-2 px-4 rounded no-underline hover:bg-gray-800 text-white text-sm font-medium flex items-center ml-3">
-                        Batal
-                      </button>
-                    </Link>
-                  </div>
+                  </Link>
                 </div>
                 <div className="flex flex-col justify-center items-center -mt-20">
                   <div className="flex flex-col justify-center items-center ">
@@ -181,22 +132,8 @@ const EditSiswa = (props) => {
                         className="mt-3 w-64 h-64 object-cover rounded border-2 border-gray-300 flex justify-center items-center mb-3"
                       />
                     )}
-                    <label className="block font-semibold">
-                      <input
-                        type="file"
-                        className="block w-full text-sm text-slate-500
-                            file:mr-4 file:py-2 file:px-4
-                            file:rounded-full file:border-0
-                            file:text-sm file:font-semibold
-                            file:bg-gray-100 file:text-gray-700
-                            hover:file:bg-gray-200
-                            "
-                        onChange={loadGambar}
-                      />
-                    </label>
                   </div>
                 </div>
-                {/* DISINI */}
               </div>
             </form>
           </div>
@@ -206,4 +143,4 @@ const EditSiswa = (props) => {
   );
 };
 
-export default EditSiswa;
+export default ViewSiswa;

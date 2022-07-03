@@ -13,6 +13,7 @@ const AddSiswa = (props) => {
   const [quotes, setQuotes] = useState("");
   const [kelas, setKelas] = useState([]);
   const [kelasid, setKelasid] = useState("");
+  document.title = "BTS - Tambah Siswa";
 
   const loadGambar = (e) => {
     const img = e.target.files[0];
@@ -79,37 +80,32 @@ const AddSiswa = (props) => {
             <form onSubmit={addSiswa}>
               <div className="grid grid-cols-3 gap-4 pt-4">
                 <div className="col-span-2  rounded p-4 ">
-                  <div className="form-group mb-3">
-                    <label className="block font-semibold">
-                      <span className="block text-md text-gray-700 mb-2">
-                        NIS <span className="text-red-500">*</span>
-                      </span>
+                <div className="form-group mb-3">
+                    <label className="text-md text-gray-700 mb-2 font-semibold">
+                      NIS <span className="text-red-500">*</span>
+                    </label>
                       <input
                         className="form-control placeholder:italic placeholder:text-sm"
-                        type="text"
+                        type="number"
                         placeholder="Masukkan NIS Siswa *"
                         onChange={(e) => setNis(e.target.value)}
                       />
-                    </label>
                   </div>
                   <div className="form-group mb-3">
-                    <label className="block font-semibold">
-                      <span className="block text-md text-gray-700 whitespace-nowrap mb-2">
-                        Nama <span className="text-red-500">*</span>
-                      </span>
+                    <label className="text-md text-gray-700 mb-2 font-semibold">
+                      Nama <span className="text-red-500">*</span>
+                    </label>
                       <input
                         className="form-control placeholder:italic placeholder:text-sm"
                         type="text"
                         placeholder="Masukkan Nama Siswa *"
                         onChange={(e) => setNama(e.target.value)}
                       />
-                    </label>
                   </div>
                   <div className="form-group mb-3">
-                    <label className="block font-semibold">
-                      <span className="block text-md text-gray-700 whitespace-nowrap mb-2">
-                        Quote <span className="text-red-500">*</span>
-                      </span>
+                    <label className="text-md text-gray-700 mb-2 font-semibold">
+                      Quote <span className="text-red-500">*</span>
+                    </label>
                       <textarea
                         className="form-control placeholder:italic placeholder:text-sm"
                         rows="3"
@@ -117,14 +113,11 @@ const AddSiswa = (props) => {
                         placeholder="Masukkan Quotes * ( Max : 100 Karakter )"
                         onChange={(e) => setQuotes(e.target.value)}
                       />
-                    </label>
                   </div>
-
                   <div className="form-group mb-3">
-                    <label className="block font-semibold">
-                      <span className="block text-md text-gray-700 whitespace-nowrap mb-2">
-                        Kelas <span className="text-red-500">*</span>
-                      </span>
+                    <label className="text-md text-gray-700 mb-2 font-semibold">
+                      Kelas <span className="text-red-500">*</span>
+                    </label>
                       <select
                         className="form-control italic text-sm"
                         onChange={(e) => setKelasid(e.target.value)}
@@ -136,16 +129,15 @@ const AddSiswa = (props) => {
                             {kelasid.kelas_nama}
                           </option>
                         ))}
-                      </select>
-                    </label>
+                      </select> 
                   </div>
                 </div>
                 <div className="flex flex-col justify-center items-center">
                   <div className="flex flex-col justify-center items-center">
-                    <div className="flex w-full text-left">
-                      <span className="font-semibold">
-                        Gambar <span className="text-red-500">*</span>
-                      </span>
+                    <div className="flex w-full text-left"> 
+                    <label className="text-md text-gray-700 mb-2 font-semibold">
+                      Gambar <span className="text-red-500">*</span>
+                    </label>
                     </div>
                     {preview ? (
                       <img
@@ -179,11 +171,11 @@ const AddSiswa = (props) => {
 
                 <div className="inline-flex">
                   <button className="bg-sky-600 py-2 px-4 rounded hover:bg-sky-800 text-white text-sm font-medium flex items-center">
-                    Add
+                    Tambah
                   </button>
                   <Link to={`/admin/siswa/kelas/${location.state.id}`}>
                     <button className="bg-gray-600 py-2 px-4 no-underline rounded hover:bg-gray-800 text-white text-sm font-medium flex items-center ml-3">
-                      Back
+                      Batal
                     </button>
                   </Link>
                 </div>
