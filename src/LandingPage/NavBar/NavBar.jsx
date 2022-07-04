@@ -14,10 +14,9 @@ export default function NavBar() {
     setJurusan(data.data.data);
   };
   useEffect(() => {
-    if(loading === true){
-      getJurusan();
-      setLoading(false);
-    }
+    setLoading(true)
+    getJurusan().then(setLoading(false))
+
   }, [loading]);
   return (
     <div>
