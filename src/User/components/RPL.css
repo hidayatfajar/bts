@@ -10,6 +10,7 @@
     width: 100%; /* Full width */
     height: 100%; /* Full height */
     overflow: auto; /* Enable scroll if needed */
+    overflow-y: hidden;
     background-color: rgba(19, 8, 8, 0.404);
     backdrop-filter: blur(5px);
   }
