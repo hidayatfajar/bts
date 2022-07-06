@@ -420,23 +420,11 @@ export default class LandingPage extends Component {
           {/* Page Tim Pembuat */}
           <div className="pt-56">
             <Container>
-              <div className="flex ">
+              <div className="flex justify-between">
                 <div className="w-full laptop:w-5/12">
                   <h1 className="text-title max-w-sm">
                     Tim Pembuat <span className="gradient-text">Website.</span>
                   </h1>
-                </div>
-                <div className="hidden laptop:block w-1/12">
-                  <Image className="h-32 -ml-4" src={garis} />
-                </div>
-                <div className="hidden laptop:block w-4/12">
-                  <p className="-ml-7 ">
-                    Lorem ipsum dolor sit amet consectetur, adipisicing elit.
-                    Fugit, molestiae obcaecati rerum illo velit earum
-                    perferendis! Velit quod voluptatibus, tenetur qui illum,
-                    dolorem iste tempore accusantium delectus rem, ipsa
-                    molestias?
-                  </p>
                 </div>
                 <div className="-mt-12 -mr-36 laptop:-mr-40">
                   <Image className="" src={img6} />

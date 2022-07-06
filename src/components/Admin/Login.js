@@ -86,7 +86,7 @@ export const Login = () => {
             </label>
           </div>
           <div className="w-full pt-6">
-            <button className="w-full h-10 bg-blue-600 hover:bg-blue-700 rounded">
+            <button className="w-full h-10 font-body bg-blue-600 hover:bg-blue-700 rounded">
               Masuk
             </button>
           </div>

@@ -30,19 +30,19 @@ const KelasList = () => {
           <table className="w-full border-2 rounded-full">
             <thead className="bg-gray-50 border-2 border-gray-200">
               <tr>
-                <th className="p-3 text-black text-sm font-semibold tracking-wide text-left">
+                <th className="p-3 text-black text-sm font-body font-semibold tracking-wide text-left">
                   No
                 </th>
-                <th className="p-3 text-black text-sm font-semibold tracking-wide text-left">
+                <th className="p-3 text-black text-sm font-body font-semibold tracking-wide text-left">
                   Kelas
                 </th>
-                <th className="p-3 text-black text-sm font-semibold tracking-wide text-left">
+                <th className="p-3 text-black text-sm font-body font-semibold tracking-wide text-left">
                   Jurusan
                 </th>
-                <th className="p-3 text-black text-sm font-semibold tracking-wide text-left">
+                <th className="p-3 text-black text-sm font-body font-semibold tracking-wide text-left">
                   Action
                 </th>
-                <th className="p-3 text-black text-sm font-semibold tracking-wide text-left">
+                <th className="p-3 text-black text-sm font-body font-semibold tracking-wide text-left">
                   Action
                 </th>
               </tr>
@@ -53,13 +53,13 @@ const KelasList = () => {
                   className="odd:bg-white even:bg-gray-50"
                   key={kelas.kelas_id}
                 >
-                  <td className="p-3 text-sm text-black whitespace-nowrap font-bold">
+                  <td className="p-3 text-sm font-body text-black whitespace-nowrap font-bold">
                     {index + 1}
                   </td>
-                  <td className="p-3 text-sm text-gray-700 whitespace-nowrap">
+                  <td className="p-3 text-sm font-body text-gray-700 whitespace-nowrap">
                     XII
                   </td>
-                  <td className="p-3 text-sm text-gray-700 whitespace-nowrap">
+                  <td className="p-3 text-sm font-body text-gray-700 whitespace-nowrap">
                     {kelas.kelas_nama}
                   </td>
                   <td className="p-3 text-sm text-gray-700 whitespace-nowrap">
@@ -72,7 +72,7 @@ const KelasList = () => {
                   <td className="p-3 text-sm text-gray-700 whitespace-nowrap">
                     <Link to={`/admin/foto/kelas/${kelas.kelas_id}`}>
                       <button className="text-black h-8 w-32 rounded bg-gray-200 font-body font-semibold">
-                        <p>go to foto kelas</p>
+                        go to foto kelas
                       </button>
                     </Link>
                   </td>

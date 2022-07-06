@@ -91,9 +91,9 @@ export default function KelasCardListing(props) {
               {filteredData.map((siswa, index) => (
                 <div className="w-full md:w-3/12 pt-7" key={siswa.siswa_id}>
                   <Col>
-                    <Card className="xs:h-auto md:h-custom mx-auto my-0 p-1 rounded-xl">
+                    <Card className="w-fit xs:h-auto md:h-custom mx-auto my-0 p-1 rounded-xl">
                       <img
-                        className="img-siswa"
+                        className="mobile:w-[356px] laptop:w-[300px] mobile:h-[356px] laptop:h-[300px] object-cover"
                         variant="top"
                         src={
                           "http://localhost:8000/public/images/" +

@@ -57,6 +57,7 @@ export default function GuruCardList(props) {
                 />
                 {filteredData[guruIndex].guru_gambar ? (
                   <img
+                    className="mobile:w-auto laptop:w-auto mobile:h-[520px] laptop:h-[580px] object-cover object-bottom"
                     src={
                       "http://localhost:8000/public/images/" +
                       filteredData[guruIndex].guru_gambar
@@ -95,9 +96,9 @@ export default function GuruCardList(props) {
         <div className="tablet:grid laptop:grid tablet:grid-cols-2 laptop:grid-cols-4 space-y-4 md:space-y-0 gap-4 mx-auto min-h-screen">
           {filteredData.map((guru, index) => (
             <div className="w-full pt-7" key={guru.guru_id}>
-              <Card className="w-fit mobile:h-auto laptop:h-96 mx-auto my-0 p-1 rounded-xl">
+              <Card className="w-fit mobile:h-auto laptop:h-[440px] mx-auto my-0 p-1 rounded-xl">
                 <img
-                  className="mobile:w-auto laptop:w-[280px] mobile:h-[356px] laptop:h-[270px] object-cover"
+                  className="mobile:w-[356px] laptop:w-[300px] mobile:h-[356px] laptop:h-[300px] object-cover"
                   variant="top"
                   src={
                     "http://localhost:8000/public/images/" + guru.guru_gambar

@@ -8,25 +8,23 @@ export default function KelasFotoFooter(props) {
   gambar.map((item) => {
     if (item.gambar_jenis === "bebas") {
       imageForFooter.push(item);
-    }})
-    console.log(imageForFooter);
-    return (
+    }
+  });
+  console.log(imageForFooter);
+  return (
     <Container>
-      <Row>
+      <div className="image-galery">
         {imageForFooter.map((item, index) => {
           return item.gambar_jenis == "bebas" ? (
-            <Col md={6} xs={12} className="col" key={index}>
+            <div className="image-box" key={index}>
               <Image
-                src={
-                  "http://localhost:8000/public/images/" +
-                  item.gambar_nama
-                }
+                src={"http://localhost:8000/public/images/" + item.gambar_nama}
                 // style={{ width: "100%", height: "100%" }}
               />
-            </Col>
+            </div>
           ) : null;
         })}
-      </Row>
+      </div>
     </Container>
   );
 }
