@@ -86,7 +86,6 @@ export default class LandingPage extends Component {
       <div>
         <div className="bg-bts ">
           <NavBarMagic />
-
           <NavBar />
           <br />
           <br />
