@@ -71,6 +71,7 @@ export default function Guru() {
                 >
                   <InputGroup className="mb-3">
                     <Form.Control
+                      className="font-body"
                       size="lg"
                       type="email"
                       placeholder="Search here..."

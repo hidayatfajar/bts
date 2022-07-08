@@ -70,12 +70,13 @@ export default function RPL1() {
               >
                 <InputGroup className="mb-3">
                   <Form.Control
+                    className="font-body"
                     size="lg"
                     type="email"
                     placeholder="Search here..."
                     onChange={(e) => setSearch(e.target.value.toLowerCase())}
                   />
-                  <InputGroup.Text>Q</InputGroup.Text>
+                  {/* <InputGroup.Text>Q</InputGroup.Text> */}
                 </InputGroup>
               </FloatingLabel>
             </Container>
