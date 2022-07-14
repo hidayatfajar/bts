@@ -11,8 +11,8 @@ const WisudaGalery = (props) => {
   const [modal, setModal] = useState(false);
   const [wisudaIndex, setWisudaIndex] = useState(1);
   const image = props.image;
-  console.log(image)
-  console.log(wisudaIndex)
+  console.log(image);
+  console.log(wisudaIndex);
 
   const onModal = (e, wisudaId) => {
     e.preventDefault();
@@ -41,7 +41,7 @@ const WisudaGalery = (props) => {
                 </button>
               </div>
               {/* <!-- Modal content --> */}
-              <div className="modal-content md:mx-3 -mx-1  ">
+              <div className="modal-content laptop:mx-3 -mx-1  ">
                 <FontAwesomeIcon
                   icon={faTimes}
                   className="close"

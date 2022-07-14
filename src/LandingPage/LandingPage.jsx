@@ -234,8 +234,10 @@ export default class LandingPage extends Component {
                   </h4>
                   <br />
                   <div className="bg-gray-500 py-8 pl-4 pr-4 laptop:pl-60 laptop:pr-4 rounded-xl">
-                    <p>
-                      Bismillah Wal Hamdulillah,
+                    <p className="font-normal">
+                      <span className="font-body leading-10">
+                        Assalamu’alaikum Wr Wb,
+                      </span>
                       <br />
                       Sukacita dan rasa gembira mengiringi keberhasilan yang
                       diraih, yaitu LULUS dari SMKN 2 Kota Bekasi. Tetaplah
@@ -248,12 +250,18 @@ export default class LandingPage extends Component {
                       kehidupan. Mohon maaf apabila saya, para guru dan karyawan
                       pernah memiliki khilaf dan salah. Terima kasih.
                       <br />
-                      Wasassalamu’alaikum Wr Wb.
+                      <span className="font-body leading-10">
+                        Wasassalamu’alaikum Wr Wb.
+                      </span>
                     </p>
                     <br />
                     <br />
-                    <h6>Dr. Agus Wimbadi M.pd</h6>
-                    <p>Kepala Sekolah SMKN 2</p>
+                    <p className="tracking-wider">
+                      Kepala Sekolah SMKN2 Kota Bekasi,
+                    </p>
+                    <h6 className="font-bold tracking-widest">
+                      Dr. B. Agus Wimbadi M.Pd.{" "}
+                    </h6>
                   </div>
                 </div>
               </div>
@@ -278,16 +286,16 @@ export default class LandingPage extends Component {
                     <div className="flex flex-row items-center">
                       <div className="profile">
                         <img
-                          className="mobile:w-14 tablet:w-20 laptop:w-14"
+                          className="mini:w-14 mobile:w-14 tablet:w-20 laptop:w-14"
                           src={kaprogAK}
                         />
                       </div>
 
-                      <div className="mini:ml-3 mobile:ml-4 laptop:ml-4 mt-2">
-                        <h6 className="-mb-1 mini:text-sm mobile:text-base tablet:text-xl laptop:text-base tracking-wider">
+                      <div className=" mini:ml-3 mobile:ml-4 laptop:ml-4 mt-2">
+                        <h6 className="-mb-1 mini:leading-6 mini:text-sm mobile:text-base tablet:text-xl laptop:text-base tracking-wider">
                           SRI SUPRIATININGSIH, S. Pd.
                         </h6>
-                        <p className="mobile:text-sm tablet:text-base laptop:text-sm font-light tracking-widest">
+                        <p className="mini:text-xs mobile:text-sm tablet:text-base laptop:text-sm font-light tracking-widest">
                           Kepala Program AK
                         </p>
                       </div>
@@ -302,16 +310,16 @@ export default class LandingPage extends Component {
                     <div className="flex flex-row items-center">
                       <div className="profile">
                         <img
-                          className="mobile:w-14 tablet:w-20 laptop:w-14"
+                          className="mini:w-14 mobile:w-14 tablet:w-20 laptop:w-14"
                           src={kaprogRPL}
                         />
                       </div>
 
-                      <div className="mini:ml-3 mobile:ml-4 laptop:ml-4 mt-2">
-                        <h6 className="-mb-1 mini:text-sm mobile:text-base tablet:text-xl laptop:text-base tracking-wider">
-                          ANDI SUSANDI, S.Kom.
+                      <div className=" mini:ml-3 mobile:ml-4 laptop:ml-4 mt-2">
+                        <h6 className="-mb-1 mini:leading-6 mini:text-sm mobile:text-base tablet:text-xl laptop:text-base tracking-wider">
+                          SRI SUPRIATININGSIH, S. Pd.
                         </h6>
-                        <p className="mobile:text-sm tablet:text-base laptop:text-sm font-light tracking-widest">
+                        <p className="mini:text-xs mobile:text-sm tablet:text-base laptop:text-sm font-light tracking-widest">
                           Kepala Program RPL
                         </p>
                       </div>
@@ -319,22 +327,23 @@ export default class LandingPage extends Component {
                     <img className="w-full rounded-lg pt-2" src={RPL} />
                   </div>
                 </Link>
+
                 {/* TKJ */}
                 <Link to="/jurusan/3" className="no-underline text-white">
                   <div className="w-auto mx-auto bg-gray-500 mini:p-2 mobile:p-[10px] tablet:p-6 laptop:p-3 rounded-xl">
                     <div className="flex flex-row items-center">
                       <div className="profile">
                         <img
-                          className="mobile:w-14 tablet:w-20 laptop:w-14"
+                          className="mini:w-14 mobile:w-14 tablet:w-20 laptop:w-14"
                           src={kaprogTKJ}
                         />
                       </div>
 
-                      <div className="mini:ml-3 mobile:ml-4 laptop:ml-4 mt-2">
-                        <h6 className="-mb-1 mini:text-sm mobile:text-base tablet:text-xl laptop:text-base tracking-wider">
-                          DANI KURNAWAN, S.Kom.{" "}
+                      <div className=" mini:ml-3 mobile:ml-4 laptop:ml-4 mt-2">
+                        <h6 className="-mb-1 mini:leading-6 mini:text-sm mobile:text-base tablet:text-xl laptop:text-base tracking-wider">
+                          SRI SUPRIATININGSIH, S. Pd.
                         </h6>
-                        <p className="mobile:text-sm tablet:text-base laptop:text-sm font-light tracking-widest">
+                        <p className="mini:text-xs mobile:text-sm tablet:text-base laptop:text-sm font-light tracking-widest">
                           Kepala Program TKJ
                         </p>
                       </div>
@@ -349,16 +358,16 @@ export default class LandingPage extends Component {
                     <div className="flex flex-row items-center">
                       <div className="profile">
                         <img
-                          className="mobile:w-14 tablet:w-20 laptop:w-14"
+                          className="mini:w-14 mobile:w-14 tablet:w-20 laptop:w-14"
                           src={kaprogTEI}
                         />
                       </div>
 
-                      <div className="mini:ml-3 mobile:ml-4 laptop:ml-4 mt-2">
-                        <h6 className="-mb-1 mini:text-sm mobile:text-base tablet:text-xl laptop:text-base tracking-wider">
-                          DEWI MARLINA, S.Pd.{" "}
+                      <div className=" mini:ml-3 mobile:ml-4 laptop:ml-4 mt-2">
+                        <h6 className="-mb-1 mini:leading-6 mini:text-sm mobile:text-base tablet:text-xl laptop:text-base tracking-wider">
+                          SRI SUPRIATININGSIH, S. Pd.
                         </h6>
-                        <p className="mobile:text-sm tablet:text-base laptop:text-sm font-light tracking-widest">
+                        <p className="mini:text-xs mobile:text-sm tablet:text-base laptop:text-sm font-light tracking-widest">
                           Kepala Program TEI
                         </p>
                       </div>
@@ -366,22 +375,23 @@ export default class LandingPage extends Component {
                     <img className="w-full rounded-lg pt-2" src={TEI} />
                   </div>
                 </Link>
+
                 {/* TBSM */}
                 <Link to="/jurusan/5" className="no-underline text-white">
                   <div className="w-auto mx-auto bg-gray-500 mini:p-2 mobile:p-[10px] tablet:p-6 laptop:p-3 rounded-xl">
                     <div className="flex flex-row items-center">
                       <div className="profile">
                         <img
-                          className="mobile:w-14 tablet:w-20 laptop:w-14"
+                          className="mini:w-14 mobile:w-14 tablet:w-20 laptop:w-14"
                           src={kaprogTBSM}
                         />
                       </div>
 
-                      <div className="mini:ml-3 mobile:ml-4 laptop:ml-4 mt-2">
-                        <h6 className="-mb-1 mini:text-sm mobile:text-base tablet:text-xl laptop:text-base tracking-wider">
-                          ROHADI YUSUF, S.Pd.{" "}
+                      <div className=" mini:ml-3 mobile:ml-4 laptop:ml-4 mt-2">
+                        <h6 className="-mb-1 mini:leading-6 mini:text-sm mobile:text-base tablet:text-xl laptop:text-base tracking-wider">
+                          SRI SUPRIATININGSIH, S. Pd.
                         </h6>
-                        <p className="mobile:text-sm tablet:text-base laptop:text-sm font-light tracking-widest">
+                        <p className="mini:text-xs mobile:text-sm tablet:text-base laptop:text-sm font-light tracking-widest">
                           Kepala Program TBSM
                         </p>
                       </div>
@@ -389,22 +399,23 @@ export default class LandingPage extends Component {
                     <img className="w-full rounded-lg pt-2" src={TBSM} />
                   </div>
                 </Link>
+
                 {/* TET */}
                 <Link to="/jurusan/6" className="no-underline text-white">
                   <div className="w-auto mx-auto bg-gray-500 mini:p-2 mobile:p-[10px] tablet:p-6 laptop:p-3 rounded-xl">
                     <div className="flex flex-row items-center">
                       <div className="profile">
                         <img
-                          className="mobile:w-14 tablet:w-20 laptop:w-14"
+                          className="mini:w-14 mobile:w-14 tablet:w-20 laptop:w-14"
                           src={kaprogTET}
                         />
                       </div>
 
-                      <div className="mini:ml-3 mobile:ml-4 laptop:ml-4 mt-2">
-                        <h6 className="-mb-1 mini:text-sm mobile:text-base tablet:text-xl laptop:text-base tracking-wider">
-                          IMAM NURSYAHIED, S.Pd.{" "}
+                      <div className=" mini:ml-3 mobile:ml-4 laptop:ml-4 mt-2">
+                        <h6 className="-mb-1 mini:leading-6 mini:text-sm mobile:text-base tablet:text-xl laptop:text-base tracking-wider">
+                          SRI SUPRIATININGSIH, S. Pd.
                         </h6>
-                        <p className="mobile:text-sm tablet:text-base laptop:text-sm font-light tracking-widest">
+                        <p className="mini:text-xs mobile:text-sm tablet:text-base laptop:text-sm font-light tracking-widest">
                           Kepala Program TET
                         </p>
                       </div>

@@ -7,6 +7,8 @@ import WisudaHeader from "./WisudaHeader";
 import axios from "axios";
 import Spinner from "react-bootstrap/Spinner";
 
+import "../RPL.css";
+
 export default function Wisuda() {
   const [data, setData] = useState([]);
   const [loading, setLoading] = useState(true);
@@ -25,7 +27,7 @@ export default function Wisuda() {
     getData();
     setTimeout(() => {
       setLoading(false);
-    }, 1000);
+    }, 2000);
   }, []);
 
   return (
@@ -35,11 +37,38 @@ export default function Wisuda() {
         <NavBar />
         <br />
         {loading ? (
-          <center>
-            <Spinner animation="border" />
-          </center>
-        ) : (
-          data.length !== 0 ? (
+          <>
+            <div className="container animate-pulse">
+              <div class="w-96 h-10 bg-slate-700 rounded-full col-span-2"></div>
+              <div class="w-80 h-10 bg-slate-700 rounded-full mt-6 col-span-1"></div>
+            </div>
+
+            <br />
+            <div className="container">
+              <div class="backdrop-blur-sm bg-white/30 shadow rounded-md p-4 w-full mx-auto">
+                <div class="animate-pulse flex space-x-4">
+                  <div class="rounded-full bg-slate-700 w-60 h-60 pt-3 mx-auto laptop:pt-0 laptop:w-52 laptop:h-52"></div>
+                  <div class="flex-1 space-y-6 py-1">
+                    <div class="space-y-3 pl-0 pt-3 text-center laptop:pt-0 laptop:pl-9 tablet:pl-10">
+                      <div class="w-128 h-8 bg-slate-700 mt-8 rounded-full"></div>
+                      <br />
+                      <div class="w-[22rem] h-4 bg-slate-700 rounded-full"></div>
+                      <div class="w-[20rem] h-4 bg-slate-700 rounded-full"></div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="w-36 h-8 animate-pulse bg-slate-700 mx-auto mt-14 -mb-8 rounded-full"></div>
+              <div className="image-galery-s animate-pulse">
+                <div className="image-box-s"></div>
+                <div className="image-box-s"></div>
+                <div className="image-box-s"></div>
+                <div className="image-box-s"></div>
+                <div className="image-box-s"></div>
+              </div>
+            </div>
+          </>
+        ) : data.length !== 0 ? (
           <>
             <Container>
               <div className="">
@@ -58,11 +87,9 @@ export default function Wisuda() {
               </h1>
               <WisudaGalery image={data} />
             </Container>
-          </> ) : (
-            <div className="text-center">
-              <h1>Gagal mengambil data wisuda</h1>
-            </div>
-          )
+          </>
+        ) : (
+          <div className="text-center">Gagal mengambil data</div>
         )}
       </div>
     </>

@@ -5,6 +5,7 @@ import {
   faTimes,
   faChevronLeft,
   faChevronRight,
+  faDownload,
 } from "@fortawesome/free-solid-svg-icons";
 import "../RPL.css";
 
@@ -49,10 +50,15 @@ export default function KelasCardListing(props) {
                 </button>
               </div>
               {/* <!-- Modal content --> */}
-              <div className="modal-content md:mx-3 -mx-1  ">
+              <div className="modal-content mobile:w-[90%] laptop:w-[28%] laptop:mx-3 -mx-1  ">
                 <FontAwesomeIcon
                   icon={faTimes}
                   className="close"
+                  onClick={onModal}
+                />
+                <FontAwesomeIcon
+                  icon={faDownload}
+                  className="absolute right-2 bottom-2 text-2xl"
                   onClick={onModal}
                 />
                 {filteredData[siswaIndex].siswa_gambar ? (
@@ -86,7 +92,43 @@ export default function KelasCardListing(props) {
       ) : null}
       <div>
         <Container>
-          <div className="md:flex justify-between">
+          <div className="tablet:grid laptop:grid tablet:grid-cols-2 laptop:grid-cols-4 space-y-4 md:space-y-0 gap-4 mx-auto min-h-screen">
+            {filteredData.map((siswa, index) => (
+              <div className="w-full pt-7" key={siswa.siswa_id}>
+                <Card className="w-fit xs:h-auto md:h-custom mx-auto my-0 p-1 rounded-xl">
+                  <img
+                    className="mini:w-[356px] mobile:w-[356px] laptop:w-[300px] mini:h-72 mobile:h-[356px] laptop:h-[290px] object-cover object-top"
+                    variant="top"
+                    src={
+                      "http://localhost:8000/public/images/" +
+                      siswa.siswa_gambar
+                    }
+                    onClick={(e) => onModal(e, index)}
+                    loading="lazy"
+                  />
+                  <Card.Body>
+                    <p className="text-black text-base font-medium tracking-wide -mt-1">
+                      {siswa.siswa_nama}
+                    </p>
+                    <Card.Text as="div">
+                      <footer className="text-gray-600 text-sm font-normal tracking-wide -mt-2">
+                        <p className="text-sm font-normal italic">
+                          "{siswa.siswa_quote}"
+                        </p>
+                      </footer>
+                    </Card.Text>
+                    <FontAwesomeIcon
+                      icon={faDownload}
+                      className="absolute right-2 bottom-2 text-xl text-gray-700"
+                      // onClick={onModal}
+                    />
+                  </Card.Body>
+                </Card>
+              </div>
+            ))}
+          </div>
+
+          {/* <div className="md:flex justify-between">
             <Row xs={1} md={4} className="g-4">
               {filteredData.map((siswa, index) => (
                 <div className="w-full md:w-3/12 pt-7" key={siswa.siswa_id}>
@@ -119,7 +161,7 @@ export default function KelasCardListing(props) {
                 </div>
               ))}
             </Row>
-          </div>
+          </div> */}
         </Container>
       </div>
     </div>
