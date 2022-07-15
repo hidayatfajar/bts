@@ -98,7 +98,7 @@ export default function GuruCardList(props) {
             <div className="w-full pt-7" key={guru.guru_id}>
               <Card className="w-fit mobile:h-auto laptop:h-[440px] mx-auto my-0 p-1 rounded-xl">
                 <img
-                  className="mobile:w-[356px] laptop:w-[300px] mobile:h-[356px] laptop:h-[300px] object-cover"
+                  className=" mini:w-[356px] mobile:w-[356px] laptop:w-[300px] mini:h-72 mobile:h-[356px] laptop:h-[290px] object-cover"
                   variant="top"
                   src={
                     "http://localhost:8000/public/images/" + guru.guru_gambar

@@ -226,46 +226,61 @@ export default class LandingPage extends Component {
                 <div className="hidden laptop:block -ml-44 -mt-14 ">
                   <Image className="" src={img2} />
                 </div>
-                <div className="w-full ml-0 laptop:w-9/12 laptop:ml-16">
+                <div className="laptop:w-[1300px] ml-0 laptop:ml-16">
                   <h4 className="text-left laptop:text-right text-3xl laptop:text-2xl font-semibold font-body laptop:font-bold tracking-widest">
                     KATA SAMBUTAN {""}
                     <br className="block laptop:hidden" />
                     <span className="gradient-text"> KEPALA SEKOLAH</span>
                   </h4>
                   <br />
-                  <div className="bg-gray-500 py-8 pl-4 pr-4 laptop:pl-60 laptop:pr-4 rounded-xl">
-                    <p className="font-normal">
-                      <span className="font-body leading-10">
-                        Assalamu’alaikum Wr Wb,
-                      </span>
-                      <br />
-                      Sukacita dan rasa gembira mengiringi keberhasilan yang
-                      diraih, yaitu LULUS dari SMKN 2 Kota Bekasi. Tetaplah
-                      berpijak pada keyakinan bahwa KITA BISA dan PASTI BISA
-                      meraih sukses di masa depan dengan gemilang. Selamat atas
-                      Kelulusan yang sudah dicapai, dan semoga sukses selalu
-                      anak-anak ku Angkatan ke 16 SMKN 2 Kota Bekasi. Semoga
-                      Alloh SWT, Tuhan Yang Maha Esa memberikan kemudahan dan
-                      kelancaran dalam setiap langkah mengarungi perjalanan
-                      kehidupan. Mohon maaf apabila saya, para guru dan karyawan
-                      pernah memiliki khilaf dan salah. Terima kasih.
-                      <br />
-                      <span className="font-body leading-10">
-                        Wasassalamu’alaikum Wr Wb.
-                      </span>
-                    </p>
-                    <br />
-                    <br />
-                    <p className="tracking-wider">
-                      Kepala Sekolah SMKN2 Kota Bekasi,
-                    </p>
-                    <h6 className="font-bold tracking-widest">
-                      Dr. B. Agus Wimbadi M.Pd.{" "}
-                    </h6>
+                  <div className=" laptop:flex bg-gray-500 mini:px-3 mini:py-8 mobile:px-4 mobile:py-8 laptop:pl-3 laptop:py-3 laptop:pr-4 rounded-xl">
+                    <Image
+                      className="w-60 mini:hidden mobile:hidden laptop:block"
+                      src={img3}
+                    />
+                    <div className="mobile:pl-0 laptop:pl-4 flex flex-col justify-center">
+                      <p className="font-normal text-justify leading-snug">
+                        <span className="font-body mini:leading-8 mobile:leading-10 laptop:leading-9">
+                          Assalamu’alaikum Wr Wb,
+                        </span>
+                        <br />
+                        Sukacita dan rasa gembira mengiringi keberhasilan yang
+                        diraih, yaitu LULUS dari SMKN 2 Kota Bekasi. Tetaplah
+                        berpijak pada keyakinan bahwa KITA BISA dan PASTI BISA
+                        meraih sukses di masa depan dengan gemilang. Selamat
+                        atas Kelulusan yang sudah dicapai, dan semoga sukses
+                        selalu anak-anak ku Angkatan ke 16 SMKN 2 Kota Bekasi.
+                        Semoga Allah SWT, Tuhan Yang Maha Esa memberikan
+                        kemudahan dan kelancaran dalam setiap langkah mengarungi
+                        perjalanan kehidupan. Mohon maaf apabila saya, para guru
+                        dan karyawan pernah memiliki khilaf dan salah. Terima
+                        kasih.
+                        <br />
+                        <span className="font-body mini:leading-8 mobile:leading-10 laptop:leading-9">
+                          Wasassalamu’alaikum Wr Wb.
+                        </span>
+                      </p>
+                      <div className="mini:flex mobile:flex mobile:pt-2 laptop:block laptop:pt-0">
+                        <Image
+                          className="w-24 mobile:block laptop:hidden"
+                          src={img3}
+                        />
+                        <div className="mini:pl-3 mobile:pl-3 laptop:pl-0">
+                          <p className="flex tracking-wider pt-3">
+                            Kepala Sekolah{" "}
+                            <span className="mini:hidden mobile:hidden laptop:block">
+                              &nbsp;SMKN2 Kota Bekasi,
+                            </span>
+                          </p>
+                          <h6 className="font-bold tracking-widest">
+                            Dr. B. Agus Wimbadi M.Pd.{" "}
+                          </h6>
+                        </div>
+                      </div>
+                    </div>
                   </div>
                 </div>
               </div>
-              <Image className="-mt-40 laptop:-mt-96 ml-32" src={img3} />
               <div className="hidden">
                 <Image className="" src={img4} />
               </div>
@@ -317,7 +332,7 @@ export default class LandingPage extends Component {
 
                       <div className=" mini:ml-3 mobile:ml-4 laptop:ml-4 mt-2">
                         <h6 className="-mb-1 mini:leading-6 mini:text-sm mobile:text-base tablet:text-xl laptop:text-base tracking-wider">
-                          SRI SUPRIATININGSIH, S. Pd.
+                          ANDI SUSANDI, S.Kom.
                         </h6>
                         <p className="mini:text-xs mobile:text-sm tablet:text-base laptop:text-sm font-light tracking-widest">
                           Kepala Program RPL
@@ -341,7 +356,7 @@ export default class LandingPage extends Component {
 
                       <div className=" mini:ml-3 mobile:ml-4 laptop:ml-4 mt-2">
                         <h6 className="-mb-1 mini:leading-6 mini:text-sm mobile:text-base tablet:text-xl laptop:text-base tracking-wider">
-                          SRI SUPRIATININGSIH, S. Pd.
+                          DANI KURNAWAN, S.Kom.
                         </h6>
                         <p className="mini:text-xs mobile:text-sm tablet:text-base laptop:text-sm font-light tracking-widest">
                           Kepala Program TKJ
@@ -365,7 +380,7 @@ export default class LandingPage extends Component {
 
                       <div className=" mini:ml-3 mobile:ml-4 laptop:ml-4 mt-2">
                         <h6 className="-mb-1 mini:leading-6 mini:text-sm mobile:text-base tablet:text-xl laptop:text-base tracking-wider">
-                          SRI SUPRIATININGSIH, S. Pd.
+                          DEWI MARLINA, S.Pd.
                         </h6>
                         <p className="mini:text-xs mobile:text-sm tablet:text-base laptop:text-sm font-light tracking-widest">
                           Kepala Program TEI
@@ -389,7 +404,7 @@ export default class LandingPage extends Component {
 
                       <div className=" mini:ml-3 mobile:ml-4 laptop:ml-4 mt-2">
                         <h6 className="-mb-1 mini:leading-6 mini:text-sm mobile:text-base tablet:text-xl laptop:text-base tracking-wider">
-                          SRI SUPRIATININGSIH, S. Pd.
+                          ROHADI YUSUF, S.Pd.
                         </h6>
                         <p className="mini:text-xs mobile:text-sm tablet:text-base laptop:text-sm font-light tracking-widest">
                           Kepala Program TBSM
@@ -413,7 +428,7 @@ export default class LandingPage extends Component {
 
                       <div className=" mini:ml-3 mobile:ml-4 laptop:ml-4 mt-2">
                         <h6 className="-mb-1 mini:leading-6 mini:text-sm mobile:text-base tablet:text-xl laptop:text-base tracking-wider">
-                          SRI SUPRIATININGSIH, S. Pd.
+                          IMAM NURSYAHIED, S.Pd.
                         </h6>
                         <p className="mini:text-xs mobile:text-sm tablet:text-base laptop:text-sm font-light tracking-widest">
                           Kepala Program TET
