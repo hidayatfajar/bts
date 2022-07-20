@@ -56,13 +56,15 @@ export default function RPL1() {
         {loading ? (
           <>
             <div className="container">
+              {/* search */}
               <div class="w-[95%] h-fit backdrop-blur-sm bg-white/30 p-3 mt-4 mb-8 mx-auto rounded-lg">
                 <div class="w-32 h-5 animate-pulse bg-slate-700 rounded-full"></div>
               </div>
+              {/* card */}
               <div className="tablet:grid laptop:grid tablet:grid-cols-2 laptop:grid-cols-4 space-y-4 md:space-y-0 gap-4 mx-auto min-h-screen">
                 <div className="pt-7">
-                  <div class="backdrop-blur-sm bg-white/30 shadow mobile:w-full laptop:w-fit  mobile:h-[500px] laptop:h-[440px] mx-auto my-0 p-1 mobile:mt-7 laptop:mt-0 rounded-md">
-                    <div class="animate-pulse mobile:w-full laptop:w-[250px] mobile:h-[356px] laptop:h-[250px] object-cover bg-slate-700 "></div>
+                  <div class="backdrop-blur-sm bg-white/30 shadow mobile:w-full laptop:w-fit mini:h-[440px] mobile:h-[500px] laptop:h-[440px] mx-auto my-0 p-1 mobile:mt-7 laptop:mt-0 rounded-md">
+                    <div class="animate-pulse w-full laptop:w-[250px] mini:h-72 mobile:h-[356px] laptop:h-[250px]  bg-slate-700 "></div>
                     <div className="container animate-pulse">
                       <div class="w-52 h-5 bg-slate-700 mt-8 rounded-full"></div>
                       <br />
@@ -71,8 +73,8 @@ export default function RPL1() {
                   </div>
                 </div>
                 <div className="pt-7">
-                  <div class="backdrop-blur-sm bg-white/30 shadow mobile:w-full laptop:w-fit  mobile:h-[500px] laptop:h-[440px] mx-auto my-0 p-1 mobile:mt-7 laptop:mt-0 rounded-md">
-                    <div class="animate-pulse mobile:w-full laptop:w-[250px] mobile:h-[356px] laptop:h-[250px] object-cover bg-slate-700 "></div>
+                  <div class="backdrop-blur-sm bg-white/30 shadow mobile:w-full laptop:w-fit mini:h-[440px] mobile:h-[500px] laptop:h-[440px] mx-auto my-0 p-1 mobile:mt-7 laptop:mt-0 rounded-md">
+                    <div class="animate-pulse w-full laptop:w-[250px] mini:h-72 mobile:h-[356px] laptop:h-[250px]  bg-slate-700 "></div>
                     <div className="container animate-pulse">
                       <div class="w-52 h-5 bg-slate-700 mt-8 rounded-full"></div>
                       <br />
@@ -81,8 +83,8 @@ export default function RPL1() {
                   </div>
                 </div>
                 <div className="pt-7">
-                  <div class="backdrop-blur-sm bg-white/30 shadow mobile:w-full laptop:w-fit  mobile:h-[500px] laptop:h-[440px] mx-auto my-0 p-1 mobile:mt-7 laptop:mt-0 rounded-md">
-                    <div class="animate-pulse mobile:w-full laptop:w-[250px] mobile:h-[356px] laptop:h-[250px] object-cover bg-slate-700 "></div>
+                  <div class="backdrop-blur-sm bg-white/30 shadow mobile:w-full laptop:w-fit mini:h-[440px] mobile:h-[500px] laptop:h-[440px] mx-auto my-0 p-1 mobile:mt-7 laptop:mt-0 rounded-md">
+                    <div class="animate-pulse w-full laptop:w-[250px] mini:h-72 mobile:h-[356px] laptop:h-[250px]  bg-slate-700 "></div>
                     <div className="container animate-pulse">
                       <div class="w-52 h-5 bg-slate-700 mt-8 rounded-full"></div>
                       <br />
@@ -91,8 +93,8 @@ export default function RPL1() {
                   </div>
                 </div>
                 <div className="pt-7">
-                  <div class="backdrop-blur-sm bg-white/30 shadow mobile:w-full laptop:w-fit  mobile:h-[500px] laptop:h-[440px] mx-auto my-0 p-1 mobile:mt-7 laptop:mt-0 rounded-md">
-                    <div class="animate-pulse mobile:w-full laptop:w-[250px] mobile:h-[356px] laptop:h-[250px] object-cover bg-slate-700 "></div>
+                  <div class="backdrop-blur-sm bg-white/30 shadow mobile:w-full laptop:w-fit mini:h-[440px] mobile:h-[500px] laptop:h-[440px] mx-auto my-0 p-1 mobile:mt-7 laptop:mt-0 rounded-md">
+                    <div class="animate-pulse w-full laptop:w-[250px] mini:h-72 mobile:h-[356px] laptop:h-[250px]  bg-slate-700 "></div>
                     <div className="container animate-pulse">
                       <div class="w-52 h-5 bg-slate-700 mt-8 rounded-full"></div>
                       <br />

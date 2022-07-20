@@ -58,7 +58,7 @@ export default function KelasCardListing(props) {
                 />
                 <FontAwesomeIcon
                   icon={faDownload}
-                  className="absolute right-2 bottom-2 text-2xl"
+                  className="absolute right-2 bottom-2 text-2xl text-gray-200 hover:text-gray-600 cursor-pointer"
                   onClick={onModal}
                 />
                 {filteredData[siswaIndex].siswa_gambar ? (
@@ -119,7 +119,7 @@ export default function KelasCardListing(props) {
                     </Card.Text>
                     <FontAwesomeIcon
                       icon={faDownload}
-                      className="absolute right-2 bottom-2 text-xl text-gray-700"
+                      className="absolute right-2 bottom-2 text-xl text-gray-500 hover:text-gray-800 cursor-pointer"
                       // onClick={onModal}
                     />
                   </Card.Body>
