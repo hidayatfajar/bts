@@ -7,18 +7,8 @@ import {
   faInstagram,
   faYoutube,
 } from "@fortawesome/free-brands-svg-icons";
-import { Map, InfoWindow, Marker, GoogleApiWrapper } from "google-maps-react";
 
-class Footer extends Component {
-  constructor(props) {
-    super(props);
-    this.state = {
-      center: {
-        lat : -6.355731503098946,
-        lng : 106.99205144041609
-      }
-    };
-  }
+export default class Footer extends Component {
   render() {
     return (
       <div>
@@ -28,7 +18,7 @@ class Footer extends Component {
             <div className="">
               <h3 className="font-semibold">SMKN 2 Kota Bekasi</h3>
             </div>
-            <div className="py-2 md:grid md:grid-cols-2 items-center justify-center">
+            <div className="py-2 md:flex justify-between">
               <div className="w-full">
                 <p className="max-w-sm pt-1 leading-7 tracking-wide">
                   Jl. Lap Bola Rawa Butun Ciketing Udik Bantargebang Kota Bekasi
@@ -64,32 +54,6 @@ class Footer extends Component {
                   </a>
                 </div>
               </div>
-              <div className="bg-gray-600">
-                <Map
-                  google={this.props.google}
-                  zoom={15}
-                  style={{ height: "350px", width: "500px" }}
-                  defaultCenter={{
-                    lat : -6.355731503098946,
-                    lng : 106.99205144041609
-                  }}
-                  initialCenter={{
-                    lat : -6.355731503098946,
-                    lng : 106.99205144041609
-                  }}
-                  defaultZoom={20}
-
-                >
-                  <Marker
-                    position={{
-                      lat: -6.355731503098946,
-                      lng: 106.99205144041609,
-                    }}
-                    onClick={this.onMarkerClick}
-                    name={"Current Location"}
-                  />
-                </Map>
-              </div>
             </div>
           </Container>
         </div>
@@ -97,7 +61,3 @@ class Footer extends Component {
     );
   }
 }
-
-export default GoogleApiWrapper({
-  apiKey: "AIzaSyDaxLGfa3TB2wETwtUqNqisAcEnkGamW7s",
-})(Footer);
