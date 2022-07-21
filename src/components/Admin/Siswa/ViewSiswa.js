@@ -51,11 +51,11 @@ const ViewSiswa = (props) => {
               <div className="grid grid-cols-3 gap-4 pt-4">
                 <div className="col-span-2  rounded p-4 ">
                   <div className="form-group mb-3">
-                    <label className="text-md text-gray-700 mb-2 font-semibold">
+                    <label className="text-md text-gray-700 mb-2 font-extrabold font-body">
                       NIS <span className="text-red-500">*</span>
                     </label>
                     <input
-                      className="form-control placeholder:italic placeholder:text-sm"
+                      className="form-control font-body placeholder:italic placeholder:text-sm"
                       type="number"
                       placeholder="Masukkan NIS Siswa *"
                       disabled
@@ -63,11 +63,11 @@ const ViewSiswa = (props) => {
                     />
                   </div>
                   <div className="form-group mb-3">
-                    <label className="text-md text-gray-700 mb-2 font-semibold">
+                    <label className="text-md text-gray-700 mb-2 font-extrabold font-body">
                       Nama <span className="text-red-500">*</span>
                     </label>
                     <input
-                      className="form-control placeholder:italic placeholder:text-sm"
+                      className="form-control font-body placeholder:italic placeholder:text-sm"
                       type="text"
                       placeholder="Nama"
                       disabled
@@ -75,11 +75,11 @@ const ViewSiswa = (props) => {
                     />
                   </div>
                   <div className="form-group mb-3">
-                    <label className="text-md text-gray-700 mb-2 font-semibold">
+                    <label className="text-md text-gray-700 mb-2 font-extrabold font-body">
                       Quote <span className="text-red-500">*</span>
                     </label>
                     <textarea
-                      className="form-control placeholder:italic placeholder:text-sm"
+                      className="form-control font-body placeholder:italic placeholder:text-sm"
                       rows="3"
                       type="text"
                       placeholder="Masukkan Quotes * ( Max : 100 Karakter )"
@@ -88,11 +88,11 @@ const ViewSiswa = (props) => {
                     />
                   </div>
                   <div className="form-group">
-                    <label className="text-md text-gray-700 mb-2 font-semibold">
+                    <label className="text-md text-gray-700 mb-2 font-extrabold font-body">
                       Kelas <span className="text-red-500">*</span>
                     </label>
                     <select
-                      className="form-control text-sm mb-3"
+                      className="form-control font-body text-sm mb-3"
                       disabled
                       value={kelas_id}
                     >
@@ -104,8 +104,8 @@ const ViewSiswa = (props) => {
                       ))}
                     </select>
                   </div>
-                  <Link to={`/admin/siswa/kelas/${location.state.id}`}>
-                    <button className="bg-gray-600 py-2 px-4 rounded no-underline hover:bg-gray-800 text-white text-sm font-medium flex items-center">
+                  <Link to={`/admin/siswa/kelas/${location.state.id}`} className="no-underline">
+                    <button className="bg-gray-600 py-2 px-4 rounded no-underline hover:bg-gray-800 text-white text-sm font-semibold font-body flex items-center">
                       Batal
                     </button>
                   </Link>
@@ -113,7 +113,7 @@ const ViewSiswa = (props) => {
                 <div className="flex flex-col justify-center items-center -mt-20">
                   <div className="flex flex-col justify-center items-center ">
                     <div className="flex w-full text-left">
-                      <label className="font-semibold">
+                      <label className="font-extrabold font-body">
                         Gambar <span className="text-red-500">*</span>
                       </label>
                     </div>

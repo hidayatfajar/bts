@@ -14,16 +14,15 @@ export default function NavBar() {
     setJurusan(data.data.data);
   };
   useEffect(() => {
-    setLoading(true)
-    getJurusan().then(setLoading(false))
-
+    setLoading(true);
+    getJurusan().then(setLoading(false));
   }, [loading]);
   return (
     <div>
       {" "}
       <Navbar collapseOnSelect expand="lg" variant="dark">
         <Container>
-          <Navbar.Brand href="#home">
+          <Navbar.Brand href="/">
             <Image src={logo} className="w-28 md:w-auto" />
           </Navbar.Brand>
           <Navbar.Toggle aria-controls="offcanvasNavbar" />
@@ -73,7 +72,7 @@ export default function NavBar() {
                 <Nav.Link
                   as={Link}
                   to={`/`}
-                  className="text-blue-600 text-lg font-semibold tracking-widest"
+                  className="text-blue-600 text-lg font-semibold font-body tracking-widest"
                 >
                   Home
                 </Nav.Link>
@@ -81,7 +80,7 @@ export default function NavBar() {
                 <Nav.Link
                   as={Link}
                   to={`/wisuda`}
-                  className="text-blue-600 text-lg font-semibold tracking-widest"
+                  className="text-blue-600 text-lg font-semibold font-body tracking-widest"
                 >
                   Wisuda
                 </Nav.Link>
@@ -89,7 +88,7 @@ export default function NavBar() {
                 <Nav.Link
                   as={Link}
                   to={`/guru`}
-                  className="mt-[10px] text-blue-600 text-lg font-semibold tracking-widest"
+                  className="mt-[10px] text-blue-600 text-lg font-semibold font-body tracking-widest"
                 >
                   Guru
                 </Nav.Link>
@@ -98,7 +97,7 @@ export default function NavBar() {
                   (jurusan) => (
                     <Nav.Link
                       as={Link}
-                      className="mt-[10px] text-blue-600 text-lg font-semibold tracking-widest"
+                      className="mt-[10px] text-blue-600 text-lg font-semibold font-body tracking-widest"
                       to={`/jurusan/${jurusan.jurusan_id}`}
                       key={jurusan.jurusan_id}
                     >

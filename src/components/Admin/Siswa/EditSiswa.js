@@ -95,11 +95,11 @@ const EditSiswa = (props) => {
               <div className="grid grid-cols-3 gap-4 pt-4">
                 <div className="col-span-2  rounded p-4 ">
                   <div className="form-group mb-3">
-                    <label className="text-md text-gray-700 mb-2 font-semibold">
+                    <label className="text-md text-gray-700 mb-2 font-extrabold font-body">
                       NIS <span className="text-red-500">*</span>
                     </label>
                     <input
-                      className="form-control placeholder:italic placeholder:text-sm"
+                      className="form-control placeholder:italic placeholder:text-sm font-body"
                       type="number"
                       placeholder="Masukkan NIS Siswa *"
                       onChange={(e) => setNis(e.target.value)}
@@ -107,11 +107,11 @@ const EditSiswa = (props) => {
                     />
                   </div>
                   <div className="form-group mb-3">
-                    <label className="text-md text-gray-700 mb-2 font-semibold">
+                    <label className="text-md text-gray-700 mb-2 font-extrabold font-body">
                       Nama <span className="text-red-500">*</span>
                     </label>
                     <input
-                      className="form-control placeholder:italic placeholder:text-sm"
+                      className="form-control placeholder:italic placeholder:text-sm font-body"
                       type="text"
                       placeholder="Nama"
                       onChange={(e) => setNama(e.target.value)}
@@ -119,11 +119,11 @@ const EditSiswa = (props) => {
                     />
                   </div>
                   <div className="form-group mb-3">
-                    <label className="text-md text-gray-700 mb-2 font-semibold">
+                    <label className="text-md text-gray-700 mb-2 font-extrabold font-body">
                       Quote <span className="text-red-500">*</span>
                     </label>
                     <textarea
-                      className="form-control placeholder:italic placeholder:text-sm"
+                      className="form-control placeholder:italic placeholder:text-sm font-body"
                       rows="3"
                       type="text"
                       placeholder="Masukkan Quotes * ( Max : 100 Karakter )"
@@ -132,28 +132,28 @@ const EditSiswa = (props) => {
                     />
                   </div>
                   <div className="form-group">
-                    <label className="text-md text-gray-700 mb-2 font-semibold">
+                    <label className="text-md text-gray-700 mb-2 font-extrabold font-body">
                       Kelas <span className="text-red-500">*</span>
                     </label>
                     <select
-                      className="form-select italic text-sm mb-3"
+                      className="form-select italic text-sm mb-3 font-body"
                       onChange={(e) => setKelas_id(e.target.value)}
                       value={kelas_id}
                     >
                       <option value="">=== Pilih Kelas ===</option>
                       {kelas.map((kelasid, index) => (
-                        <option key={index} value={kelasid.kelas_id}>
+                        <option key={index} value={kelasid.kelas_id} className="font-body">
                           {kelasid.kelas_nama}
                         </option>
                       ))}
                     </select>
                   </div>
                   <div className="inline-flex">
-                    <button className="bg-sky-600 py-2 px-4 no-underline rounded hover:bg-sky-800 text-white text-sm font-medium flex items-center">
+                    <button className="bg-sky-600 py-2 px-4 no-underline rounded hover:bg-sky-800 text-white text-sm font-semibold font-body flex items-center">
                       Ubah
                     </button>
-                    <Link to={`/admin/siswa/kelas/${location.state.id}`}>
-                      <button className="bg-gray-600 py-2 px-4 rounded no-underline hover:bg-gray-800 text-white text-sm font-medium flex items-center ml-3">
+                    <Link to={`/admin/siswa/kelas/${location.state.id}`} className="no-underline">
+                      <button className="bg-gray-600 py-2 px-4 rounded no-underline hover:bg-gray-800 text-white text-sm font-semibold font-body flex items-center ml-3">
                         Batal
                       </button>
                     </Link>
@@ -162,7 +162,7 @@ const EditSiswa = (props) => {
                 <div className="flex flex-col justify-center items-center -mt-20">
                   <div className="flex flex-col justify-center items-center ">
                     <div className="flex w-full text-left">
-                      <label className="font-semibold">
+                      <label className="font-extrabold font-body">
                         Gambar <span className="text-red-500">*</span>
                       </label>
                     </div>
@@ -181,13 +181,13 @@ const EditSiswa = (props) => {
                         className="mt-3 w-64 h-64 object-cover rounded border-2 border-gray-300 flex justify-center items-center mb-3"
                       />
                     )}
-                    <label className="block font-semibold">
+                    <label className="block font-extrabold font-body">
                       <input
                         type="file"
                         className="block w-full text-sm text-slate-500
                             file:mr-4 file:py-2 file:px-4
                             file:rounded-full file:border-0
-                            file:text-sm file:font-semibold
+                            file:text-sm file:font-extrabold font-body
                             file:bg-gray-100 file:text-gray-700
                             hover:file:bg-gray-200
                             "

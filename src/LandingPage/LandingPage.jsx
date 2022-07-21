@@ -307,8 +307,8 @@ export default class LandingPage extends Component {
                       </div>
 
                       <div className=" mini:ml-3 mobile:ml-4 laptop:ml-4 mt-2">
-                        <h6 className="-mb-1 mini:leading-6 mini:text-sm mobile:text-base tablet:text-xl laptop:text-base tracking-wider">
-                          SRI SUPRIATININGSIH, S. Pd.
+                        <h6 className="-mb-1 mini:leading-8 mini:text-sm mobile:text-base tablet:text-xl laptop:text-base tracking-wider">
+                          SRI SUPRIATININGSIH, S.Pd.
                         </h6>
                         <p className="mini:text-xs mobile:text-sm tablet:text-base laptop:text-sm font-light tracking-widest">
                           Kepala Program AK
@@ -331,7 +331,7 @@ export default class LandingPage extends Component {
                       </div>
 
                       <div className=" mini:ml-3 mobile:ml-4 laptop:ml-4 mt-2">
-                        <h6 className="-mb-1 mini:leading-6 mini:text-sm mobile:text-base tablet:text-xl laptop:text-base tracking-wider">
+                        <h6 className="-mb-1 mini:leading-8 mini:text-sm mobile:text-base tablet:text-xl laptop:text-base tracking-wider">
                           ANDI SUSANDI, S.Kom.
                         </h6>
                         <p className="mini:text-xs mobile:text-sm tablet:text-base laptop:text-sm font-light tracking-widest">
@@ -355,7 +355,7 @@ export default class LandingPage extends Component {
                       </div>
 
                       <div className=" mini:ml-3 mobile:ml-4 laptop:ml-4 mt-2">
-                        <h6 className="-mb-1 mini:leading-6 mini:text-sm mobile:text-base tablet:text-xl laptop:text-base tracking-wider">
+                        <h6 className="-mb-1 mini:leading-8 mini:text-sm mobile:text-base tablet:text-xl laptop:text-base tracking-wider">
                           DANI KURNAWAN, S.Kom.
                         </h6>
                         <p className="mini:text-xs mobile:text-sm tablet:text-base laptop:text-sm font-light tracking-widest">
@@ -379,7 +379,7 @@ export default class LandingPage extends Component {
                       </div>
 
                       <div className=" mini:ml-3 mobile:ml-4 laptop:ml-4 mt-2">
-                        <h6 className="-mb-1 mini:leading-6 mini:text-sm mobile:text-base tablet:text-xl laptop:text-base tracking-wider">
+                        <h6 className="-mb-1 mini:leading-8 mini:text-sm mobile:text-base tablet:text-xl laptop:text-base tracking-wider">
                           DEWI MARLINA, S.Pd.
                         </h6>
                         <p className="mini:text-xs mobile:text-sm tablet:text-base laptop:text-sm font-light tracking-widest">
@@ -403,7 +403,7 @@ export default class LandingPage extends Component {
                       </div>
 
                       <div className=" mini:ml-3 mobile:ml-4 laptop:ml-4 mt-2">
-                        <h6 className="-mb-1 mini:leading-6 mini:text-sm mobile:text-base tablet:text-xl laptop:text-base tracking-wider">
+                        <h6 className="-mb-1 mini:leading-8 mini:text-sm mobile:text-base tablet:text-xl laptop:text-base tracking-wider">
                           ROHADI YUSUF, S.Pd.
                         </h6>
                         <p className="mini:text-xs mobile:text-sm tablet:text-base laptop:text-sm font-light tracking-widest">
@@ -427,7 +427,7 @@ export default class LandingPage extends Component {
                       </div>
 
                       <div className=" mini:ml-3 mobile:ml-4 laptop:ml-4 mt-2">
-                        <h6 className="-mb-1 mini:leading-6 mini:text-sm mobile:text-base tablet:text-xl laptop:text-base tracking-wider">
+                        <h6 className="-mb-1 mini:leading-8 mini:text-sm mobile:text-base tablet:text-xl laptop:text-base tracking-wider">
                           IMAM NURSYAHIED, S.Pd.
                         </h6>
                         <p className="mini:text-xs mobile:text-sm tablet:text-base laptop:text-sm font-light tracking-widest">

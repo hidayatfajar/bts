@@ -60,37 +60,37 @@ const AddGuru = () => {
             <form onSubmit={addGuru}>
               <div className="columns-2">
                 <div className="form-group mb-3">
-                  <label className="font-semibold text-sm text-gray-700 mb-2">
+                  <label className="font-extrabold text-sm text-gray-700 font-body mb-2">
                     Nama Guru <span className="text-red-500">*</span>
                   </label>
                   <input
-                    className="form-control placeholder:italic placeholder:text-sm"
+                    className="form-control placeholder:italic placeholder:text-sm font-body"
                     type="text"
                     placeholder="Nama Guru *"
                     onChange={(e) => setGuru(e.target.value)}
                   />
                 </div>
                 <div className="form-group mb-3">
-                  <label className="font-semibold text-sm text-gray-700 mb-2">
+                  <label className="font-extrabold text-sm text-gray-700 font-body mb-2">
                     Jabatan <span className="text-red-500">*</span>
                   </label>
                   <input
-                    className="form-control placeholder:italic placeholder:text-sm"
+                    className="form-control placeholder:italic placeholder:text-sm font-body"
                     type="text"
                     placeholder="Jabatan *"
                     onChange={(e) => setJabatan(e.target.value)}
                   />
                 </div>
                 <div className="form-group mb-3">
-                  <label className="font-semibold text-sm text-gray-700 mb-2">
+                  <label className="font-extrabold text-sm text-gray-700 font-body mb-2">
                     Foto <span className="text-red-500">*</span>
                   </label>
                   <input
                     type="file"
-                    className="block w-full text-sm text-slate-500
+                    className="block w-full text-sm text-slate-500 font-body 
                             file:mr-4 file:py-2 file:px-4
                             file:rounded-full file:border-0
-                            file:text-sm file:font-semibold
+                            file:text-sm file:font-extrabold
                             file:bg-gray-100 file:text-gray-700
                             hover:file:bg-gray-200
                           "
@@ -98,18 +98,18 @@ const AddGuru = () => {
                   />
                 </div>
                 <div className="inline-flex">
-                  <button className="bg-sky-600 py-2 px-4 rounded hover:bg-sky-800 text-white text-sm font-medium flex items-center">
+                  <button className="bg-sky-600 py-2 px-4 rounded hover:bg-sky-800 text-white text-sm font-bold font-body flex items-center">
                     Tambah
                   </button>
                   &ensp;
                   <Link to={`/admin/guru/`}>
-                    <button className="bg-gray-600 py-2 px-4 no-underline rounded hover:bg-gray-700 text-white text-sm font-medium flex items-center ml-3">
+                    <button className="bg-gray-600 py-2 px-4 no-underline rounded hover:bg-gray-700 text-white text-sm font-bold font-body flex items-center ml-3">
                       Batal
                     </button>
                   </Link>
                 </div>
                 <div className="flex flex-col justify-center items-center">
-                  <label className="flex w-full text-left font-semibold text-sm text-gray-700">
+                  <label className="flex w-full text-left font-extrabold text-sm text-gray-700 font-body">
                     Preview :
                   </label>
                   {preview ? (

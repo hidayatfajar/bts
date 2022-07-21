@@ -70,7 +70,7 @@ const NavBarMagic = () => {
         style={{ top: visible ? "-220px" : "0" }}
       >
         <Container>
-          <Navbar.Brand href="#home">
+          <Navbar.Brand href="/">
             <Image src={logo} className="w-28 md:w-auto " />
           </Navbar.Brand>
           <Navbar.Toggle aria-controls="offcanvasNavbar" />

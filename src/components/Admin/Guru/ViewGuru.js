@@ -37,12 +37,12 @@ const ViewGuru = () => {
   return (
     <div>
       <div className="container">
-        <p className="text-3xl text-black font-semibold mb-3">Ubah Guru</p>
+        <p className="text-3xl text-black font-semibold mb-3">Detail Guru</p>
         <div className="shadow rounded border-2 border-gray-200">
           <div className="px-5 py-5">
             <form>
               <div className="form-group mb-3">
-                <label className="font-semibold text-sm text-gray-700 mb-2">
+                <label className="font-extrabold font-body text-sm text-gray-700 mb-2">
                   Foto Guru <span className="text-red-500">*</span>
                 </label>
                 <img
@@ -52,11 +52,11 @@ const ViewGuru = () => {
                 />
               </div>
               <div className="form-group mb-3">
-                <label className="font-semibold text-sm text-gray-700 mb-2">
+                <label className="font-extrabold font-body text-sm text-gray-700 mb-2">
                   Nama Guru <span className="text-red-500">*</span>
                 </label>
                 <input
-                  className="form-control placeholder:italic placeholder:text-sm"
+                  className="form-control placeholder:italic placeholder:text-sm font-body"
                   type="text"
                   placeholder="Nama Guru"
                   value={guru}
@@ -64,11 +64,11 @@ const ViewGuru = () => {
                 />
               </div>
               <div className="form-group mb-3">
-                <label className="font-semibold text-sm text-gray-700 mb-2">
+                <label className="font-extrabold font-body text-sm text-gray-700 mb-2">
                   Jabatan <span className="text-red-500">*</span>
                 </label>
                 <input
-                  className="form-control placeholder:italic placeholder:text-sm"
+                  className="form-control placeholder:italic placeholder:text-sm font-body"
                   type="text"
                   placeholder="Jabatan"
                   value={jabatan}
@@ -76,8 +76,8 @@ const ViewGuru = () => {
                 />
               </div>
               <Link to={`/admin/guru/`}>
-                <button className="bg-gray-600 py-2 px-4 no-underline rounded hover:bg-gray-700 text-white text-sm font-medium ">
-                  Batal
+                <button className="bg-gray-600 py-2 px-4 no-underline rounded hover:bg-gray-700 text-white text-sm font-bold font-body ">
+                  Kembali
                 </button>
               </Link>
             </form>

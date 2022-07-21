@@ -85,10 +85,7 @@ const WisudaGalery = (props) => {
             onClick={(e) => onModal(e, index)}
           >
             <img
-              src={
-                `http://localhost:8000/public/images/Moment-Wisuda/` +
-                item.wisuda_gambar
-              }
+              src={"http://localhost:8000/public/images/" + item.wisuda_gambar}
               alt="image"
             />{" "}
           </div>
