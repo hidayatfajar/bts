@@ -4,10 +4,10 @@ import { BrowserRouter, Route, Switch } from "react-router-dom";
 import LandingPage from "./LandingPage/LandingPage";
 import SidebarAdmin from "./components/Admin/SidebarAdmin";
 
-import Jurusan from "./User/components/Jurusan/Jurusan"
-import Kelas from "./User/components/Kelas/Kelas"
-import Wisuda from "./User/components/Wisuda/Wisuda";
-import Guru from "./User/components/Guru/Guru";
+import Jurusan from "./components/User/Jurusan/Jurusan"
+import Kelas from "./components/User/Kelas/Kelas"
+import Wisuda from "./components/User/Wisuda/Wisuda";
+import Guru from "./components/User/Guru/Guru";
 import { Login } from "./components/Admin/Login";
 
 export default class App extends Component {

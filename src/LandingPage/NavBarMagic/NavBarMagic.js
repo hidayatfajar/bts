@@ -54,7 +54,6 @@ const NavBarMagic = () => {
   }, [loading]);
   // new useEffect
   useEffect(() => {
-    getJurusan();
     window.addEventListener("scroll", handleScroll);
     return () => window.removeEventListener("scroll", handleScroll);
   }, [prevScrollPos, visible, handleScroll]);
