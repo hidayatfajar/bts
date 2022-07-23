@@ -1,8 +1,9 @@
 import React, {useState} from "react";
 import {useHistory } from "react-router-dom";
 import axios from "axios";
-import logoM from "../assets/images/LogoM.png";
+import logoM from "../assets/images/LogoM2.png";
 import logo2 from "../assets/images/logo2.svg";
+import frame from "../assets/frame.png"
 import Swal from 'sweetalert2';
 
 
@@ -44,22 +45,23 @@ export const Login = () => {
 
 
   return (
-    <div>
-      <form onSubmit={Login}>
-      <div className="w-[90%] h-[auto] mt-16 bg-[#303C3A] p-6 mx-auto rounded-lg mini:mt-4 mobile:mt-16 tablet:w-[60%] laptop:w-[30%] laptop:mt-11">
+    <div >
+      <form onSubmit={Login} >
+      <div className="w-fit h-[auto] mt-16 bg-[#f5f5f5] p-6 mx-auto rounded-lg mini:mt-4 mobile:mt-16 tablet:w-[60%] laptop:w-fit laptop:mt-8">
+        <div className="laptop:grid laptop:grid-cols-2 gap-x-10">
         <div className="text-white text-center flex flex-col justify-center items-center">
-          <img src={logoM} alt="" className="w-20 pt-4" />
+          <img src={logoM} alt="" className="w-28 pt-4" />
           {/* ------------------- */}
-          <div className="pt-10 pb-3 ">
-            <h2 className="text-xl font-semibold">Masuk Sebagai Admin</h2>
-            <p className="text-sm font-medium leading-none">
+          <div className="pb-3 ">
+            <h2 className="text-black text-xl font-semibold">Masuk Sebagai Admin</h2>
+            <p className="text-black text-sm font-medium leading-none">
               Masukkan email dan password anda
             </p>
           </div>
           {/* ------------------- */}
           <div className="form-group mb-3 w-full ">
             <label className="block font-semibold">
-              <p className="block text-md text-slate-400 text-left whitespace-nowrap mb-2">
+              <p className="block text-md text-black text-left whitespace-nowrap mb-2">
                 Email
               </p>
               <input
@@ -73,7 +75,7 @@ export const Login = () => {
           </div>
           <div className="form-group mb-3 w-full ">
             <label className="block font-semibold">
-              <p className="block text-md text-slate-400 text-left whitespace-nowrap mb-2">
+              <p className="block text-md text-black text-left whitespace-nowrap mb-2">
                 Password
               </p>
               <input
@@ -91,14 +93,16 @@ export const Login = () => {
             </button>
           </div>
         </div>
+      <img src={frame} className="w-96 laptop:block mobile:hidden mini:hidden"/>
       </div>
-      <div>
+      </div>
+      {/* <div>
         <img
           src={logo2}
           alt="logo"
           className="hidden pt-16 mx-auto mobile:block tablet:block laptop:pt-12 laptop:block"
         />
-      </div>
+      </div> */}
       </form>
     </div>
   );

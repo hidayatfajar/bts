@@ -10,15 +10,15 @@ import {
 import { Map, InfoWindow, Marker, GoogleApiWrapper } from "google-maps-react";
 
 class Footer extends Component {
-  constructor(props) {
-    super(props);
-    this.state = {
-      center: {
-        lat : -6.355731503098946,
-        lng : 106.99205144041609
-      }
-    };
-  }
+  // constructor(props) {
+  //   super(props);
+  //   this.state = {
+  //     center: {
+  //       lat: -6.355731503098946,
+  //       lng: 106.99205144041609,
+  //     },
+  //   };
+  // }
   render() {
     return (
       <div>
@@ -28,7 +28,7 @@ class Footer extends Component {
             <div className="">
               <h3 className="font-semibold">SMKN 2 Kota Bekasi</h3>
             </div>
-            <div className="py-2 md:grid md:grid-cols-2 items-center justify-center">
+            <div className="py-2 grid grid-cols-2 items-center justify-center">
               <div className="w-full">
                 <p className="max-w-sm pt-1 leading-7 tracking-wide">
                   Jl. Lap Bola Rawa Butun Ciketing Udik Bantargebang Kota Bekasi
@@ -41,44 +41,44 @@ class Footer extends Component {
                 {/* <p className="pt-2 tracking-wide">
                   &copy; Copyright by 12 RPL 3 Team
                 </p> */}
-                <div className="pt-2 flex">
+                <div className="pt-2 flex gap-x-4">
                   <a href="https://twitter.com/smkn2kotabekasi">
-                    <div className="bg-green-700 text-white text-2xl py-1 px-2 rounded-md hover:bg-green-900">
+                    <div className="bg-gray-800 text-white text-2xl py-1 px-2 rounded-md hover:bg-gray-700">
                       <FontAwesomeIcon className="" icon={faTwitter} />
                     </div>
                   </a>
                   <a href="https://www.facebook.com/smkn2kotabekasi">
-                    <div className="ml-4 bg-green-700 text-white text-2xl py-1 px-2 rounded-md hover:bg-green-900">
+                    <div className=" bg-gray-800 text-white text-2xl py-1 px-2 rounded-md hover:bg-gray-700">
                       <FontAwesomeIcon className="" icon={faFacebook} />
                     </div>
                   </a>
                   <a href="https://www.instagram.com/smkn2.kotabks/">
-                    <div className="ml-4 bg-green-700 text-white text-2xl py-1 px-[10px] rounded-md hover:bg-green-900">
+                    <div className=" bg-gray-800 text-white text-2xl py-1 px-[10px] rounded-md hover:bg-gray-700">
                       <FontAwesomeIcon className="" icon={faInstagram} />
                     </div>
                   </a>
                   <a href="https://www.youtube.com/channel/UCZwg40VejkUACpE0ClIkrdg">
-                    <div className="ml-4 bg-green-700 text-white text-2xl py-1 px-2 rounded-md hover:bg-green-900">
+                    <div className=" bg-gray-800 text-white text-2xl py-1 px-2 rounded-md hover:bg-gray-700">
                       <FontAwesomeIcon className="" icon={faYoutube} />
                     </div>
                   </a>
                 </div>
               </div>
-              <div className="bg-gray-600">
+              {/* Map */}
+              {/* <div className="max-w-xl contents">
                 <Map
                   google={this.props.google}
                   zoom={15}
-                  style={{ height: "350px", width: "500px" }}
+                  style={{ maxWidth: "500px", height: "auto", width: "auto" }}
                   defaultCenter={{
-                    lat : -6.355731503098946,
-                    lng : 106.99205144041609
+                    lat: -6.355731503098946,
+                    lng: 106.99205144041609,
                   }}
                   initialCenter={{
-                    lat : -6.355731503098946,
-                    lng : 106.99205144041609
+                    lat: -6.355731503098946,
+                    lng: 106.99205144041609,
                   }}
                   defaultZoom={20}
-
                 >
                   <Marker
                     position={{
@@ -89,7 +89,7 @@ class Footer extends Component {
                     name={"Current Location"}
                   />
                 </Map>
-              </div>
+              </div> */}
             </div>
           </Container>
         </div>
@@ -98,6 +98,8 @@ class Footer extends Component {
   }
 }
 
-export default GoogleApiWrapper({
-  apiKey: "AIzaSyDaxLGfa3TB2wETwtUqNqisAcEnkGamW7s",
-})(Footer);
+// export default GoogleApiWrapper({
+//   apiKey: "AIzaSyDaxLGfa3TB2wETwtUqNqisAcEnkGamW7s",
+// })(Footer);
+
+export default Footer;

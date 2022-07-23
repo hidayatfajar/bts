@@ -11,8 +11,8 @@ const WisudaGalery = (props) => {
   const [modal, setModal] = useState(false);
   const [wisudaIndex, setWisudaIndex] = useState(1);
   const image = props.image;
-  console.log(image)
-  console.log(wisudaIndex)
+  console.log(image);
+  console.log(wisudaIndex);
 
   const onModal = (e, wisudaId) => {
     e.preventDefault();
@@ -85,10 +85,7 @@ const WisudaGalery = (props) => {
             onClick={(e) => onModal(e, index)}
           >
             <img
-              src={
-                `http://localhost:8000/public/images/Moment-Wisuda/` +
-                item.wisuda_gambar
-              }
+              src={`http://localhost:8000/public/images/` + item.wisuda_gambar}
               alt="image"
             />{" "}
           </div>
