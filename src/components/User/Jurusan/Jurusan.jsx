@@ -4,7 +4,7 @@ import NavBar from "../LandingPage/NavBar/NavBar";
 import NavBarMagic from "../LandingPage/NavBarMagic/NavBarMagic";
 import JurusanHeader from "./JurusanHeader";
 import JurusanCardList from "./JurusanCardList";
-import JurusanFooter from "./JurusanFooter";
+import JurusanFooter from "../LandingPage/Footer/Footer";
 import { useParams } from "react-router-dom";
 import axios from "axios";
 

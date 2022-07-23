@@ -4,7 +4,7 @@ import NavBarMagic from "../LandingPage/NavBarMagic/NavBarMagic";
 import "../RPL.css";
 import axios from "axios";
 import KelasFotoSlide from "./KelasFotoSlide";
-import KelasFotoFooter from "./KelasFotoFooter";
+import KelasFotoFooter from "../LandingPage/Footer/Footer";
 import KelasCardListing from "./KelasCardListing";
 import { useParams } from "react-router-dom";
 import {

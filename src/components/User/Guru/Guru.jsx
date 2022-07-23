@@ -3,7 +3,7 @@ import axios from "axios";
 import NavBar from "../LandingPage/NavBar/NavBar";
 import NavBarMagic from "../LandingPage/NavBarMagic/NavBarMagic";
 import GuruCardList from "./GuruCardList";
-import GuruFooter from "./GuruFooter";
+import GuruFooter from "../LandingPage/Footer/Footer";
 import GuruHeader from "./GuruHeader";
 import "../RPL.css";
 import {

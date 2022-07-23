@@ -2,6 +2,7 @@ import React, { useState, useEffect } from "react";
 import { Link, useParams } from "react-router-dom";
 import NavBar from "../NavBar/NavBar";
 import NavBarMagic from "../NavBarMagic/NavBarMagic";
+import Footer from "../Footer/Footer"
 
 const Jurusan = () => {
   const Kaprogs = [
@@ -164,6 +165,7 @@ const Jurusan = () => {
             </div>
           </>
         ) : (
+          <>
           <div className="container pt-4">
             <h1 className="max-w-sm laptop:max-w-md text-title">
               Beberapa list <span className="gradient-text"> Jurusan.</span>
@@ -209,6 +211,8 @@ const Jurusan = () => {
             <br />
             <br />
           </div>
+            <Footer />
+            </>
         )}
       </div>
     </>
