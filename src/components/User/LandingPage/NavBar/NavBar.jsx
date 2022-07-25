@@ -20,7 +20,7 @@ export default function NavBar() {
   return (
     <div>
       {" "}
-      <Navbar collapseOnSelect expand="lg" variant="dark">
+      <Navbar collapseOnSelect expand="lg" variant="dark" className="z-[2]">
         <Container>
           <Navbar.Brand href="/">
             <Image src={logo} className="w-28 md:w-auto" />

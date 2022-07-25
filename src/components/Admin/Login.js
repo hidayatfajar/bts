@@ -53,10 +53,8 @@ export const Login = () => {
           <img src={logoM} alt="" className="w-28 pt-4" />
           {/* ------------------- */}
           <div className="pb-3 ">
-            <h2 className="text-black text-xl font-semibold">Masuk Sebagai Admin</h2>
-            <p className="text-black text-sm font-medium leading-none">
-              Masukkan email dan password anda
-            </p>
+            <h2 className="text-black text-2xl font-bold">Masuk Sebagai Admin</h2>
+            <br/>
           </div>
           {/* ------------------- */}
           <div className="form-group mb-3 w-full ">
@@ -88,7 +86,7 @@ export const Login = () => {
             </label>
           </div>
           <div className="w-full pt-6">
-            <button className="w-full h-10 font-body bg-blue-600 hover:bg-blue-700 rounded">
+            <button className="w-full h-10 font-bold text-lg font-body tracking-widest bg-gray-600 hover:bg-gray-700 rounded">
               Masuk
             </button>
           </div>

@@ -58,7 +58,7 @@ const NavBarMagic = () => {
         expand="lg"
         variant="dark"
         id="nav"
-        className="bg-white/30 backdrop-blur-xl flex items-center"
+        className="bg-white/30 backdrop-blur-xl flex items-center z-[2]"
         style={{ top: visible ? "-220px" : "0" }}
       >
         <Container>

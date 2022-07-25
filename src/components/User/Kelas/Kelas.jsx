@@ -133,7 +133,7 @@ export default function RPL1() {
           </>
         ) : (
           <div className="text-center">
-            <h1>Gagal mengambil data siswa</h1>
+            <h4>Gagal Mengambil Data Siswa</h4>
           </div>
         )}
         <br />

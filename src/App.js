@@ -10,6 +10,7 @@ import Kelas from "./components/User/Kelas/Kelas"
 import Wisuda from "./components/User/Wisuda/Wisuda";
 import Guru from "./components/User/Guru/Guru";
 import { Login } from "./components/Admin/Login";
+import NotFound from "./components/User/LandingPage/NotFound/NotFound";
 
 export default class App extends Component {
   render() {
@@ -26,6 +27,7 @@ export default class App extends Component {
               <Route path="/kelas/:kelasId" component={Kelas} />
               <Route path="/wisuda" component={Wisuda} />
               <Route path="/guru" component={Guru} />
+              <Route path="*" component={NotFound} />
             </Switch>
         </BrowserRouter>
       </div>

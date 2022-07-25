@@ -28,7 +28,7 @@ class Footer extends Component {
             <div className="">
               <h3 className="font-semibold">SMKN 2 Kota Bekasi</h3>
             </div>
-            <div className="py-2 grid grid-cols-2 items-center justify-center">
+            <div className="py-2 laptop:grid grid-cols-2 items-center justify-center">
               <div className="w-full">
                 <p className="max-w-sm pt-1 leading-7 tracking-wide">
                   Jl. Lap Bola Rawa Butun Ciketing Udik Bantargebang Kota Bekasi
