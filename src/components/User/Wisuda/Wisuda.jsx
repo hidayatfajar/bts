@@ -44,29 +44,29 @@ export default function Wisuda() {
           <>
             {/* title */}
             <div className="container animate-pulse">
-              <div class="mini:w-56 mobile:w-60 laptop:w-96 h-10 bg-slate-700 rounded-full col-span-2"></div>
-              <div class="mini:w-40 mobile:w-52 laptop:w-80 h-10 bg-slate-700 rounded-full mini:mt-3 mobile:mt-4 laptop:mt-6 col-span-1"></div>
+              <div className="mini:w-56 mobile:w-60 laptop:w-96 h-10 bg-slate-700 rounded-full col-span-2"></div>
+              <div className="mini:w-40 mobile:w-52 laptop:w-80 h-10 bg-slate-700 rounded-full mini:mt-3 mobile:mt-4 laptop:mt-6 col-span-1"></div>
             </div>
 
             {/* header */}
             <br />
             <div className="container">
-              <div class="backdrop-blur-sm bg-white/30 shadow rounded-md p-3 h-[450px] laptop:p-4 laptop:h-auto w-full mx-auto">
-                <div class="animate-pulse laptop:flex laptop:space-x-4 mini:py-8 mobile:py-8 laptop:py-6 laptop:px-4">
-                  <div class="rounded-full bg-slate-700 mini:w-36 mini:h-36 mobile:w-36 mobile:h-36  mx-auto laptop:pt-0 laptop:w-40 laptop:h-40"></div>
+              <div className="backdrop-blur-sm bg-white/30 shadow rounded-md p-3 h-[450px] laptop:p-4 laptop:h-auto w-full mx-auto">
+                <div className="animate-pulse laptop:flex laptop:space-x-4 mini:py-8 mobile:py-8 laptop:py-6 laptop:px-4">
+                  <div className="rounded-full bg-slate-700 mini:w-36 mini:h-36 mobile:w-36 mobile:h-36  mx-auto laptop:pt-0 laptop:w-40 laptop:h-40"></div>
 
-                  <div class="laptop:flex-1 laptop:space-y-6 py-1">
-                    <div class="space-y-3 mobile:pl-0 pt-3 text-center laptop:pt-0 laptop:pl-9 tablet:pl-10">
-                      <div class="w-[90%] mini:mx-auto mobile:mx-auto laptop:w-128 laptop:mx-0 h-8 bg-slate-700 mini:mt-8 mobile:mt-8 laptop:mt-1 rounded-full"></div>
+                  <div className="laptop:flex-1 laptop:space-y-6 py-1">
+                    <div className="space-y-3 mobile:pl-0 pt-3 text-center laptop:pt-0 laptop:pl-9 tablet:pl-10">
+                      <div className="w-[90%] mini:mx-auto mobile:mx-auto laptop:w-128 laptop:mx-0 h-8 bg-slate-700 mini:mt-8 mobile:mt-8 laptop:mt-1 rounded-full"></div>
                       <br />
-                      <div class="mobile:w-full laptop:w-[22rem] h-4 bg-slate-700 rounded-full"></div>
-                      <div class="mobile:w-full laptop:w-[20rem] h-4 bg-slate-700 rounded-full"></div>
+                      <div className="mobile:w-full laptop:w-[22rem] h-4 bg-slate-700 rounded-full"></div>
+                      <div className="mobile:w-full laptop:w-[20rem] h-4 bg-slate-700 rounded-full"></div>
                     </div>
                   </div>
                 </div>
               </div>
               {/* grid */}
-              <div class="w-36 h-8 animate-pulse bg-slate-700 mx-auto mt-14 mobile:mb-1 laptop:-mb-8 rounded-full"></div>
+              <div className="w-36 h-8 animate-pulse bg-slate-700 mx-auto mt-14 mobile:mb-1 laptop:-mb-8 rounded-full"></div>
               <div className="image-galery-s animate-pulse">
                 <div className="image-box-s"></div>
                 <div className="image-box-s"></div>

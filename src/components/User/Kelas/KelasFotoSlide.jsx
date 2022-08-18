@@ -20,7 +20,7 @@ export default function KelasFotoSlide(props) {
           <img
             className="d-block w-100"
             src={
-              "http://localhost:8000/public/images/" +
+              `${process.env.REACT_APP_API_KEY}public/images/` +
               item.gambar_nama
             }
             alt={item.gambar_nama}
@@ -29,17 +29,4 @@ export default function KelasFotoSlide(props) {
       ))}
     </Carousel>
   );
-}
-
-{
-  /* {gambar.map((item, index) => {
-      return item.gambar_jenis == "wajib" ? (
-        <Carousel.Item key={index}>
-          <img
-            className="d-block w-100"
-            src={"http://localhost:8000/public/images/ak/ak1/" + item.gambar_nama}
-            alt={item.gambar_nama} />
-        </Carousel.Item>
-      ) : null;
-    })} */
 }

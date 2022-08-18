@@ -132,7 +132,7 @@ const EditGuru = () => {
                       />
                     ) : (
                       <img
-                        src={`http://localhost:8000/public/images/`+ image}
+                        src={`${process.env.REACT_APP_API_KEY}public/images/`+ image}
                         alt="preview"
                         className="mt-3 w-64 h-64 object-cover rounded border-2 border-gray-300 flex justify-center items-center mb-3"
                       />

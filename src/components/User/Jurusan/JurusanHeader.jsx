@@ -45,7 +45,7 @@ export default function JurusanHeader(props) {
           <div className="laptop:flex" key={index}>
             <div className="">
               <img
-                src={"http://localhost:8000/public/images/" + item.jurusan_logo}
+                src={`${process.env.REACT_APP_API_KEY}public/images/` + item.jurusan_logo}
                 className="w-56 mr-0 laptop:mr-8 mx-auto"
                 alt={item.jurusan_nama}
                 // style={{ width: "150px", height: "150px" }}

@@ -47,7 +47,7 @@ const Jurusan = () => {
   useEffect(() => {
     setTimeout(() => {
       setLoading(false);
-    }, 3000);
+    }, 1000);
   }, [loading]);
 
   return (
@@ -59,8 +59,8 @@ const Jurusan = () => {
           <>
             {/* title */}
             <div className="container pt-4 animate-pulse">
-              <div class="mini:w-56 mobile:w-60 laptop:w-96 h-10 bg-slate-700 rounded-full col-span-2"></div>
-              <div class="mini:w-40 mobile:w-52 laptop:w-80 h-10 bg-slate-700 rounded-full mini:mt-3 mobile:mt-4 laptop:mt-6 col-span-1"></div>
+              <div className="mini:w-56 mobile:w-60 laptop:w-96 h-10 bg-slate-700 rounded-full col-span-2"></div>
+              <div className="mini:w-40 mobile:w-52 laptop:w-80 h-10 bg-slate-700 rounded-full mini:mt-3 mobile:mt-4 laptop:mt-6 col-span-1"></div>
             </div>
             <br />
             {/* Content Bar */}
@@ -69,96 +69,96 @@ const Jurusan = () => {
                 <div className="w-full mx-auto bg-white/30 mini:p-2 mobile:p-[10px] tablet:p-6 laptop:p-3 rounded-xl">
                   <div className="flex flex-row items-center">
                     <div className="profile">
-                      <div class="mini:w-14 mobile:w-14 tablet:w-20 laptop:w-14 mini:h-14 mobile:h-14 tablet:h-20 laptop:h-14 animate-pulse bg-slate-700 rounded-full"></div>
+                      <div className="mini:w-14 mobile:w-14 tablet:w-20 laptop:w-14 mini:h-14 mobile:h-14 tablet:h-20 laptop:h-14 animate-pulse bg-slate-700 rounded-full"></div>
                     </div>
 
                     <div className="mini:ml-3 mobile:ml-4 laptop:ml-4 ">
-                      <div class="w-48 h-4 animate-pulse bg-slate-700 rounded-full"></div>
-                      <div class="w-40 h-3 mt-1 animate-pulse bg-slate-700 rounded-full"></div>
+                      <div className="w-48 h-4 animate-pulse bg-slate-700 rounded-full"></div>
+                      <div className="w-40 h-3 mt-1 animate-pulse bg-slate-700 rounded-full"></div>
                     </div>
                   </div>
-                  <div class="w-full mini:h-36 mobile:h-44 laptop:h-44 mt-3 pt-3 bg-slate-700 animate-pulse rounded-lg">
-                    <div class="mini:w-28 mini:h-28 mobile:w-36 mobile:h-36 laptop:w-36 laptop:h-36 animate-pulse bg-white/30 mx-auto rounded-full"></div>
+                  <div className="w-full mini:h-36 mobile:h-44 laptop:h-44 mt-3 pt-3 bg-slate-700 animate-pulse rounded-lg">
+                    <div className="mini:w-28 mini:h-28 mobile:w-36 mobile:h-36 laptop:w-36 laptop:h-36 animate-pulse bg-white/30 mx-auto rounded-full"></div>
                   </div>
                 </div>
 
                 <div className="w-full mx-auto bg-white/30 mini:p-2 mobile:p-[10px] tablet:p-6 laptop:p-3 rounded-xl">
                   <div className="flex flex-row items-center">
                     <div className="profile">
-                      <div class="mini:w-14 mobile:w-14 tablet:w-20 laptop:w-14 mini:h-14 mobile:h-14 tablet:h-20 laptop:h-14 animate-pulse bg-slate-700 rounded-full"></div>
+                      <div className="mini:w-14 mobile:w-14 tablet:w-20 laptop:w-14 mini:h-14 mobile:h-14 tablet:h-20 laptop:h-14 animate-pulse bg-slate-700 rounded-full"></div>
                     </div>
 
                     <div className="mini:ml-3 mobile:ml-4 laptop:ml-4 ">
-                      <div class="w-48 h-4 animate-pulse bg-slate-700 rounded-full"></div>
-                      <div class="w-40 h-3 mt-1 animate-pulse bg-slate-700 rounded-full"></div>
+                      <div className="w-48 h-4 animate-pulse bg-slate-700 rounded-full"></div>
+                      <div className="w-40 h-3 mt-1 animate-pulse bg-slate-700 rounded-full"></div>
                     </div>
                   </div>
-                  <div class="w-full mini:h-36 mobile:h-44 laptop:h-44 mt-3 pt-3 bg-slate-700 animate-pulse rounded-lg">
-                    <div class="mini:w-28 mini:h-28 mobile:w-36 mobile:h-36 laptop:w-36 laptop:h-36 animate-pulse bg-white/30 mx-auto rounded-full"></div>
+                  <div className="w-full mini:h-36 mobile:h-44 laptop:h-44 mt-3 pt-3 bg-slate-700 animate-pulse rounded-lg">
+                    <div className="mini:w-28 mini:h-28 mobile:w-36 mobile:h-36 laptop:w-36 laptop:h-36 animate-pulse bg-white/30 mx-auto rounded-full"></div>
                   </div>
                 </div>
 
                 <div className="w-full mx-auto bg-white/30 mini:p-2 mobile:p-[10px] tablet:p-6 laptop:p-3 rounded-xl">
                   <div className="flex flex-row items-center">
                     <div className="profile">
-                      <div class="mini:w-14 mobile:w-14 tablet:w-20 laptop:w-14 mini:h-14 mobile:h-14 tablet:h-20 laptop:h-14 animate-pulse bg-slate-700 rounded-full"></div>
+                      <div className="mini:w-14 mobile:w-14 tablet:w-20 laptop:w-14 mini:h-14 mobile:h-14 tablet:h-20 laptop:h-14 animate-pulse bg-slate-700 rounded-full"></div>
                     </div>
 
                     <div className="mini:ml-3 mobile:ml-4 laptop:ml-4 ">
-                      <div class="w-48 h-4 animate-pulse bg-slate-700 rounded-full"></div>
-                      <div class="w-40 h-3 mt-1 animate-pulse bg-slate-700 rounded-full"></div>
+                      <div className="w-48 h-4 animate-pulse bg-slate-700 rounded-full"></div>
+                      <div className="w-40 h-3 mt-1 animate-pulse bg-slate-700 rounded-full"></div>
                     </div>
                   </div>
-                  <div class="w-full mini:h-36 mobile:h-44 laptop:h-44 mt-3 pt-3 bg-slate-700 animate-pulse rounded-lg">
-                    <div class="mini:w-28 mini:h-28 mobile:w-36 mobile:h-36 laptop:w-36 laptop:h-36 animate-pulse bg-white/30 mx-auto rounded-full"></div>
+                  <div className="w-full mini:h-36 mobile:h-44 laptop:h-44 mt-3 pt-3 bg-slate-700 animate-pulse rounded-lg">
+                    <div className="mini:w-28 mini:h-28 mobile:w-36 mobile:h-36 laptop:w-36 laptop:h-36 animate-pulse bg-white/30 mx-auto rounded-full"></div>
                   </div>
                 </div>
 
                 <div className="w-full mx-auto bg-white/30 mini:p-2 mobile:p-[10px] tablet:p-6 laptop:p-3 rounded-xl">
                   <div className="flex flex-row items-center">
                     <div className="profile">
-                      <div class="mini:w-14 mobile:w-14 tablet:w-20 laptop:w-14 mini:h-14 mobile:h-14 tablet:h-20 laptop:h-14 animate-pulse bg-slate-700 rounded-full"></div>
+                      <div className="mini:w-14 mobile:w-14 tablet:w-20 laptop:w-14 mini:h-14 mobile:h-14 tablet:h-20 laptop:h-14 animate-pulse bg-slate-700 rounded-full"></div>
                     </div>
 
                     <div className="mini:ml-3 mobile:ml-4 laptop:ml-4 ">
-                      <div class="w-48 h-4 animate-pulse bg-slate-700 rounded-full"></div>
-                      <div class="w-40 h-3 mt-1 animate-pulse bg-slate-700 rounded-full"></div>
+                      <div className="w-48 h-4 animate-pulse bg-slate-700 rounded-full"></div>
+                      <div className="w-40 h-3 mt-1 animate-pulse bg-slate-700 rounded-full"></div>
                     </div>
                   </div>
-                  <div class="w-full mini:h-36 mobile:h-44 laptop:h-44 mt-3 pt-3 bg-slate-700 animate-pulse rounded-lg">
-                    <div class="mini:w-28 mini:h-28 mobile:w-36 mobile:h-36 laptop:w-36 laptop:h-36 animate-pulse bg-white/30 mx-auto rounded-full"></div>
+                  <div className="w-full mini:h-36 mobile:h-44 laptop:h-44 mt-3 pt-3 bg-slate-700 animate-pulse rounded-lg">
+                    <div className="mini:w-28 mini:h-28 mobile:w-36 mobile:h-36 laptop:w-36 laptop:h-36 animate-pulse bg-white/30 mx-auto rounded-full"></div>
                   </div>
                 </div>
 
                 <div className="w-full mx-auto bg-white/30 mini:p-2 mobile:p-[10px] tablet:p-6 laptop:p-3 rounded-xl">
                   <div className="flex flex-row items-center">
                     <div className="profile">
-                      <div class="mini:w-14 mobile:w-14 tablet:w-20 laptop:w-14 mini:h-14 mobile:h-14 tablet:h-20 laptop:h-14 animate-pulse bg-slate-700 rounded-full"></div>
+                      <div className="mini:w-14 mobile:w-14 tablet:w-20 laptop:w-14 mini:h-14 mobile:h-14 tablet:h-20 laptop:h-14 animate-pulse bg-slate-700 rounded-full"></div>
                     </div>
 
                     <div className="mini:ml-3 mobile:ml-4 laptop:ml-4 ">
-                      <div class="w-48 h-4 animate-pulse bg-slate-700 rounded-full"></div>
-                      <div class="w-40 h-3 mt-1 animate-pulse bg-slate-700 rounded-full"></div>
+                      <div className="w-48 h-4 animate-pulse bg-slate-700 rounded-full"></div>
+                      <div className="w-40 h-3 mt-1 animate-pulse bg-slate-700 rounded-full"></div>
                     </div>
                   </div>
-                  <div class="w-full mini:h-36 mobile:h-44 laptop:h-44 mt-3 pt-3 bg-slate-700 animate-pulse rounded-lg">
-                    <div class="mini:w-28 mini:h-28 mobile:w-36 mobile:h-36 laptop:w-36 laptop:h-36 animate-pulse bg-white/30 mx-auto rounded-full"></div>
+                  <div className="w-full mini:h-36 mobile:h-44 laptop:h-44 mt-3 pt-3 bg-slate-700 animate-pulse rounded-lg">
+                    <div className="mini:w-28 mini:h-28 mobile:w-36 mobile:h-36 laptop:w-36 laptop:h-36 animate-pulse bg-white/30 mx-auto rounded-full"></div>
                   </div>
                 </div>
 
                 <div className="w-full mx-auto bg-white/30 mini:p-2 mobile:p-[10px] tablet:p-6 laptop:p-3 rounded-xl">
                   <div className="flex flex-row items-center">
                     <div className="profile">
-                      <div class="mini:w-14 mobile:w-14 tablet:w-20 laptop:w-14 mini:h-14 mobile:h-14 tablet:h-20 laptop:h-14 animate-pulse bg-slate-700 rounded-full"></div>
+                      <div className="mini:w-14 mobile:w-14 tablet:w-20 laptop:w-14 mini:h-14 mobile:h-14 tablet:h-20 laptop:h-14 animate-pulse bg-slate-700 rounded-full"></div>
                     </div>
 
                     <div className="mini:ml-3 mobile:ml-4 laptop:ml-4 ">
-                      <div class="w-48 h-4 animate-pulse bg-slate-700 rounded-full"></div>
-                      <div class="w-40 h-3 mt-1 animate-pulse bg-slate-700 rounded-full"></div>
+                      <div className="w-48 h-4 animate-pulse bg-slate-700 rounded-full"></div>
+                      <div className="w-40 h-3 mt-1 animate-pulse bg-slate-700 rounded-full"></div>
                     </div>
                   </div>
-                  <div class="w-full mini:h-36 mobile:h-44 laptop:h-44 mt-3 pt-3 bg-slate-700 animate-pulse rounded-lg">
-                    <div class="mini:w-28 mini:h-28 mobile:w-36 mobile:h-36 laptop:w-36 laptop:h-36 animate-pulse bg-white/30 mx-auto rounded-full"></div>
+                  <div className="w-full mini:h-36 mobile:h-44 laptop:h-44 mt-3 pt-3 bg-slate-700 animate-pulse rounded-lg">
+                    <div className="mini:w-28 mini:h-28 mobile:w-36 mobile:h-36 laptop:w-36 laptop:h-36 animate-pulse bg-white/30 mx-auto rounded-full"></div>
                   </div>
                 </div>
               </div>
@@ -177,6 +177,7 @@ const Jurusan = () => {
                   <Link
                     to={`/jurusan/${Kaprog.id_jurusan}`}
                     className="no-underline text-white"
+                    key={index}
                   >
                     <div
                       key={index}

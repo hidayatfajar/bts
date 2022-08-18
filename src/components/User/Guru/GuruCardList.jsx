@@ -59,7 +59,7 @@ export default function GuruCardList(props) {
                   <img
                     className="mobile:w-auto laptop:w-auto mobile:h-[520px] laptop:h-[580px] object-cover object-bottom"
                     src={
-                      "http://localhost:8000/public/images/" +
+                      `${process.env.REACT_APP_API_KEY}public/images/` +
                       filteredData[guruIndex].guru_gambar
                     }
                     alt={filteredData[guruIndex].guru_nama}
@@ -101,7 +101,7 @@ export default function GuruCardList(props) {
                   className="mobile:w-[356px] laptop:w-[300px] mobile:h-[356px] laptop:h-[300px] object-cover"
                   variant="top"
                   src={
-                    "http://localhost:8000/public/images/" + guru.guru_gambar
+                    `${process.env.REACT_APP_API_KEY}public/images/` + guru.guru_gambar
                   }
                   onClick={(e) => onModal(e, index)}
                   loading="lazy"

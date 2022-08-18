@@ -25,11 +25,10 @@ class Footer extends Component {
         {" "}
         <div className="py-10 bg-gray-600">
           <Container>
-            <div className="">
-              <h3 className="font-semibold">SMKN 2 Kota Bekasi</h3>
-            </div>
             <div className="py-2 laptop:grid grid-cols-2 items-center justify-center">
+              {/* ---- AlAMAT ------ */}
               <div className="w-full">
+                <h3 className="font-semibold">SMKN 2 Kota Bekasi</h3>
                 <p className="max-w-sm pt-1 leading-7 tracking-wide">
                   Jl. Lap Bola Rawa Butun Ciketing Udik Bantargebang Kota Bekasi
                   17153
@@ -64,32 +63,30 @@ class Footer extends Component {
                   </a>
                 </div>
               </div>
-              {/* Map */}
-              {/* <div className="max-w-xl contents">
-                <Map
-                  google={this.props.google}
-                  zoom={15}
-                  style={{ maxWidth: "500px", height: "auto", width: "auto" }}
-                  defaultCenter={{
-                    lat: -6.355731503098946,
-                    lng: 106.99205144041609,
-                  }}
-                  initialCenter={{
-                    lat: -6.355731503098946,
-                    lng: 106.99205144041609,
-                  }}
-                  defaultZoom={20}
-                >
-                  <Marker
-                    position={{
-                      lat: -6.355731503098946,
-                      lng: 106.99205144041609,
-                    }}
-                    onClick={this.onMarkerClick}
-                    name={"Current Location"}
-                  />
-                </Map>
-              </div> */}
+              {/* ----MAPS----- */}
+              {/* Hah? ga kedengeran */}
+              <div>
+                <h3 className="font-semibold laptop:text-center mobile:text-left mobile:ml-0 laptop:mr-10 laptop:mb-5 mobile:mb-5 mini:mb-5 laptop:mt-0 mobile:mt-10 mini:mt-10">
+                  Find us on Map
+                </h3>
+                <div className="flex flex-col items-end">
+                  <div className="relative text-right h-52 laptop:w-[400px] mobile:w-full">
+                    {/* Tnya  */}
+                    <div className="overflow-hidden bg-none h-52 laptop:w-[400px] mobile:w-full">
+                      <iframe
+                        className="laptop:w-[400px] mobile:w-full h-52"
+                        id="gmap_canvas"
+                        src="https://maps.google.com/maps?q=SMKN%202%20Kota%20Bekasi&t=&z=17&ie=UTF8&iwloc=&output=embed"
+                        frameBorder="0"
+                        scrolling="no"
+                        marginHeight="0"
+                        marginWidth="0"
+                      ></iframe>
+                      <a href="https://fmovies-online.net"></a>
+                    </div>
+                  </div>
+                </div>
+              </div>
             </div>
           </Container>
         </div>

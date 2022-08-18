@@ -36,7 +36,7 @@ export default function JurusanCardList(props) {
             <div className="relative flex items-center justify-center rounded bg-white/30 p-3">
               <img
                 src={
-                  "http://localhost:8000/public/images/" + kelas.kelas_gambar
+                  `${process.env.REACT_APP_API_KEY}public/images/` + kelas.kelas_gambar
                 }
                 alt={kelas.kelas_gambar}
                 className="object-fit"

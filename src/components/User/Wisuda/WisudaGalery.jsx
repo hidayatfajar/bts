@@ -50,7 +50,7 @@ const WisudaGalery = (props) => {
                 {image[wisudaIndex].wisuda_gambar ? (
                   <img
                     src={
-                      "http://localhost:8000/public/images/" +
+                      `${process.env.REACT_APP_API_KEY}public/images/` +
                       image[wisudaIndex].wisuda_gambar
                     }
                     alt={image[wisudaIndex].wisuda_nama}
@@ -85,7 +85,7 @@ const WisudaGalery = (props) => {
             onClick={(e) => onModal(e, index)}
           >
             <img
-              src={`http://localhost:8000/public/images/` + item.wisuda_gambar}
+              src={`${process.env.REACT_APP_API_KEY}public/images/` + item.wisuda_gambar}
               alt="image"
             />{" "}
           </div>

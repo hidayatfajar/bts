@@ -36,7 +36,7 @@ const NavBarMagic = () => {
 
   const [loading, setLoading] = useState(true);
   const getJurusan = async () => {
-    const data = await axios.get("http://localhost:8000/jurusan/");
+    const data = await axios.get(`${process.env.REACT_APP_API_KEY}jurusan/`);
     setJurusan(data.data.data);
   };
   useEffect(() => {

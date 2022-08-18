@@ -154,7 +154,7 @@ const GuruList = () => {
                   <td className="p-3 text-sm text-gray-700 whitespace-nowrap">
                     <img
                       src={
-                        "http://localhost:8000/public/images/" +
+                        `${process.env.REACT_APP_API_KEY}public/images/` +
                         guru.guru_gambar
                       }
                       alt="gambar"
