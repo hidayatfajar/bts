@@ -21,9 +21,9 @@ export default function Wisuda() {
     const response = await axios.get(`/user/wisuda`);
     try {
       setData(response.data.data);
-      console.log(response.data);
+      
     } catch (error) {
-      console.log(error);
+      
     }
   };
 

@@ -11,8 +11,8 @@ const WisudaGalery = (props) => {
   const [modal, setModal] = useState(false);
   const [wisudaIndex, setWisudaIndex] = useState(1);
   const image = props.image;
-  console.log(image);
-  console.log(wisudaIndex);
+  
+  
 
   const onModal = (e, wisudaId) => {
     e.preventDefault();

@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from "react";
 import { Container, Navbar, Nav, Offcanvas } from "react-bootstrap";
 import { Link} from "react-router-dom";
-import { useHistory } from "react-router-dom";
+import { useNavigate } from "react-router-dom";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faRightFromBracket } from "@fortawesome/free-solid-svg-icons";
 import axios from "axios";
@@ -15,11 +15,11 @@ const Navigation = () => {
     try {
       setContent(res.data.data);
     } catch (error) {
-      console.log(error);
+      
     }
   };
 
-  const history = useHistory();
+  const history = useNavigate();
 
   const handleLogout = () => {
     Swal.fire({

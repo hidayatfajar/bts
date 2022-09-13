@@ -221,7 +221,7 @@ const LandingPage = () => {
                           </span>
                         </p>
                         <h6 className="font-bold tracking-widest">
-                          Dr. B. Agus Wimbadi M.Pd.{" "}
+                        B. Agus Wimbadi, M.Pd{" "}
                         </h6>
                       </div>
                     </div>

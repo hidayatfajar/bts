@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from "react";
-import { Link, useHistory, useLocation, useParams } from "react-router-dom";
+import { Link, useNavigate, useLocation, useParams } from "react-router-dom";
 import axios from "axios";
 import Swal from "sweetalert2";
 
@@ -12,7 +12,7 @@ const EditFoto = (props) => {
   document.title = "BTS - Ubah Foto";
 
   const { gambar_id } = useParams();
-  const history = useHistory();
+  const history = useNavigate();
   const location = useLocation();
 
   const loadGambar = async (e) => {
@@ -27,9 +27,9 @@ const EditFoto = (props) => {
       setJenis(res.data.data[0].gambar_jenis);
       setKelas_id(res.data.data[0].kelas_id);
       setImage(res.data.data[0].gambar_nama);
-      console.log(res.data.data[0].gambar_nama);
+      
     } catch (error) {
-      console.log(error);
+      
     }
   };
 
@@ -37,9 +37,9 @@ const EditFoto = (props) => {
     const res = await axios.get("/kelas");
     try {
       setKelas(res.data.data);
-      console.log(res.data.data);
+      
     } catch (error) {
-      console.log(error);
+      
     }
   };
 
@@ -70,14 +70,14 @@ const EditFoto = (props) => {
         history.push(`/admin/foto/kelas/${location.state.id}`);
       }
     } catch (error) {
-      console.log(error);
+      
     }
   };
 
   useEffect(() => {
     getKelas();
     getDataById();
-    console.log(jenis);
+    
   }, []);
 
   return (

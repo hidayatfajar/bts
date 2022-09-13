@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from "react";
-import { Link, useLocation, useHistory } from "react-router-dom";
+import { Link, useLocation, useNavigate } from "react-router-dom";
 import axios from "axios";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faImage } from "@fortawesome/free-solid-svg-icons";
@@ -21,14 +21,14 @@ const AddSiswa = (props) => {
     setPreview(URL.createObjectURL(img));
   };
   const location = useLocation();
-  const history = useHistory();
+  const history = useNavigate();
   const getKelas = async () => {
     const res = await axios.get("/kelas");
     try {
       setKelas(res.data.data);
-      console.log(res.data.data);
+      
     } catch (error) {
-      console.log(error);
+      
     }
   };
 
@@ -60,15 +60,15 @@ const AddSiswa = (props) => {
         });
         history.push(`/admin/siswa/kelas/${location.state.id}`);
       }
-      console.log(data);
+      
     } catch (error) {
-      console.log(error);
+      
     }
   };
 
   useEffect(() => {
     getKelas();
-    console.log(location.state.id);
+    
   }, []);
 
   return (

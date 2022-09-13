@@ -12,9 +12,9 @@ const KelasList = () => {
     const res = await axios.get(`/kelas/jurusan/${jurusan_id}`);
     try {
       setKelas(res.data.data);
-      console.log(res.data.data);
+      
     } catch (error) {
-      console.log(error);
+      
     }
   };
 

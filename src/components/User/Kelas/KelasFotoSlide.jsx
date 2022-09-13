@@ -11,7 +11,7 @@ export default function KelasFotoSlide(props) {
       imageForSlider.push(item);
     }
   });
-  console.log(imageForSlider);
+  
 
   return props.props.loading ? null : (
     <Carousel className="z-0">

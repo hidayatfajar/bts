@@ -7,7 +7,6 @@ import {
   faInstagram,
   faYoutube,
 } from "@fortawesome/free-brands-svg-icons";
-import { Map, InfoWindow, Marker, GoogleApiWrapper } from "google-maps-react";
 
 class Footer extends Component {
   // constructor(props) {

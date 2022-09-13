@@ -34,7 +34,7 @@ export default function Guru() {
 
   const getData = async () => {
     const guru = await axios.get(`${process.env.REACT_APP_API_KEY}guru/`);
-    console.log(guru);
+    
     setGuru(guru.data.data.sort(sort));
   };
   useEffect(() => {

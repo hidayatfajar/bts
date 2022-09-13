@@ -1,5 +1,5 @@
 import React, {useState} from "react";
-import {useHistory } from "react-router-dom";
+import {useNavigate } from "react-router-dom";
 import axios from "axios";
 import logoM from "../assets/images/LogoM2.png";
 import logo2 from "../assets/images/logo2.svg";
@@ -12,7 +12,7 @@ export const Login = () => {
   const [password, setPassword] = useState("");
   document.title = "BTS - Login Page";
 
-  const history = useHistory();
+  const history = useNavigate();
 
   const Login = async(e) => {
     e.preventDefault();
@@ -35,11 +35,11 @@ export const Login = () => {
           title: "Good Job!",
           text: `${res.data.message}`,
         });
-        history.push(`/admin/`);
+        history(`/admin/`);
       }
     }
     catch (err) {
-      console.log(err);
+      
     }
   }
 

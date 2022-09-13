@@ -12,7 +12,7 @@ export default function GuruCardList(props) {
   const [modal, setModal] = useState(false);
   const [guruIndex, setGuruIndex] = useState(1);
   const guru = props.guru;
-  console.log(props.guru);
+  
 
   const filteredData = guru.filter((el) => {
     if (props.search === "") {

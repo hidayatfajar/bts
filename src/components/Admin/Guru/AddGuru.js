@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-import { Link, useHistory } from "react-router-dom";
+import { Link, useNavigate } from "react-router-dom";
 import axios from "axios";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faImage } from "@fortawesome/free-solid-svg-icons";
@@ -11,13 +11,13 @@ const AddGuru = () => {
   const [preview, setPreview] = useState("");
   document.title = "BTS - Tambah Guru";
 
-  const history = useHistory();
+  const history = useNavigate();
 
   const loadGambar = (e) => {
     const img = e.target.files[0];
     setImage(img);
     setPreview(URL.createObjectURL(img));
-    console.log(guru);
+    
   };
 
   const addGuru = async (e) => {
@@ -46,9 +46,9 @@ const AddGuru = () => {
         });
         history.push("/admin/guru");
       }
-      console.log(res.data);
+      
     } catch (error) {
-      console.log(error);
+      
     }
   };
   return (

@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from "react";
-import { Link, useParams, useHistory, useLocation } from "react-router-dom";
+import { Link, useParams, useNavigate, useLocation } from "react-router-dom";
 import axios from "axios";
 import Swal from "sweetalert2";
 
@@ -24,7 +24,7 @@ const ViewSiswa = (props) => {
     setQuotes(res.data.data[0].siswa_quote);
     setKelas_id(res.data.data[0].kelas_id);
     setImage(res.data.data[0].siswa_gambar); 
-    console.log(res.data.data[0].kelas_id);
+    
   };
 
   const getKelas = async () => {
@@ -32,7 +32,7 @@ const ViewSiswa = (props) => {
     try {
       setKelas(res.data.data); 
     } catch (error) {
-      console.log(error);
+      
     }
   };
 

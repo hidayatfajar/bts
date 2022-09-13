@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from "react";
-import { Link, useParams, useHistory, useLocation } from "react-router-dom";
+import { Link, useParams, useNavigate, useLocation } from "react-router-dom";
 import axios from "axios";
 import Swal from "sweetalert2";
 
@@ -14,13 +14,13 @@ const EditSiswa = (props) => {
   document.title = "BTS - Ubah Siswa";
 
   const { siswa_id } = useParams();
-  const history = useHistory();
+  const history = useNavigate();
 
   const loadGambar = (e) => {
     const img = e.target.files[0];
     setImage(img);
     setPreview(URL.createObjectURL(img));
-    console.log(kelas);
+    
   };
 
   const location = useLocation();
@@ -32,17 +32,17 @@ const EditSiswa = (props) => {
     setQuotes(res.data.data[0].siswa_quote);
     setKelas_id(res.data.data[0].kelas_id);
     setImage(res.data.data[0].siswa_gambar);
-    console.log(res.data.data);
-    console.log(res.data.data[0].kelas_id);
+    
+    
   };
 
   const getKelas = async () => {
     const res = await axios.get("/kelas");
     try {
       setKelas(res.data.data);
-      //   console.log(res.data.data);
+      //   
     } catch (error) {
-      console.log(error);
+      
     }
   };
 
@@ -73,10 +73,10 @@ const EditSiswa = (props) => {
         });
         history.push(`/admin/siswa/kelas/${location.state.id}`);
       }
-      console.log(data);
+      
     } catch (error) {
-      console.log(error);
-      console.log(location.state.id);
+      
+      
     }
   };
 

@@ -10,9 +10,11 @@ import {
   faSearch,
   faEye,
 } from "@fortawesome/free-solid-svg-icons";
+import ReactPaginate from "react-paginate";
 
 const SiswaList = () => {
   const [siswa, setSiswa] = useState([]);
+  const [pageNumber, setPageNumber] = useState(0);
   const [Isloading, SetIsloading] = useState(true);
   const { kelas_id } = useParams();
   const [order, setOrder] = useState("asc");
@@ -31,9 +33,9 @@ const SiswaList = () => {
     const res = await axios.get(`/siswa/kelas/${kelas_id}`);
     try {
       setSiswa(res.data.data.sort(sort));
-      console.log(res.data.data.sort(sort));
+      
     } catch (error) {
-      console.log(error);
+      
     }
   };
 
@@ -66,9 +68,23 @@ const SiswaList = () => {
       await axios.delete(`/siswa/hapus/${siswa_id}`);
       getSiswa();
     } catch (error) {
-      console.log(error);
+      
     }
   };
+
+  const dataPerPage = 5;
+  const [pageCount, setPageCount] = useState(
+    Math.ceil(siswa.length / dataPerPage)
+  );
+
+  const pageVisited = pageNumber * dataPerPage;
+  const changePage = ({ selected }) => {
+    setPageNumber(selected);
+  };
+
+  useEffect(() => {
+    setPageCount(Math.ceil(siswas.length / dataPerPage));
+  }, [siswas]);
 
   useEffect(() => {
     setTimeout(() => {
@@ -147,64 +163,90 @@ const SiswaList = () => {
                 </tr>
               </thead>
               <tbody className="divide-y ">
-                {siswas.map((siswa, index) => (
-                  <tr
-                    className="odd:bg-white even:bg-gray-50"
-                    key={siswa.siswa_id}
-                  >
-                    <td className="p-3 text-sm font-bold whitespace-nowrap">
-                      {index + 1}
-                    </td>
-                    <td className="p-3 text-sm text-gray-700 whitespace-nowrap">
-                      {siswa.siswa_nis}
-                    </td>
-                    <td className="p-3 text-sm text-gray-700 whitespace-nowrap">
-                      <img
-                        src={
-                          `${process.env.REACT_APP_API_KEY}public/images/` +
-                          siswa.siswa_gambar
-                        }
-                        alt="gambar"
-                        className="h-12 w-12 rounded"
-                      />
-                    </td>
-                    <td className="p-3 text-sm text-gray-700 whitespace-nowrap">
-                      {siswa.siswa_nama}
-                    </td>
-                    <td className="p-3 text-sm italic text-gray-700 whitespace-nowrap">
-                      " {siswa.siswa_quote} "
-                    </td>
-                    <td className="p-3 text-sm text-black whitespace-nowrap">
-                      <Link
-                        to={{
-                          pathname: `/admin/siswa/view/${siswa.siswa_id}`,
-                          state: { id: kelas_id },
-                        }}
-                      >
-                      <button className="text-black text-left">
-                        <FontAwesomeIcon icon={faEye}/>
-                      </button>
-                      </Link>
-                      <Link
-                        to={{
-                          pathname: `/admin/siswa/ubah/${siswa.siswa_id}`,
-                          state: { id: kelas_id },
-                        }}
-                      >
-                        <button className="text-black text-center px-4">
-                          <FontAwesomeIcon icon={faPen} />
+                {siswas
+                  .slice(pageVisited, pageVisited + dataPerPage)
+                  .map((siswa, index) => (
+                    <tr
+                      className="odd:bg-white even:bg-gray-50"
+                      key={siswa.siswa_id}
+                    >
+                      <td className="p-3 text-sm font-bold whitespace-nowrap">
+                        {index + 1}
+                      </td>
+                      <td className="p-3 text-sm text-gray-700 whitespace-nowrap">
+                        {siswa.siswa_nis}
+                      </td>
+                      <td className="p-3 text-sm text-gray-700 whitespace-nowrap">
+                        <img
+                          src={
+                            `${process.env.REACT_APP_API_KEY}public/images/` +
+                            siswa.siswa_gambar
+                          }
+                          alt="gambar"
+                          className="h-12 w-12 rounded"
+                        />
+                      </td>
+                      <td className="p-3 text-sm text-gray-700 whitespace-nowrap">
+                        {siswa.siswa_nama}
+                      </td>
+                      <td className="p-3 text-sm italic text-gray-700 whitespace-nowrap">
+                        " {siswa.siswa_quote} "
+                      </td>
+                      <td className="p-3 text-sm text-black whitespace-nowrap">
+                        <Link
+                          to={{
+                            pathname: `/admin/siswa/view/${siswa.siswa_id}`,
+                            state: { id: kelas_id },
+                          }}
+                        >
+                          <button className="text-black text-left">
+                            <FontAwesomeIcon icon={faEye} />
+                          </button>
+                        </Link>
+                        <Link
+                          to={{
+                            pathname: `/admin/siswa/ubah/${siswa.siswa_id}`,
+                            state: { id: kelas_id },
+                          }}
+                        >
+                          <button className="text-black text-center px-4">
+                            <FontAwesomeIcon icon={faPen} />
+                          </button>
+                        </Link>
+                        <button
+                          className="text-black text-end"
+                          onClick={() => deleteSiswa(siswa.siswa_id)}
+                        >
+                          <FontAwesomeIcon icon={faTrash} />
                         </button>
-                      </Link>
-                      <button className="text-black text-end" onClick={() => deleteSiswa(siswa.siswa_id)}>
-                        <FontAwesomeIcon icon={faTrash} />
-                      </button>
-                    </td>
-                  </tr>
-                ))}
+                      </td>
+                    </tr>
+                  ))}
               </tbody>
             </table>
           </div>
         )}
+        <div className="my-3 flex justify-center">
+          <ReactPaginate
+            previousLabel={"Previous"}
+            nextLabel={"Next"}
+            breakLabel={"..."}
+            pageCount={pageCount}
+            marginPagesDisplayed={2}
+            pageRangeDisplayed={3}
+            onPageChange={changePage}
+            containerClassName={"pagination justify-content-center"}
+            pageClassName={"page-item"}
+            pageLinkClassName={"page-link"}
+            previousClassName={"page-item"}
+            previousLinkClassName={"page-link"}
+            nextClassName={"page-item"}
+            nextLinkClassName={"page-link"}
+            breakClassName={"page-item"}
+            breakLinkClassName={"page-link"}
+            activeClassName={"active"}
+          />
+        </div>
       </div>
     </div>
   );

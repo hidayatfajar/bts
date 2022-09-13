@@ -1,4 +1,4 @@
-import React, { useState, useEffect, } from "react";
+import React, { useState, useEffect } from "react";
 import axios from "axios";
 import { Link } from "react-router-dom";
 import { Spinner } from "react-bootstrap";
@@ -10,9 +10,11 @@ import {
   faTrash,
   faEye,
 } from "@fortawesome/free-solid-svg-icons";
+import ReactPaginate from "react-paginate";
 
 const GuruList = () => {
   const [guru, setGuru] = useState([]);
+  const [pageNumber, setPageNumber] = useState(0);
   const [Isloading, SetIsloading] = useState(true);
   const [searchInput, setSearchInput] = useState("");
   const [order, setOrder] = useState("asc");
@@ -22,9 +24,9 @@ const GuruList = () => {
     const res = await axios.get(`/guru`);
     try {
       setGuru(res.data.data.sort(autoSort));
-      console.log(res.data.data);
+      
     } catch (error) {
-      console.log(error);
+      
     }
   };
 
@@ -38,8 +40,8 @@ const GuruList = () => {
 
   useEffect(() => {
     setTimeout(() => {
-    getGuru();
-    SetIsloading(false);
+      getGuru();
+      SetIsloading(false);
     }, 2000);
   }, []);
 
@@ -72,9 +74,23 @@ const GuruList = () => {
       await axios.delete(`/guru/hapus/${guru_id}`);
       getGuru();
     } catch (error) {
-      console.log(error);
+      
     }
   };
+
+  const dataPerPage = 5;
+  const [pageCount, setPageCount] = useState(
+    Math.ceil(guru.length / dataPerPage)
+  );
+
+  const pageVisited = pageNumber * dataPerPage;
+  const changePage = ({ selected }) => {
+    setPageNumber(selected);
+  };
+
+  useEffect(() => {
+    setPageCount(Math.ceil(data.length / dataPerPage));
+  }, [data]);
 
   return (
     <div>
@@ -115,76 +131,107 @@ const GuruList = () => {
             />
           </center>
         ) : (
-        <div className="overflow-auto rounded-lg shadow mt-14 md:mt-0">
-          <table className="w-full border-2 rounded-full">
-            <thead className="bg-gray-50 border-b-2 border-gray-200">
-              <tr>
-                <th className="p-3 text-black text-sm font-extrabold tracking-wide text-left">
-                  No
-                </th>
-                <th
-                  className="p-3 text-black text-sm font-extrabold tracking-wide text-left"
-                  onClick={() => sortByName("guru_nama")}
-                >
-                  Nama Guru &ensp;
-                  <FontAwesomeIcon icon={faSort} />
-                </th>
-                <th className="p-3 text-black text-sm font-extrabold tracking-wide text-left">
-                  Foto Guru
-                </th>
-                <th className="p-3 text-black text-sm font-extrabold tracking-wide text-left">
-                  Jabatan
-                </th>
-                <th className="p-3 text-black text-sm font-extrabold tracking-wide text-left">
-                  Aksi
-                </th>
-              </tr>
-            </thead>
-
-            <tbody className="divide-y">
-              
-              {data.map((guru, index) => (
-                <tr className="odd:bg-white even:bg-gray-50" key={guru.guru_id}>
-                  <td className="p-3 text-sm font-bold text-black-500 whitespace-nowrap">
-                    {index + 1}
-                  </td>
-                  <td className="p-3 text-sm text-gray-700 whitespace-nowrap">
-                    {guru.guru_nama}
-                  </td>
-                  <td className="p-3 text-sm text-gray-700 whitespace-nowrap">
-                    <img
-                      src={
-                        `${process.env.REACT_APP_API_KEY}public/images/` +
-                        guru.guru_gambar
-                      }
-                      alt="gambar"
-                      className="h-12 w-12 rounded"
-                    />
-                  </td>
-                  <td className="p-3 text-sm text-gray-700 whitespace-nowrap">
-                    {guru.guru_jabatan}
-                  </td>
-                  <td className="p-3 text-sm text-gray-700 whitespace-nowrap">
-                    <Link to={`/admin/guru/view/${guru.guru_id}`}>
-                      <button className="text-black">
-                        <FontAwesomeIcon icon={faEye} />
-                      </button>
-                    </Link>
-                    <Link to={`/admin/guru/ubah/${guru.guru_id}`}>
-                      <button className="text-black px-4">
-                        <FontAwesomeIcon icon={faPen} />
-                      </button>
-                    </Link>
-                      <button className="text-black">
-                        <FontAwesomeIcon icon={faTrash} onClick={() => deleteGuru(guru.guru_id)}/>
-                      </button>
-                  </td>
+          <div className="overflow-auto rounded-lg shadow mt-14 md:mt-0">
+            <table className="w-full border-2 rounded-full">
+              <thead className="bg-gray-50 border-b-2 border-gray-200">
+                <tr>
+                  <th className="p-3 text-black text-sm font-extrabold tracking-wide text-left">
+                    No
+                  </th>
+                  <th
+                    className="p-3 text-black text-sm font-extrabold tracking-wide text-left"
+                    onClick={() => sortByName("guru_nama")}
+                  >
+                    Nama Guru &ensp;
+                    <FontAwesomeIcon icon={faSort} />
+                  </th>
+                  <th className="p-3 text-black text-sm font-extrabold tracking-wide text-left">
+                    Foto Guru
+                  </th>
+                  <th className="p-3 text-black text-sm font-extrabold tracking-wide text-left">
+                    Jabatan
+                  </th>
+                  <th className="p-3 text-black text-sm font-extrabold tracking-wide text-left">
+                    Aksi
+                  </th>
                 </tr>
-              ))}
-            </tbody>
-          </table>
-        </div>
+              </thead>
+
+              <tbody className="divide-y">
+                {data
+                  .slice(pageVisited, pageVisited + dataPerPage)
+                  .map((guru, index) => {
+                    return (
+                      <tr
+                        className="odd:bg-white even:bg-gray-50"
+                        key={guru.guru_id}
+                      >
+                        <td className="p-3 text-sm font-bold text-black-500 whitespace-nowrap">
+                          {/* {index + 1} */}
+                          {guru.guru_id}
+                        </td>
+                        <td className="p-3 text-sm text-gray-700 whitespace-nowrap">
+                          {guru.guru_nama}
+                        </td>
+                        <td className="p-3 text-sm text-gray-700 whitespace-nowrap">
+                          <img
+                            src={
+                              `${process.env.REACT_APP_API_KEY}public/images/` +
+                              guru.guru_gambar
+                            }
+                            alt="gambar"
+                            className="h-12 w-12 rounded"
+                          />
+                        </td>
+                        <td className="p-3 text-sm text-gray-700 whitespace-nowrap">
+                          {guru.guru_jabatan}
+                        </td>
+                        <td className="p-3 text-sm text-gray-700 whitespace-nowrap">
+                          <Link to={`/admin/guru/view/${guru.guru_id}`}>
+                            <button className="text-black">
+                              <FontAwesomeIcon icon={faEye} />
+                            </button>
+                          </Link>
+                          <Link to={`/admin/guru/ubah/${guru.guru_id}`}>
+                            <button className="text-black px-4">
+                              <FontAwesomeIcon icon={faPen} />
+                            </button>
+                          </Link>
+                          <button className="text-black">
+                            <FontAwesomeIcon
+                              icon={faTrash}
+                              onClick={() => deleteGuru(guru.guru_id)}
+                            />
+                          </button>
+                        </td>
+                      </tr>
+                    );
+                  })}
+              </tbody>
+            </table>
+          </div>
         )}
+        <div className="my-3 flex justify-center">
+          <ReactPaginate
+            previousLabel={"Previous"}
+            nextLabel={"Next"}
+            breakLabel={"..."}
+            pageCount={pageCount}
+            marginPagesDisplayed={2}
+            pageRangeDisplayed={3}
+            onPageChange={changePage}
+            containerClassName={"pagination justify-content-center"}
+            pageClassName={"page-item"}
+            pageLinkClassName={"page-link"}
+            previousClassName={"page-item"}
+            previousLinkClassName={"page-link"}
+            nextClassName={"page-item"}
+            nextLinkClassName={"page-link"}
+            breakClassName={"page-item"}
+            breakLinkClassName={"page-link"}
+            activeClassName={"active"}
+          />
+        </div>
       </div>
     </div>
   );

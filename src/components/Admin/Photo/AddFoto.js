@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from "react";
-import { Link, useHistory, useLocation } from "react-router-dom";
+import { Link, useNavigate, useLocation } from "react-router-dom";
 import axios from "axios";
 import Swal from "sweetalert2";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
@@ -13,7 +13,7 @@ const AddFoto = (props) => {
   const [kelas, setKelas] = useState([]);
 
   document.title = "BTS - Tambah Foto";
-  const history = useHistory();
+  const history = useNavigate();
   const location = useLocation();
 
   const loadGambar = async (e) => {
@@ -26,9 +26,9 @@ const AddFoto = (props) => {
     const res = await axios.get("/kelas");
     try {
       setKelas(res.data.data);
-      console.log(res.data.data);
+      
     } catch (error) {
-      console.log(error);
+      
     }
   };
 
@@ -59,13 +59,13 @@ const AddFoto = (props) => {
         history.push(`/admin/foto/kelas/${location.state.id}`);
       }
     } catch (error) {
-      console.log(error);
+      
     }
   };
 
   useEffect(() => {
     getKelas();
-    console.log(jenis);
+    
   }, []);
 
   return (

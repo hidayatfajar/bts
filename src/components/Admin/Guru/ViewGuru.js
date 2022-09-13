@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from "react";
-import { Link, useHistory, useParams } from "react-router-dom";
+import { Link, useNavigate, useParams } from "react-router-dom";
 import axios from "axios";
 import Swal from "sweetalert2";
 const ViewGuru = () => {
@@ -9,13 +9,13 @@ const ViewGuru = () => {
   const [preview, setPreview] = useState("");
   document.title = "BTS - View Guru";
 
-  const history = useHistory();
+  const history = useNavigate();
   const { guru_id } = useParams();
   const loadGambar = (e) => {
     const img = e.target.files[0];
     setImage(img);
     setPreview(URL.createObjectURL(img));
-    console.log(guru);
+    
   };
 
   const getDataById = async () => {
@@ -24,9 +24,9 @@ const ViewGuru = () => {
       setGuru(res.data.data[0].guru_nama);
       setJabatan(res.data.data[0].guru_jabatan);
       setImage(res.data.data[0].guru_gambar);
-      console.log(res.data.data);
+      
     } catch (error) {
-      console.log(error);
+      
     }
   };
 
