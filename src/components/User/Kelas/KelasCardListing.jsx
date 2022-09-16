@@ -129,11 +129,11 @@ export default function KelasCardListing(props) {
                         </p>
                       </footer>
                     </Card.Text>
-                    <FontAwesomeIcon
+                    {/* <FontAwesomeIcon
                       icon={faDownload}
                       className="absolute right-2 bottom-2 text-xl text-gray-700"
                       onClick={(e) => download(e, siswa)}
-                    />
+                    /> */}
                   </Card.Body>
                 </Card>
               </div>
