@@ -33,7 +33,7 @@ const Navigation = () => {
     }).then((result) => {
       if (result.isConfirmed) {
     localStorage.removeItem("dataAdmin");
-    history.push("/auth/login");
+    history("/auth/login");
       }
     });
   };

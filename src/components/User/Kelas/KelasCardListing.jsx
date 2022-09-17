@@ -31,11 +31,19 @@ export default function KelasCardListing(props) {
   };
 
   async function download(e, siswa) {
-     axios.get("http://119.2.42.134:8000/public/images/Adityas_Apriyanto.JPG")
-    .then(res => {
-      console.log(res)
-    })
-    
+    axios
+      .get(`http://119.2.42.134:8000/siswa/download/${siswa.siswa_id}`, {
+        responseType: "blob",
+      })
+      .then((res) => {
+        console.log(typeof res.data);
+        console.log(res);
+        if (res.data) {
+          console.log(URL.createObjectURL(res.data));
+        }
+        const images = new Blob(res.data);
+        saveAs(images, "image.jpg");
+      });
   }
 
   return (
@@ -129,11 +137,14 @@ export default function KelasCardListing(props) {
                         </p>
                       </footer>
                     </Card.Text>
-                    {/* <FontAwesomeIcon
-                      icon={faDownload}
-                      className="absolute right-2 bottom-2 text-xl text-gray-700"
-                      onClick={(e) => download(e, siswa)}
-                    /> */}
+                    <a
+                      href={`${process.env.REACT_APP_API_KEY}siswa/download/${siswa.siswa_id}`}
+                    >
+                      <FontAwesomeIcon
+                        icon={faDownload}
+                        className="absolute right-2 bottom-2 text-xl text-gray-700"
+                      />
+                    </a>
                   </Card.Body>
                 </Card>
               </div>

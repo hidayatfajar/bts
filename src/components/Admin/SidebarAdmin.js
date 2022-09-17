@@ -115,9 +115,9 @@ const SideBar = () => {
               <Link
                 to={`/admin/jurusan/${jurusan.jurusan_id}`}
                 className="no-underline text-white"
+                key={index}
               >
                 <li
-                  key={index}
                   className={`flex  rounded-md p-2 cursor-pointer hover:bg-slate-400 text-gray-300 text-sm items-center gap-x-4 mt-3 -ml-2 ${
                     !open && "-ml-9"
                   } text-lg duration-200 

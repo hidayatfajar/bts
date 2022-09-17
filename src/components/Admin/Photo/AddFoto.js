@@ -56,7 +56,7 @@ const AddFoto = (props) => {
           title: "Good Job!",
           text: `${res.data.message}`,
         });
-        history.push(`/admin/foto/kelas/${location.state.id}`);
+        history(`/admin/foto/kelas/${location.state.id}`);
       }
     } catch (error) {
       

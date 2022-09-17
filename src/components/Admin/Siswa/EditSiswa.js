@@ -24,6 +24,7 @@ const EditSiswa = (props) => {
   };
 
   const location = useLocation();
+  console.log(location)
 
   const getDataById = async () => {
     const res = await axios.get(`/siswa/${siswa_id}`);
@@ -71,7 +72,7 @@ const EditSiswa = (props) => {
           title: "Good Job!",
           text: `${res.data.message}`,
         });
-        history.push(`/admin/siswa/kelas/${location.state.id}`);
+        history(`/admin/siswa/kelas/${location.state.id}`);
       }
       
     } catch (error) {

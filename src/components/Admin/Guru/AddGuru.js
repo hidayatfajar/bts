@@ -44,7 +44,7 @@ const AddGuru = () => {
           title: "Good Job!",
           text: `${res.data.message}`,
         });
-        history.push("/admin/guru");
+        history("/admin/guru");
       }
       
     } catch (error) {

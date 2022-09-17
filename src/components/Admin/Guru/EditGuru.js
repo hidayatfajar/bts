@@ -54,7 +54,7 @@ const EditGuru = () => {
           title: "Good Job!",
           text: `${res.data.message}`,
         });
-        history.push("/admin/guru");
+        history("/admin/guru");
       }
       
     } catch (error) {
@@ -113,7 +113,7 @@ const EditGuru = () => {
                   </div>
                   <div className="inline-flex">
                   <button className="bg-sky-600 py-2 px-4 rounded hover:bg-sky-800 text-white text-sm font-bold font-body flex items-center">
-                    Tambah
+                    Ubah
                   </button>
                   &ensp;
                   <Link to={`/admin/guru/`} >

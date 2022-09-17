@@ -33,10 +33,7 @@ const SiswaList = () => {
     const res = await axios.get(`/siswa/kelas/${kelas_id}`);
     try {
       setSiswa(res.data.data.sort(sort));
-      
-    } catch (error) {
-      
-    }
+    } catch (error) {}
   };
 
   const sortByName = (col) => {
@@ -67,9 +64,7 @@ const SiswaList = () => {
     try {
       await axios.delete(`/siswa/hapus/${siswa_id}`);
       getSiswa();
-    } catch (error) {
-      
-    }
+    } catch (error) {}
   };
 
   const dataPerPage = 5;
@@ -100,7 +95,8 @@ const SiswaList = () => {
         <div className="md:flex justify-between mb-3">
           <div>
             <Link
-              to={{ pathname: `/admin/siswa/tambah/`, state: { id: kelas_id } }}
+              to={{ pathname: `/admin/siswa/tambah/` }}
+              state={{ id: kelas_id }}
             >
               <button className="bg-sky-600 py-2 px-4 no-underline rounded hover:bg-sky-800 text-white text-sm font-medium font-body flex items-center">
                 Tambah
@@ -196,8 +192,8 @@ const SiswaList = () => {
                         <Link
                           to={{
                             pathname: `/admin/siswa/view/${siswa.siswa_id}`,
-                            state: { id: kelas_id },
                           }}
+                          state={{ id: kelas_id }}
                         >
                           <button className="text-black text-left">
                             <FontAwesomeIcon icon={faEye} />
@@ -206,8 +202,8 @@ const SiswaList = () => {
                         <Link
                           to={{
                             pathname: `/admin/siswa/ubah/${siswa.siswa_id}`,
-                            state: { id: kelas_id },
                           }}
+                          state={{ id: kelas_id }}
                         >
                           <button className="text-black text-center px-4">
                             <FontAwesomeIcon icon={faPen} />

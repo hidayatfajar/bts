@@ -21,6 +21,7 @@ const AddSiswa = (props) => {
     setPreview(URL.createObjectURL(img));
   };
   const location = useLocation();
+  console.log(location)
   const history = useNavigate();
   const getKelas = async () => {
     const res = await axios.get("/kelas");
@@ -58,7 +59,7 @@ const AddSiswa = (props) => {
           title: "Good Job!",
           text: `${res.data.message}`,
         });
-        history.push(`/admin/siswa/kelas/${location.state.id}`);
+        history(`/admin/siswa/kelas/${location.state.id}`);
       }
       
     } catch (error) {

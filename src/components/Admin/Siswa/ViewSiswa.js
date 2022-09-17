@@ -16,6 +16,7 @@ const ViewSiswa = (props) => {
   const { siswa_id } = useParams(); 
 
   const location = useLocation();
+  console.log(location)
 
   const getDataById = async () => {
     const res = await axios.get(`/siswa/${siswa_id}`);
